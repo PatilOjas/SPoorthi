@@ -16,7 +16,7 @@ def registrationPage(request):
 			# from_email = settings.EMAIL_HOST_USER
 			# mail = send_mail(subject, message, from_email, [request.POST['email']], fail_silently=False)
 		
-	return render(request, '')
+	return render(request, 'index.html')
 
 # def homePage(request):
 # 	return render(request, '')
