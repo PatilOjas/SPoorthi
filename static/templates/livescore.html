@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	{% for key, values in data.items %}
+		{% if forloop.counter|divisibleby:2 %}
+			<h1>{{key}}</h1>
+			<p>{{values.0}}</p>
+			<p>{{values.1}}</p>
+		{% endif %}
+	{% endfor %}
+	{% for key, values in data.items %}
+		{% if not forloop.counter|divisibleby:2 %}
+			<h1>{{key}}</h1>
+			<p>{{values.0}}</p>
+			<p>{{values.1}}</p>
+		{% endif %}
+	{% endfor %}
+</body>
+<script>
+	window.setInterval('refresh()', 5000);
+	function refresh(){
+		window.location.reload()
+	}
+</script>
+</html>

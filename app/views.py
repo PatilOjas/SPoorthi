@@ -3,6 +3,7 @@ from django.shortcuts import render
 from .forms import RegistrationForm
 from django.core.mail import send_mail
 from django.conf import settings
+from cricScore import LiveScoreCricket
 
 
 
@@ -20,3 +21,8 @@ def registrationPage(request):
 
 # def homePage(request):
 # 	return render(request, '')
+
+def scorepage(request):
+	L = LiveScoreCricket()
+	data = L.fetchScore()
+	return render(request, 'livescore.html', {'data': data, 'keys': data.keys()})
