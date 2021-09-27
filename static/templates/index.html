@@ -1,21 +1,11 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<!------ Include the above in your HEAD tag ---------->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
-	<link rel="stylesheet" href="{% static 'CSS/style.css' %}">
-	<title>Reg</title>
-</head>
+{% extends 'base.html' %}
 
-<body>
+<!--Block content goes below-->
+
+
+  {% block content %}
+
 
 	<div class="register-section">
 
@@ -23,7 +13,7 @@
 			<!-- ############################################## registration form ########################################### -->
 			<div class="card bg-light">
 				<article class="card-body mx-auto" style="max-width: 400px;">
-					<h4 class="card-title mt-3 text-center">Registeration</h4>
+					<h4 class="card-title mt-3 text-center">Registration</h4>
 					<p class="text-center text-secondary">Get registered and prove you are a Champion</p>
 
 					<form method="POST">
@@ -80,6 +70,4 @@
 	</div>
 
 
-</body>
-
-</html>
+	{% endblock %}
