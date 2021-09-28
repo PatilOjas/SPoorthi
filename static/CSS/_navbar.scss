@@ -1,8 +1,24 @@
 
 /* ####################################### navbar ###################################### */
 .navbar{
-    padding: 0.5rem 3rem;
-    background-color: rgba(108, 117, 125, 0.3); /*secondary*/
+    padding: 0.8em 6em;
+    // background-color: rgba(108, 117, 125, 0.3); /*secondary*/
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+    flex-wrap: nowrap;
+}
+.navbar-nav{
+    margin-left: 10rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+}
+
+.bg-transperent{
+    background-color: transparent;
 }
 
 .navbar .logo{
@@ -10,7 +26,7 @@
 }
 
 .logo img{
-    width: 6.5rem;
+    width: 7rem;
     // height: 100%;
 }
 

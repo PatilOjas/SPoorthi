@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap");
-body {
+.register-section {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -8,7 +8,7 @@ body {
   background-repeat: no-repeat;
   background: -webkit-gradient(linear, left bottom, right top, from(#db5050), color-stop(#ff8060), to(#fff066));
   background: linear-gradient(to right top, #db5050, #ff8060, #fff066);
-  background-size: 400%;
+  background-size: 200%;
   position: relative;
   min-height: 100vh;
   -webkit-animation-name: move-bg;
@@ -19,12 +19,13 @@ body {
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
+  z-index: 0;
 }
 
-body::after {
+.register-section::after {
   content: '';
   position: absolute;
-  top: 0;
+  bottom: 0;
   z-index: -1;
   opacity: 0.6;
   width: 100%;
@@ -32,6 +33,7 @@ body::after {
   background-image: url("/static/images/equip3.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: bottom;
 }
 
 @-webkit-keyframes move-bg {
@@ -60,9 +62,34 @@ body::after {
 
 /* ####################################### navbar ###################################### */
 .navbar {
-  padding: 0.5rem 3rem;
-  background-color: rgba(108, 117, 125, 0.3);
-  /*secondary*/
+  padding: 0.8em 6em;
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.navbar-nav {
+  margin-left: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 70%;
+}
+
+.bg-transperent {
+  background-color: transparent;
 }
 
 .navbar .logo {
@@ -70,7 +97,7 @@ body::after {
 }
 
 .logo img {
-  width: 6.5rem;
+  width: 7rem;
 }
 
 .navbar h3 {
@@ -81,9 +108,11 @@ body::after {
   width: 30rem;
   -webkit-box-shadow: 0 0 10px 2px rgba(90, 90, 90, 0.3);
           box-shadow: 0 0 10px 2px rgba(90, 90, 90, 0.3);
+  margin: 1rem;
 }
 
 .register-section .container {
+  padding: 10rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -92,12 +121,68 @@ body::after {
           justify-content: center;
 }
 
+.register-section .input-group-text-select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #e9ecef;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 1.5rem;
+  padding: 0 0.7rem;
+  border: 1px solid #ced4da;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  color: #495057;
+}
+
+.input-color {
+  color: #495057;
+}
+
+.mybtn {
+  background-color: #ff9166;
+  color: #ffffff;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 2rem;
+}
+
+.mybtn:hover {
+  background-color: #ff7260;
+}
+
 footer {
-  margin-top: 5em;
   min-height: 5rem;
   text-align: center;
   padding: 1rem;
-  background-color: rgba(108, 117, 125, 0.3);
+  background-color: #646464;
   /*secondary*/
+  color: #ffffff;
+}
+
+@media (min-width: 901px) and (max-width: 1100px) {
+  html {
+    font-size: 90%;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  html {
+    font-size: 80%;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 600px) {
+  html {
+    font-size: 70%;
+  }
+}
+
+@media (max-width: 400px) {
+  html {
+    font-size: 60%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

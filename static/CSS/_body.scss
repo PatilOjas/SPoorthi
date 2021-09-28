@@ -1,0 +1,44 @@
+
+
+.register-section{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+    // background-image: url("/static/images/Sports.png");
+    background-repeat: no-repeat;
+    background: linear-gradient(to right top, #db5050,#ff8060, #fff066);
+    background-size: 200%;
+    position: relative;
+    min-height: 100vh;
+    animation-name: move-bg;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    z-index: 0;
+}
+.register-section::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.6;
+    width: 100%;
+    height: 100%;
+    background-image: url("/static/images/equip3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+@keyframes move-bg{
+    0%{
+        background-position: (0% 0%);
+    }
+    50%{
+        background-position: (100% 100%);
+    }
+    100%{
+        background-position: (0% 0%);
+    }
+}

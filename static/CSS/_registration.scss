@@ -1,8 +1,40 @@
 .register-section .card{
     width: 30rem;
     box-shadow: 0 0 10px 2px rgba(90, 90, 90, 0.3);
+    margin: 1rem;
 }
 .register-section .container{
+    padding: 10rem 0;
+    // position: absolute;
     display: flex;
     justify-content: center;
+}
+
+.register-section .input-group-text-select{
+    display: flex;
+    background-color: #e9ecef;;
+    align-items: center;
+    line-height: 1.5rem;
+    padding: 0 0.7rem;
+    border: 1px solid #ced4da;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+    color: #495057;
+
+}
+
+.input-color{
+    color: #495057;
+}
+
+.mybtn{
+    // background-image: linear-gradient(to bottom,  #db5050,#ff8060, #fff066);
+    background-color: #ff9166;
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 2rem;
+}
+
+.mybtn:hover{
+    background-color: #ff7260;
 }
