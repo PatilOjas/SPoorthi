@@ -17,16 +17,16 @@ class LiveScoreCricket():
 
 	def fetchScore(self,):
 		returnDict = dict()
-		q = self.html_soup.find_all('td', attrs={'class': "cri_hometeam"})
-		for i in q:	
+		requested_data = self.html_soup.find_all('td', attrs={'class': "cri_hometeam"})
+		for i in requested_data:	
 			teamName = " ".join(i.text.strip().split()[:2])
 			returnDict[teamName] = list()
 			i = i.find_all_next('td', attrs={'class': "cri_set cur-ptr", 'title': 'Match Details'})[:2]
 			for j in i:
 				returnDict[teamName].append(j.text.strip())
 		
-		q = self.html_soup.find_all('td', attrs={'class': "cri_awayteam"})
-		for i in q:	
+		requested_data = self.html_soup.find_all('td', attrs={'class': "cri_awayteam"})
+		for i in requested_data:	
 			teamName = " ".join(i.text.strip().split()[:2])
 			returnDict[teamName] = list()
 			i = i.find_all_next('td', attrs={'class': "cri_set cur-ptr", 'title': 'Match Details'})[:2]
@@ -34,5 +34,6 @@ class LiveScoreCricket():
 				returnDict[teamName].append(j.text.strip())
 
 		return returnDict
-		
+
 LiveScoreCricket().fetchScore()
+
