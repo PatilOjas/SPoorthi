@@ -8,18 +8,16 @@
 	<title>Document</title>
 </head>
 <body>
-	{% for key, values in data.items %}
+	{% for values in data %}
 		{% if forloop.counter|divisibleby:2 %}
-			<h1>{{key}}</h1>
-			<p>{{values.0}}</p>
+			<h1>{{values.0}}</h1>
 			<p>{{values.1}}</p>
+			<p>{{values.2}}</p>
 		{% endif %}
-	{% endfor %}
-	{% for key, values in data.items %}
 		{% if not forloop.counter|divisibleby:2 %}
-			<h1>{{key}}</h1>
-			<p>{{values.0}}</p>
+			<h1>{{ values.0 }}</h1>
 			<p>{{values.1}}</p>
+			<p>{{values.2}}</p>
 		{% endif %}
 	{% endfor %}
 </body>

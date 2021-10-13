@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
-
+from datetime import date
 class LiveScoreCricket():
 
 	def __init__(self) -> None:
@@ -17,22 +17,25 @@ class LiveScoreCricket():
 
 	def fetchScore(self,):
 		returnDict = dict()
-		requested_data = self.html_soup.find_all('td', attrs={'class': "cri_hometeam"})
-		for i in requested_data:	
-			teamName = " ".join(i.text.strip().split()[:2])
-			returnDict[teamName] = list()
-			i = i.find_all_next('td', attrs={'class': "cri_set cur-ptr", 'title': 'Match Details'})[:2]
-			for j in i:
-				returnDict[teamName].append(j.text.strip())
-		
-		requested_data = self.html_soup.find_all('td', attrs={'class': "cri_awayteam"})
-		for i in requested_data:	
-			teamName = " ".join(i.text.strip().split()[:2])
-			returnDict[teamName] = list()
-			i = i.find_all_next('td', attrs={'class': "cri_set cur-ptr", 'title': 'Match Details'})[:2]
-			for j in i:
-				returnDict[teamName].append(j.text.strip())
+		# today = date.today().strftime("%d_%m_%Y")
+		today = 'data'
+		returnDict[today] = []
 
+		requested_data_first_team = self.html_soup.find_all('td', attrs={'class': "cri_hometeam"})
+		requested_data_second_team = self.html_soup.find_all('td', attrs={'class': "cri_awayteam"})
+		for i in range(len(requested_data_first_team)):	
+			teamName1 = " ".join(requested_data_first_team[i].text.strip().split()[:2])
+			teamName2 = " ".join(requested_data_second_team[i].text.strip().split()[:2])
+			score_team1 = requested_data_first_team[i].find_all_next('td', attrs={'class': "cri_set cur-ptr", 'title': 'Match Details'})[:2]
+			score_team2 = requested_data_second_team[i].find_all_next('td', attrs={'class': "cri_set cur-ptr", 'title': 'Match Details'})[:2]
+			lst1 = [teamName1]
+			lst2 = [teamName2]
+			for j in range(len(score_team1)):
+				lst1.append(score_team1[j].text.strip())
+				lst2.append(score_team2[j].text.strip())
+			returnDict[today].append(lst1)
+			returnDict[today].append(lst2)
+		
 		return returnDict
 
 LiveScoreCricket().fetchScore()

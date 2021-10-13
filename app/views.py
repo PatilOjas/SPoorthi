@@ -24,5 +24,5 @@ def registrationPage(request):
 
 def scorepage(request):
 	L = LiveScoreCricket()
-	data = L.fetchScore()
-	return render(request, 'livescore.html', {'data': data, 'keys': data.keys()})
+	data = L.fetchScore()['data']
+	return render(request, 'livescore.html', {'data': data})
