@@ -35,5 +35,5 @@ class LiveScoreCricket():
 
 		return returnDict
 
-LiveScoreCricket().fetchScore()
+# LiveScoreCricket().fetchScore()
 

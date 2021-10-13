@@ -19,10 +19,12 @@ def registrationPage(request):
 		
 	return render(request, 'index.html')
 
-# def homePage(request):
-# 	return render(request, '')
+def homePage(request):
+	return render(request, 'home.html')
 
 def scorepage(request):
-	L = LiveScoreCricket()
-	data = L.fetchScore()
-	return render(request, 'livescore.html', {'data': data, 'keys': data.keys()})
+	# L = LiveScoreCricket()
+	# data = L.fetchScore()
+	context = {}
+	# context =  {'data': data, 'keys': data.keys()}
+	return render(request, 'livescore.html', context)

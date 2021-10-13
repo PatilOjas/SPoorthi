@@ -3,8 +3,50 @@ footer{
     text-align: center;
     padding: 1rem;
     background-color: rgb(100, 100, 100); /*secondary*/
-    color: #ffffff;
+    color: #999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     // position: absolute;
     // bottom: 0;
     // width: 100%;
+    a{
+        color: #999999;
+    }
+    p{
+        margin: 0 5rem;
+    }
+}
+
+.social-media-links{
+    display: flex;
+    justify-content: space-evenly;
+    // width: 10rem;
+    align-items: center;
+}
+
+.media-link{
+    border: 1px solid #999999;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+    margin: 0 0.5rem;
+}
+.media-link:hover{
+    border: 1px solid #dddddd;
+}
+
+.fab{
+    transform: scale(1.6);
+    transition: all 0.2s;
+}
+
+.media-link:hover .fab{
+    transform: scale(1.8);
+    color: #dddddd;
 }

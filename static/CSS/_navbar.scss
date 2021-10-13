@@ -4,6 +4,7 @@
     padding: 0.8em 6em;
     // background-color: rgba(108, 117, 125, 0.3); /*secondary*/
     position: absolute;
+    top: 0;
     width: 100%;
     z-index: 3;
     flex-wrap: nowrap;
@@ -14,7 +15,7 @@
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
-    width: 70%;
+    width: 70%;    
 }
 
 .bg-transperent{
