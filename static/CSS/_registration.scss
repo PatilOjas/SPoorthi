@@ -41,7 +41,9 @@
     }
 }
 
-
+.register-section .form-group{
+    margin: 1rem 0;
+}
 
 
 .register-section .card{
@@ -56,12 +58,16 @@
     justify-content: center;
 }
 
+.register-section .input-group-text{
+    padding: 0.7rem;
+}
+
 .register-section .input-group-text-select{
     display: flex;
     background-color: #e9ecef;;
     align-items: center;
     line-height: 1.5rem;
-    padding: 0 0.7rem;
+    padding: 0.7rem 0.65rem;
     border: 1px solid #ced4da;
     border-top-left-radius: 0.25rem;
     border-bottom-left-radius: 0.25rem;
@@ -78,9 +84,12 @@
     background-color: #ff9166;
     color: #ffffff;
     transition: all 0.3s ease-in-out;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    // display: block;
+    width: 100%;
 }
 
 .mybtn:hover{
     background-color: #ff7260;
+    color: #ffffff;
 }

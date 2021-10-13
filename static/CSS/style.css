@@ -3,6 +3,8 @@
   margin: 0;
   padding: 0;
   background-color: #7d7d7d;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .my-container {
@@ -120,6 +122,10 @@
   }
 }
 
+.register-section .form-group {
+  margin: 1rem 0;
+}
+
 .register-section .card {
   width: 30rem;
   -webkit-box-shadow: 0 0 10px 2px rgba(90, 90, 90, 0.3);
@@ -137,6 +143,10 @@
           justify-content: center;
 }
 
+.register-section .input-group-text {
+  padding: 0.7rem;
+}
+
 .register-section .input-group-text-select {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -146,7 +156,7 @@
       -ms-flex-align: center;
           align-items: center;
   line-height: 1.5rem;
-  padding: 0 0.7rem;
+  padding: 0.7rem 0.65rem;
   border: 1px solid #ced4da;
   border-top-left-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
@@ -162,11 +172,13 @@
   color: #ffffff;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  width: 100%;
 }
 
 .mybtn:hover {
   background-color: #ff7260;
+  color: #ffffff;
 }
 
 footer {
