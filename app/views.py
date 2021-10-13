@@ -23,8 +23,6 @@ def homePage(request):
 	return render(request, 'home.html')
 
 def scorepage(request):
-	# L = LiveScoreCricket()
-	# data = L.fetchScore()
-	context = {}
-	# context =  {'data': data, 'keys': data.keys()}
-	return render(request, 'livescore.html', context)
+	L = LiveScoreCricket()
+	data = L.fetchScore()['data']
+	return render(request, 'livescore.html', {'data': data})
