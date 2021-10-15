@@ -22,7 +22,11 @@ def registrationPage(request):
 def homePage(request):
 	return render(request, 'home.html')
 
-def scorepage(request):
-	L = LiveScoreCricket()
-	data = L.fetchScore()['data']
-	return render(request, 'livescore.html', {'data': data})
+# def liveNews(request):
+# 	return render(request, 'livescore.html', {'data': data})
+
+# def gallery(request):
+# 	return render(request, 'gallery.html')
+
+# def eventPage(request):
+# 	return render(request, 'event.html')
