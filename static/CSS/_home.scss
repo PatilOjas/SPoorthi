@@ -1,0 +1,53 @@
+.carousel{
+    height: 95vh;
+    position: relative;
+    // border: 10px solid red;
+    .carousel-item{
+        height: 95vh;
+        position: relative;
+        img{
+            object-fit: cover;
+            object-position: center;
+            height: 100%;
+        }
+        .carousel-caption{
+            z-index: 2;
+            text-align: start;
+            transform: translateY(-15rem);
+            animation: fade-in 2s;
+            h1{
+                font-size: 5rem;
+            }
+        }
+        
+    }
+    .carousel-item::after{
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.3);
+        z-index: 0;
+    }
+    
+}
+
+.trailer-video-container{
+    display: flex;
+    justify-content: center;
+    margin-top
+    video{
+        max-width: 100%;
+        height: auto;
+        margin-top: 15rem;
+    }
+}
+
+.photos-container{
+    display: flex;
+    .photo{
+        width: 10rem;
+    }
+}

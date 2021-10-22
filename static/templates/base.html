@@ -10,47 +10,53 @@
 	<link rel="stylesheet" href="{% static 'CSS/bootstrap.min.css' %}">
 	<!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	
+
 	<!------ Include the above in your HEAD tag ---------->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
 	<link rel="stylesheet" href="{% static 'CSS/style.css' %}">
 	<title>Reg</title>
-	<link rel="shortcut icon" href="{% static 'images/favicon.png' %}" type="image/x-icon">  
+	<link rel="shortcut icon" href="{% static 'images/favicon.png' %}" type="image/x-icon">
 </head>
 
 <body>
 
-	<nav class="navbar-expand-lg navbar-light navbar">
+	<nav class="navbar-expand-lg navbar">
 		<div class="logo">
 			<img src="{% static 'images/sports_com_logo.png' %}" alt="Sports Committee logo">
 		</div>
-		
-		  <ul class="navbar-nav">
-			<li class="nav-item">
-			  <a class="nav-link" href="{% url 'homepage' %}">Home</a>
-			</li>
-			<li class="nav-item">
-			  <a class="nav-link" href="#">Gallery</a>
-			</li>
-			<li class="nav-item">
-			  <a class="nav-link" href="#">Events</a>
-			</li>
-			<li class="nav-item">
-			  <a class="nav-link" href="{% url 'registrationpage' %}">Register</a>
-			</li>
-			<li class="nav-item">
-			  <a class="nav-link" href="{% url 'liveScore' %}">Live News</a>
-			</li>		
-		  </ul>
-		
-	  </nav>
 
-    {% block content %}
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="{% url 'homepage' %}">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Gallery</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Events</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{% url 'registrationpage' %}">Register</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{% url 'liveScore' %}">Live News</a>
+				</li>
+			</ul>
+		</div>
 
-    {% endblock %} 
+	</nav>
 
-    <footer class="footer">
-		
+	{% block content %}
+
+	{% endblock %}
+
+	<footer class="footer">
+
 		<div class="copyrights">
 			<p>&copy; All rights Reserved. SPIT Sports Committee</p>
 		</div>
@@ -69,8 +75,8 @@
 			</div> -->
 		</div>
 
-    </footer>
-	
+	</footer>
+
 
 	<script src="{% static 'CSS/bootstrap.bundle.min.js' %}"></script>
 	<script>
