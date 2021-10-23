@@ -19,7 +19,7 @@
 /* ####################################### navbar ###################################### */
 .navbar {
   padding: 0.8em 6em;
-  background-color: rgba(100, 100, 100, 0.8);
+  background-color: rgba(38, 41, 51, 0.9);
   /*secondary*/
   position: absolute;
   top: 0;
@@ -34,6 +34,31 @@
 .navbar-toggler {
   color: black;
   background-color: white;
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar-toggler .line {
+  width: 20px;
+  height: 2px;
+  background-color: #343434;
+  margin: 1px 0;
+  border-radius: 5px;
 }
 
 .bg-transparent {
@@ -55,6 +80,7 @@
 .nav-link {
   color: #efefef;
   margin: 1rem 3rem;
+  font-size: 1.5rem;
 }
 
 .nav-link:hover {
@@ -62,12 +88,16 @@
 }
 
 .carousel {
-  height: 105vh;
+  height: 95vh;
   position: relative;
 }
 
+.carousel .carousel-inner {
+  height: 100%;
+}
+
 .carousel .carousel-item {
-  height: 105vh;
+  height: 100%;
   position: relative;
 }
 
@@ -116,32 +146,52 @@
           flex-direction: column;
 }
 
-.media-container .trailer-video-container video {
-  width: 70vw;
-  margin-top: 10rem;
+.media-container .trailer-video-container {
+  margin: 5rem 0;
+  border: 2px solid grey;
 }
 
-.media-container .theme-announcement {
+.media-container .trailer-video-container video {
+  width: 70vw;
+}
+
+.media-container .theme-container {
+  border: 3px solid blue;
+  margin-bottom: 5rem;
+}
+
+.media-container .theme-container .theme-announcement {
   text-align: center;
+  border: 3px solid red;
+}
+
+.media-container .theme-container .theme-video-container video {
+  width: 70vw;
 }
 
 .media-container .photos-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 2px solid greenyellow;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 3rem;
 }
 
 .media-container .photos-container .photo {
-  margin: auto 2rem;
+  margin: 2rem;
 }
 
 .media-container .photos-container .photo img {
   -o-object-fit: cover;
      object-fit: cover;
-  max-height: 18rem;
+  max-width: 35rem;
+  width: 30rem;
+  height: 100%;
 }
 
 .register-section {

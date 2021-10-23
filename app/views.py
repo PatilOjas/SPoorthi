@@ -28,5 +28,5 @@ def homePage(request):
 # def gallery(request):
 # 	return render(request, 'gallery.html')
 
-# def eventPage(request):
-# 	return render(request, 'event.html')
+def eventPage(request):
+	return render(request, 'events.html')

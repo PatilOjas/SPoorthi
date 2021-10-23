@@ -14,7 +14,7 @@
               <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
               <button type="button" data-bs-target="#carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
             </div> -->
-        <div class="carousel-inner" style="height:130vh">
+        <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="4000">
                 <img src="{% static 'images/spoorthi3.jpg' %}" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
@@ -57,13 +57,15 @@
         <video src="{% static 'images/trailer.mp4' %}" controls width="1000"></video>
     </div>
 
-	<div class="theme-announcement">
-		<h1>Theme</h1>
-		<h4>This year witness _____ with SPoorthi</h4>
-	</div>
-
-	<div class="theme-video-container">
-        <video src="{% static 'images/theme.mp4' %}" controls width="800"></video>
+    <div class="theme-container">
+        <div class="theme-announcement">
+            <h1>Theme</h1>
+            <h4>This year witness _____ with SPoorthi</h4>
+        </div>
+    
+        <div class="theme-video-container">
+            <video src="{% static 'images/theme.mp4' %}" controls width="1000"></video>
+        </div>
     </div>
 
     <div class="photos-container">
