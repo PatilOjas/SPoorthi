@@ -52,11 +52,20 @@
     <!-- #### Bootstrap Carousel end -->
 </section>
 
-<div class="bg-coral p-5">
+<div class="bg-coral p-5 media-container">
     <div class="trailer-video-container">
-        <video src="{% static 'images/trailer.mp4' %}" controls width="100vw"></video>
-        <!-- {% static 'images/trailer.mp4' %} -->
+        <video src="{% static 'images/trailer.mp4' %}" controls width="1000"></video>
     </div>
+
+	<div class="theme-announcement">
+		<h1>Theme</h1>
+		<h4>This year witness _____ with SPoorthi</h4>
+	</div>
+
+	<div class="theme-video-container">
+        <video src="{% static 'images/theme.mp4' %}" controls width="800"></video>
+    </div>
+
     <div class="photos-container">
         <div class="photo">
             <img src="{% static 'images/spit.jpg' %}" alt="spit photo">
@@ -65,6 +74,10 @@
             <img src="{% static 'images/newspaper.jpg' %}" alt="news article">
         </div>
     </div>
+</div>
+
+<div class="timeline">
+	<h1>Timeline here!!!</h1>
 </div>
 
 {% endblock %}

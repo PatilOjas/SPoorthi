@@ -1,9 +1,9 @@
 .carousel{
-    height: 95vh;
+    height: 105vh;
     position: relative;
-    // border: 10px solid red;
+
     .carousel-item{
-        height: 95vh;
+        height: 105vh;
         position: relative;
         img{
             object-fit: cover;
@@ -34,20 +34,31 @@
     
 }
 
-.trailer-video-container{
-    display: flex;
-    justify-content: center;
-    margin-top
-    video{
-        max-width: 100%;
-        height: auto;
-        margin-top: 15rem;
-    }
-}
+.media-container{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	.trailer-video-container{
+		// margin-top: 1rem;
+		video{
+			width: 70vw;
+			margin-top: 10rem;
+		}
+	}
 
-.photos-container{
-    display: flex;
-    .photo{
-        width: 10rem;
-    }
+	.theme-announcement{
+		text-align: center;
+	}
+
+	.photos-container{
+		display: flex;
+		justify-content: space-between;
+		.photo{
+			margin: auto 2rem;
+			img{
+				object-fit: cover;
+				max-height: 18rem;
+			}
+		}
+	}
 }
