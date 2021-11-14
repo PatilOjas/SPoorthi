@@ -25,8 +25,8 @@ def homePage(request):
 # def liveNews(request):
 # 	return render(request, 'livescore.html', {'data': data})
 
-# def gallery(request):
-# 	return render(request, 'gallery.html')
+def gallery(request):
+	return render(request, 'gallery.html')
 
 def eventPage(request):
 	return render(request, 'events.html')
