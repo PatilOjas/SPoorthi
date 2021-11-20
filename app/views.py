@@ -4,7 +4,7 @@ from .forms import RegistrationForm
 from django.core.mail import send_mail
 from django.conf import settings
 from cricScore import LiveScoreCricket
-
+import os
 
 
 def registrationPage(request):
@@ -26,7 +26,12 @@ def homePage(request):
 # 	return render(request, 'livescore.html', {'data': data})
 
 def gallery(request):
-	return render(request, 'gallery.html')
+	data = {
+		'spoorthi2018': os.listdir(path='./static/images/spoorthi2018'),
+		'spoorthi2019': os.listdir(path='./static/images/spoorthi2019'),
+	}
+	
+	return render(request, 'gallery.html', data)
 
 def eventPage(request):
 	return render(request, 'events.html')

@@ -9,13 +9,14 @@
     z-index: 3;
     // position: sticky;
     // flex-wrap: nowrap;
+    
 }
 .navbar-nav{
     margin-left: 8rem;
-    // display: flex;
-    // flex-flow: row wrap;
-    // justify-content: space-between;
-    // align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
     // width: 70%;    
 }
 
@@ -50,7 +51,7 @@
 }
 
 .logo img{
-    width: 7rem;
+    width: 6rem;
     // height: 100%;
 }
 
@@ -60,8 +61,8 @@
 
 .nav-link{
     color: #efefef;
-    margin: 1rem 3rem;
-    font-size: 1.5rem;
+    margin: 0 3rem;
+    font-size: 1.2rem;
 }
 .nav-link:hover{
     color: #fff;

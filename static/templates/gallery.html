@@ -7,6 +7,33 @@
 
 	<div class="my-container bg-coral">
 				
-	</div>
+		<div class="gallery">
+			{% for i in spoorthi2018 %}
+				<img src="{% static 'images/spoorthi2018/' %}{{i}}" alt="{{ i }}">
+			{% endfor %}
+			<div class="overlay">Spoorthi 2018</div>
+		</div>
 
+		<div class="gallery">
+			{% for i in spoorthi2019 %}
+				<img src="{% static 'images/spoorthi2019/' %}{{i}}" alt="{{i}}">
+			{% endfor %}
+			<div class="overlay">Spoorthi 2019</div>
+		</div>
+
+		<div class="gallery">
+			{% for i in spoorthi2020 %}
+				<img src="{% static 'images/spoorthi2020/' %}{{i}}" alt="{{i}}">
+			{% endfor %}
+			<div class="overlay">Spoorthi 2020</div>
+		</div>
+
+		<div class="gallery">
+			{% for i in spoorthi2021 %}
+				<img src="{% static 'images/spoorthi2021/' %}{{i}}" alt="{{i}}">
+			{% endfor %}
+			<div class="overlay">Spoorthi 2021</div>
+		</div>
+	</div>
+	
 {% endblock %}
