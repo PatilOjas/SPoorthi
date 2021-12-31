@@ -33,5 +33,10 @@ def gallery(request):
 	
 	return render(request, 'gallery.html', data)
 
-def eventPage(request):
-	return render(request, 'events.html')
+def eventPage(request, name=""):
+	if name=="":
+		return render(request, 'events.html')
+	else:
+		context = {}
+		#get the event details by event name and add to context
+		return render(request, 'event_details.html', context)
