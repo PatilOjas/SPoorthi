@@ -16,6 +16,7 @@
 	<link rel="stylesheet" href="{% static 'CSS/style.css' %}">
 	<title>Reg</title>
 	<link rel="shortcut icon" href="{% static 'images/favicon.png' %}" type="image/x-icon">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 </head>
 
 <body>
@@ -43,7 +44,7 @@
 					<a class="nav-link" href="{% url 'events' %}">Events</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="{% url 'registrationpage' %}">Register</a>
+					<a class="nav-link" href="{% url 'registrationpage' name='*' %}">Register</a>
 				</li>
 			</ul>
 		</div>

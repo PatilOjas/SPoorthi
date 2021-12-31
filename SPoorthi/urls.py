@@ -19,7 +19,8 @@ from app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls, name="admin"),
-	path('registration/', views.registrationPage, name="registrationpage"),
+	# path('registration/', views.registrationPage, name="registrationpage"),
+	path('registration/<str:name>', views.registrationPage, name="registrationpage"),
 	path('', views.homePage, name='homepage'),
 	# path('livenews/', views.liveNews, name="liveNews"),
 	path('gallery/', views.gallery, name="gallery"),
