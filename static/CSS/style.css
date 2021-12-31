@@ -408,6 +408,7 @@ ul {
           transform: translate(-50%, -50%);
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
+  overflow: hidden;
 }
 
 .gallery::after {
@@ -432,7 +433,8 @@ ul {
 
 .gallery:hover .overlay {
   opacity: 0;
-  top: 15%;
+  top: -80%;
+  overflow: hidden;
 }
 
 .event-container {
@@ -525,13 +527,21 @@ ul {
           transform: translate(1.5rem, 1rem);
 }
 
-.img-side, .content-side {
-  border: 2px solid purple;
+.event-details {
+  padding-left: 1rem;
+  -webkit-box-shadow: 0 0 10px 2px rgba(38, 41, 51, 0.4);
+          box-shadow: 0 0 10px 2px rgba(38, 41, 51, 0.4);
 }
 
 .detailed-poster-img {
   width: 100%;
   max-height: 35rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .detailed-poster-img img {
@@ -541,20 +551,32 @@ ul {
      object-fit: contain;
 }
 
+.col-md-5, .col-md-7 {
+  padding: 0;
+}
+
+.content-side {
+  border-left: 1px solid rgba(38, 41, 51, 0.4);
+}
+
 .content-side .details {
-  border: 1px solid red;
+  padding: 0 2rem;
 }
 
 .content-side .details .eventName {
-  border: 1px solid lime;
+  border-bottom: 0.5rem solid rgba(38, 41, 51, 0.9);
 }
 
 .content-side .details .eventDesc {
-  border: 1px solid lime;
+  margin: 5rem 0;
+}
+
+.content-side .details .eventDesc p {
+  font-size: 1.2rem;
 }
 
 .content-side .details .event-coordinator {
-  border: 1px solid lime;
+  color: rgba(38, 41, 51, 0.9);
 }
 
 .register-section {
@@ -682,7 +704,7 @@ footer {
   min-height: 5rem;
   text-align: center;
   padding: 1rem;
-  background-color: #646464;
+  background-color: rgba(38, 41, 51, 0.9);
   /*secondary*/
   color: #999999;
   display: -webkit-box;
@@ -777,6 +799,12 @@ footer p {
 @media (max-width: 400px) {
   html {
     font-size: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-side {
+    border: none;
   }
 }
 /*# sourceMappingURL=style.css.map */

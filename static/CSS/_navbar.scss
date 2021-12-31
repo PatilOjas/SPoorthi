@@ -2,7 +2,7 @@
 /* ####################################### navbar ###################################### */
 .navbar{
     padding: 0.8em 6em;
-    background-color: rgba(38, 41, 51, 0.9); /*secondary*/
+    background-color: $secondary; /*secondary*/
     position: absolute;
     top: 0;
     width: 100%;

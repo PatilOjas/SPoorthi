@@ -19,3 +19,9 @@
         font-size: 60%;
     }
 }
+
+@media (max-width:768px){
+    .content-side{
+        border: none;
+    }
+}

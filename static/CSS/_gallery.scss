@@ -24,6 +24,7 @@
         left: 50%;
         transform: translate(-50%,-50%);
         transition: all 0.1s ease-in-out;
+        overflow: hidden;
     }
 }
 
@@ -47,5 +48,6 @@
 }
 .gallery:hover .overlay{
     opacity: 0;
-    top: 15%;
+    top: -80%;
+    overflow: hidden;
 }
