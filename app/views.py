@@ -6,7 +6,7 @@ from django.conf import settings
 import os
 
 
-def registrationPage(request):
+def registrationPage(request, name='*'):
 	if request.method == 'POST':
 		form = RegistrationForm(request.POST)
 		if form.is_valid():
@@ -15,8 +15,11 @@ def registrationPage(request):
 			message = f"Greetings From Spoorthi SPIT,\nHello {request.POST['fullName']}, you have succesfully registered for {request.POST['event']}.\nPlease Show this email at the time of Event.\nSee you at SPoorthi from 13-31st January'20.\nSports Team At SPIT"
 			# from_email = settings.EMAIL_HOST_USER
 			# mail = send_mail(subject, message, from_email, [request.POST['email']], fail_silently=False)
-		
-	return render(request, 'index.html')
+			return redirect('events')
+	if name == '*':
+		return render(request, 'index.html')
+	else:
+		return render(request, 'index.html')
 
 def homePage(request):
 	return render(request, 'home.html')
