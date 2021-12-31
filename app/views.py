@@ -3,7 +3,6 @@ from django.shortcuts import render
 from .forms import RegistrationForm
 from django.core.mail import send_mail
 from django.conf import settings
-from cricScore import LiveScoreCricket
 import os
 
 
@@ -27,8 +26,8 @@ def homePage(request):
 
 def gallery(request):
 	data = {
-		'spoorthi2018': os.listdir(path='./static/images/spoorthi2018'),
-		'spoorthi2019': os.listdir(path='./static/images/spoorthi2019'),
+		'glimpse': os.listdir(path='./static/images/glimpse'),
+		'agility2021': os.listdir(path='./static/images/agility2021'),
 	}
 	
 	return render(request, 'gallery.html', data)
