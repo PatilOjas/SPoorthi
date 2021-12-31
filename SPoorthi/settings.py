@@ -14,6 +14,13 @@ from pathlib import Path
 from decouple import config
 import os
 
+EMAIL_USE_TLS=True
+# EMAIL_USE_SSL=True
+EMAIL_HOST='smtp.gmail.com'
+EMAIL_HOST_USER=''
+EMAIL_HOST_PASSWORD=''
+EMAIL_PORT=587
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -27,7 +34,9 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG')
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+	'0b4c-1-186-124-118.ngrok.io',
+]
 
 
 # Application definition
