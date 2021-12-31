@@ -435,6 +435,128 @@ ul {
   top: 15%;
 }
 
+.event-container {
+  background-color: #f8fff0;
+}
+
+.all-posters {
+  background-color: #f8fff0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(15rem, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 5rem;
+  -webkit-column-gap: 6rem;
+          column-gap: 6rem;
+  justify-items: center;
+}
+
+.all-posters a {
+  text-decoration: none;
+}
+
+.poster {
+  width: 15rem;
+  height: 22rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.poster-img {
+  position: relative;
+  width: 100%;
+  z-index: 3;
+}
+
+.poster-img img {
+  width: 100%;
+}
+
+.poster-img:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: aqua;
+  -webkit-transform: translate(0.5rem, 0.5rem);
+          transform: translate(0.5rem, 0.5rem);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.poster-img:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: url("../images/hover_pattern.png") repeat;
+  background-size: 10px;
+  -webkit-transform: translate(-0.7rem, -0.7rem);
+          transform: translate(-0.7rem, -0.7rem);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.poster:hover {
+  cursor: pointer;
+}
+
+.poster:hover .poster-img:before {
+  -webkit-transform: translate(-1.5rem, -1.2rem);
+          transform: translate(-1.5rem, -1.2rem);
+}
+
+.poster:hover .poster-img:after {
+  background-color: aqua;
+  -webkit-transform: translate(1.5rem, 1rem);
+          transform: translate(1.5rem, 1rem);
+}
+
+.img-side, .content-side {
+  border: 2px solid purple;
+}
+
+.detailed-poster-img {
+  width: 100%;
+  max-height: 35rem;
+}
+
+.detailed-poster-img img {
+  width: 100%;
+  max-height: 35rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.content-side .details {
+  border: 1px solid red;
+}
+
+.content-side .details .eventName {
+  border: 1px solid lime;
+}
+
+.content-side .details .eventDesc {
+  border: 1px solid lime;
+}
+
+.content-side .details .event-coordinator {
+  border: 1px solid lime;
+}
+
 .register-section {
   margin: 0;
   padding: 0;
