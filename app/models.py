@@ -1,5 +1,9 @@
 from django.db import models
+from app.models import *
+
+
 class RegistrationModel(models.Model):
+	playerId = models.AutoField(primary_key=True)
 	fullName = models.CharField(max_length=100, null=False, blank=False)
 	email = models.EmailField(null=False, blank=False)
 	collegeName = models.CharField(max_length=100, null=False, blank=False)

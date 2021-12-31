@@ -1,21 +1,30 @@
 from django.shortcuts import redirect, render
 from django.shortcuts import render
-from .forms import RegistrationForm
 from django.core.mail import send_mail
 from django.conf import settings
+
+from .forms import RegistrationForm
+
 import os
+
+from sheet import SheetEditor
 
 
 def registrationPage(request, name='*'):
+	s1 = SheetEditor(sheetName="Site Feature Testing", sheet="Sheet1")
 	if request.method == 'POST':
 		form = RegistrationForm(request.POST)
 		if form.is_valid():
-			form.save()
+			q = form.save()
+			s1.wks.update(f"A{len(s1.wks.get_all_records()) + 2}:G{len(s1.wks.get_all_records()) + 2}", 
+			[[q.playerId, q.fullName, q.email, q.collegeName, q.mobNo, q.event, str(q.datetimestamp)]])
+			
 			subject = "Successfully registered for SPoorthi!"
 			message = f"Greetings From Spoorthi SPIT,\nHello {request.POST['fullName']}, you have succesfully registered for {request.POST['event']}.\nPlease Show this email at the time of Event.\nSee you at SPoorthi from 13-31st January'20.\nSports Team At SPIT"
 			# from_email = settings.EMAIL_HOST_USER
 			# mail = send_mail(subject, message, from_email, [request.POST['email']], fail_silently=False)
 			return redirect('events')
+	
 	if name == '*':
 		return render(request, 'index.html')
 	else:
