@@ -11,3 +11,16 @@ class RegistrationModel(models.Model):
 
 	def __str__(self):
 		return self.fullName
+
+class EventModel(models.Model):
+	eventId = models.AutoField(primary_key=True)
+	eventName = models.CharField(max_length=100)
+	eventDesc = models.CharField(max_length=1000)
+	eventCoOrdinator1 = models.CharField(max_length=50)
+	eventCoOrdinator1Mob = models.CharField(max_length=15)
+	eventCoOrdinator2 = models.CharField(max_length=50)
+	eventCoOrdinator2Mob = models.CharField(max_length=15)
+	poster = models.ImageField(upload_to="media")
+
+	def __str__(self):
+		return self.eventName

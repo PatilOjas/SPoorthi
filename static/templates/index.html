@@ -34,18 +34,19 @@
 							<div class="input-group-prepend">
 								<span class="input-group-text"> <i class="fa fa-phone"></i> </span>
 							</div>
-							<input name="mobNo" class="form-control" placeholder="Phone number" type="text" required>
+							<input name="mobNo" class="form-control" pattern="[789][0-9]{9}" placeholder="Phone number" type="text" required>
 						</div> <!-- form-group// -->
 						<div class="form-group input-group">
 							<div class="input-group-prepend">
 								<span class="input-group-text-select"> <i class="fa fa-gamepad fa-sm"></i> </span>
 							</div>
-							<select class="form-control input-color" name="event" required>
+							<select class="form-control input-color" id="event" name="event" required>
 								<option value="" selected="Select job type">Select Sport</option>
 								<option value="Cricket">Cricket</option>
 								<option value="Football">Football</option>
 								<option value="Volleyball">Volleyball</option>
 								<option value="Badminton">Badminton</option>
+								<option value="Athletics">Athletics</option>
 							</select>
 						</div> <!-- form-group end.// -->
 						<div class="form-group input-group">
@@ -69,5 +70,23 @@
 		<!--container end.//-->
 	</div>
 
+	<script>
+		$(document).ready(function() {
+		// Construct URL object using current browser URL
+		var url = new URL(document.location);
+		console.log(url)
+
+		// Get query parameters object
+		var params = url.pathname;
+		console.log(typeof params)
+		
+		// Get value of paper
+		var pramsList = params.split("/")
+		console.log(pramsList.slice(-1)[0])
+		// Set it as the dropdown value
+		
+		$("#event").val(pramsList.slice(-1)[0]);
+		});
+	</script>
 
 	{% endblock %}
