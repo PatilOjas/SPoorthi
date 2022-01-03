@@ -1,5 +1,9 @@
 from django.db import models
+from app.models import *
+
+
 class RegistrationModel(models.Model):
+	playerId = models.AutoField(primary_key=True)
 	fullName = models.CharField(max_length=100, null=False, blank=False)
 	email = models.EmailField(null=False, blank=False)
 	collegeName = models.CharField(max_length=100, null=False, blank=False)
@@ -18,8 +22,8 @@ class EventModel(models.Model):
 	eventDesc = models.CharField(max_length=1000)
 	eventCoOrdinator1 = models.CharField(max_length=50)
 	eventCoOrdinator1Mob = models.CharField(max_length=15)
-	eventCoOrdinator2 = models.CharField(max_length=50)
-	eventCoOrdinator2Mob = models.CharField(max_length=15)
+	eventCoOrdinator2 = models.CharField(max_length=50, blank=True)
+	eventCoOrdinator2Mob = models.CharField(max_length=15, blank=True)
 	poster = models.ImageField(upload_to="media")
 
 	def __str__(self):
