@@ -2,7 +2,7 @@
 .gallery{
     display: grid;
     gap: 2.5rem;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
     position: relative;
     img{
         width: 100%;
@@ -17,7 +17,7 @@
     // border: 2px solid #7d7d7d;
     .overlay{
         position: absolute;
-        font-size: 10rem;
+        font-size: 10em;
         color: white;
         z-index: 2;
         top: 50%;

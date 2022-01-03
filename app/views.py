@@ -67,16 +67,23 @@ def registrationPage(request, name='*'):
 			# mail = send_mail(subject, message, from_email, [request.POST['email']], fail_silently=False)
 			return redirect('events')
 	
-	if name == '*':
-		return render(request, 'index.html')
-	else:
-		return render(request, 'index.html')
+	# if name == '*':
+	return render(request, 'index.html')
+	# else:
+	# 	return render(request, 'index.html')
+
+
+
 
 def homePage(request):
 	return render(request, 'home.html')
 
 # def liveNews(request):
 # 	return render(request, 'livescore.html', {'data': data})
+
+
+
+
 
 def gallery(request):
 	data = {
@@ -86,6 +93,9 @@ def gallery(request):
 	
 	return render(request, 'gallery.html', data)
 
+
+
+
 def eventPage(request, name=""):
 	if name=="":
 		context = {}
@@ -94,6 +104,8 @@ def eventPage(request, name=""):
 		return render(request, 'events.html', context)
 	else:
 		context = {}
+
 		#get the event details by event name and add to context
-		
+		getEvent = EventModel.objects.get(eventName=name)
+		context['item'] = getEvent
 		return render(request, 'event_details.html', context)
