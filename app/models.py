@@ -22,8 +22,8 @@ class EventModel(models.Model):
 	eventDesc = models.CharField(max_length=1000)
 	eventCoOrdinator1 = models.CharField(max_length=50)
 	eventCoOrdinator1Mob = models.CharField(max_length=15)
-	eventCoOrdinator2 = models.CharField(max_length=50)
-	eventCoOrdinator2Mob = models.CharField(max_length=15)
+	eventCoOrdinator2 = models.CharField(max_length=50, blank=True)
+	eventCoOrdinator2Mob = models.CharField(max_length=15, blank=True)
 	poster = models.ImageField(upload_to="media")
 
 	def __str__(self):

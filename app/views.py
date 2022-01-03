@@ -11,16 +11,56 @@ from sheet import SheetEditor
 
 
 def registrationPage(request, name='*'):
-	s1 = SheetEditor(sheetName="Site Feature Testing", sheet="Sheet1")
+	offset = 2
+	sheet_name = "SPoorthi"
 	if request.method == 'POST':
 		form = RegistrationForm(request.POST)
 		if form.is_valid():
-			q = form.save()
-			s1.wks.update(f"A{len(s1.wks.get_all_records()) + 2}:G{len(s1.wks.get_all_records()) + 2}", 
-			[[q.playerId, q.fullName, q.email, q.collegeName, q.mobNo, q.event, str(q.datetimestamp)]])
+			saved_data = form.save()
 			
+			if saved_data.event == "Turf Cricket":
+				sh = SheetEditor(sheetName=sheet_name, sheet=saved_data.event)
+				sh.wks.update(f"A{len(sh.wks.get_all_records()) + offset}:G{len(sh.wks.get_all_records()) + offset}", [[saved_data.playerId, saved_data.fullName, saved_data.email, saved_data.collegeName, saved_data.mobNo, saved_data.event, str(saved_data.datetimestamp)]])
+			
+			elif saved_data.event == "Turf Football":
+				sh = SheetEditor(sheetName=sheet_name, sheet=saved_data.event)
+				sh.wks.update(f"A{len(sh.wks.get_all_records()) + offset}:G{len(sh.wks.get_all_records()) + offset}", [[saved_data.playerId, saved_data.fullName, saved_data.email, saved_data.collegeName, saved_data.mobNo, saved_data.event, str(saved_data.datetimestamp)]])
+			
+			elif saved_data.event == "Volleyball":
+				sh = SheetEditor(sheetName=sheet_name, sheet=saved_data.event)
+				sh.wks.update(f"A{len(sh.wks.get_all_records()) + offset}:G{len(sh.wks.get_all_records()) + offset}", [[saved_data.playerId, saved_data.fullName, saved_data.email, saved_data.collegeName, saved_data.mobNo, saved_data.event, str(saved_data.datetimestamp)]])
+			
+			elif saved_data.event == "Badminton (Singles)":
+				sh = SheetEditor(sheetName=sheet_name, sheet=saved_data.event)
+				sh.wks.update(f"A{len(sh.wks.get_all_records()) + offset}:G{len(sh.wks.get_all_records()) + offset}", [[saved_data.playerId, saved_data.fullName, saved_data.email, saved_data.collegeName, saved_data.mobNo, saved_data.event, str(saved_data.datetimestamp)]])
+			
+			elif saved_data.event == "Badminton (Doubles)":
+				sh = SheetEditor(sheetName=sheet_name, sheet=saved_data.event)
+				sh.wks.update(f"A{len(sh.wks.get_all_records()) + offset}:G{len(sh.wks.get_all_records()) + offset}", [[saved_data.playerId, saved_data.fullName, saved_data.email, saved_data.collegeName, saved_data.mobNo, saved_data.event, str(saved_data.datetimestamp)]])
+			
+			elif saved_data.event == "Carrom (Singles)":
+				sh = SheetEditor(sheetName=sheet_name, sheet=saved_data.event)
+				sh.wks.update(f"A{len(sh.wks.get_all_records()) + offset}:G{len(sh.wks.get_all_records()) + offset}", [[saved_data.playerId, saved_data.fullName, saved_data.email, saved_data.collegeName, saved_data.mobNo, saved_data.event, str(saved_data.datetimestamp)]])
+			
+			elif saved_data.event == "Carrom (Doubles)":
+				sh = SheetEditor(sheetName=sheet_name, sheet=saved_data.event)
+				sh.wks.update(f"A{len(sh.wks.get_all_records()) + offset}:G{len(sh.wks.get_all_records()) + offset}", [[saved_data.playerId, saved_data.fullName, saved_data.email, saved_data.collegeName, saved_data.mobNo, saved_data.event, str(saved_data.datetimestamp)]])
+			
+			elif saved_data.event == "Athletics":
+				sh = SheetEditor(sheetName=sheet_name, sheet=saved_data.event)
+				sh.wks.update(f"A{len(sh.wks.get_all_records()) + offset}:G{len(sh.wks.get_all_records()) + offset}", [[saved_data.playerId, saved_data.fullName, saved_data.email, saved_data.collegeName, saved_data.mobNo, saved_data.event, str(saved_data.datetimestamp)]])
+			
+			elif saved_data.event == "Chess":
+				sh = SheetEditor(sheetName=sheet_name, sheet=saved_data.event)
+				sh.wks.update(f"A{len(sh.wks.get_all_records()) + offset}:G{len(sh.wks.get_all_records()) + offset}", [[saved_data.playerId, saved_data.fullName, saved_data.email, saved_data.collegeName, saved_data.mobNo, saved_data.event, str(saved_data.datetimestamp)]])
+			
+			elif saved_data.event == "Dodgeball":
+				sh = SheetEditor(sheetName=sheet_name, sheet=saved_data.event)
+				sh.wks.update(f"A{len(sh.wks.get_all_records()) + offset}:G{len(sh.wks.get_all_records()) + offset}", [[saved_data.playerId, saved_data.fullName, saved_data.email, saved_data.collegeName, saved_data.mobNo, saved_data.event, str(saved_data.datetimestamp)]])
+			
+
 			subject = "Successfully registered for SPoorthi!"
-			message = f"Greetings From Spoorthi SPIT,\nHello {request.POST['fullName']}, you have succesfully registered for {request.POST['event']}.\nPlease Show this email at the time of Event.\nSee you at SPoorthi from 13-31st January'20.\nSports Team At SPIT"
+			message = f"Greetings From Spoorthi SPIT,\nHello {saved_data.fullName}, you have succesfully registered for {saved_data.event}.\nPlease Show this email at the time of Event.\nSee you at SPoorthi from 13-31st January'20.\nSports Team At SPIT"
 			# from_email = settings.EMAIL_HOST_USER
 			# mail = send_mail(subject, message, from_email, [request.POST['email']], fail_silently=False)
 			return redirect('events')
