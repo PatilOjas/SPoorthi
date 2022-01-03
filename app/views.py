@@ -1,6 +1,7 @@
 from django.shortcuts import redirect, render
 from django.shortcuts import render
 from .forms import RegistrationForm
+from .models import EventModel
 from django.core.mail import send_mail
 from django.conf import settings
 import os
@@ -37,8 +38,12 @@ def gallery(request):
 
 def eventPage(request, name=""):
 	if name=="":
-		return render(request, 'events.html')
+		context = {}
+		allEvents = EventModel.objects.all()
+		context['allEvents'] = allEvents
+		return render(request, 'events.html', context)
 	else:
 		context = {}
 		#get the event details by event name and add to context
+		
 		return render(request, 'event_details.html', context)
