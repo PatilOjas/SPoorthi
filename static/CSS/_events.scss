@@ -75,13 +75,20 @@
 
 
 // ####################### event details
-.img-side, .content-side{
-    border: 2px solid purple;
+.event-details{
+    // padding-left: 1rem;
+    box-shadow: 0 0 10px 2px rgba(38, 41, 51, 0.4);
+    // background: url('../images/hover_pattern.png') repeat;
+    // background-size: 5px;
 }
+
 
 .detailed-poster-img{
     width: 100%;
     max-height: 35rem;
+    display: flex;
+    justify-content: center;
+    padding: 0 1rem;
     img{
         width: 100%;
         max-height: 35rem;
@@ -89,18 +96,30 @@
     }
 }
 
-.content-side{
-    .details{
-        border: 1px solid red;
+// .col-md-5,.col-md-7{
+//     padding: 0;
+// }
 
+.content-side{
+    border-left: 1px solid rgba(38, 41, 51, 0.4);
+    // background-color: aliceblue;
+    .details{
+        // border: 1px solid red;
+        padding: 0 2rem;
         .eventName{
-            border: 1px solid lime;
+            // border: 1px solid lime;
+            border-bottom: 0.5rem solid $secondary;
         }
         .eventDesc{
-            border: 1px solid lime;
+            // border: 1px solid lime;
+            margin: 5rem 0;
+            p{
+                font-size: 1.2rem;
+            }
         }
         .event-coordinator{
-            border: 1px solid lime;
+            // border: 1px solid lime;
+            color: $secondary;
         }
     }
 }

@@ -87,10 +87,10 @@
 		
 		// Get value of paper
 		var pramsList = params.split("/")
-		console.log(pramsList.slice(-1)[0])
+		console.log(pramsList.slice(-1)[0].replace("%20", " "))
 		// Set it as the dropdown value
 		
-		$("#event").val(pramsList.slice(-1)[0]);
+		$("#event").val(pramsList.slice(-1)[0].replace("%20", " "));
 		});
 	</script>
 

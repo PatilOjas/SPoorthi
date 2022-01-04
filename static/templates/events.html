@@ -3,77 +3,85 @@
 
 {% block content %}
 
-    <div class="my-container event-container">
-        <div class="all-posters">
+<div class="my-container event-container">
+    <div class="all-posters">
 
-            <a class="poster poster-1" href="{% url 'event_details' name='Athletic' %}">
+        {% for event in allEvents %}
+            <a class="poster poster-1" href="{% url 'event_details' name=event.eventName %}">
                 <div class="poster-img">
-                    <img src="{% static 'images/poster/Athletics.png'%}" alt="athletic poster">
+                    <img src="/{{event.poster}}" alt="{{event.eventName}} poster">
                 </div>
             </a>
-
-            <div class="poster poster-2">
-                <div class="poster-img">
-                    <img src="{% static 'images/poster/Badminton.png'%}" alt="badminton poster">
-                </div>
+        {% endfor %}
+<!-- 
+        <a class="poster poster-1" href="{% url 'event_details' name='Athletic' %}">
+            <div class="poster-img">
+                <img src="{% static 'images/poster/Athletics.png'%}" alt="athletic poster">
             </div>
+        </a>
 
-            <div class="poster poster-3">
-                <div class="poster-img">
-                    <img src="{% static 'images/poster/Box_cricket.png'%}" alt="box cricket poster">
-                </div>
+        <div class="poster poster-2">
+            <div class="poster-img">
+                <img src="{% static 'images/poster/Badminton.png'%}" alt="badminton poster">
             </div>
-
-            <div class="poster poster-4">
-                <div class="poster-img">
-                    <img src="{% static 'images/poster/Carrom.png'%}" alt="carrom poster">
-                </div>
-            </div>
-
-            <div class="poster poster-5">
-                <div class="poster-img">
-                    <img src="{% static 'images/poster/Chess.png'%}" alt="chess poster">
-                </div>
-            </div>
-
-            <div class="poster poster-6">
-                <div class="poster-img">
-                    <img src="{% static 'images/poster/Cricket.png'%}" alt="cricket poster">
-                </div>
-            </div>
-
-            <div class="poster poster-7">
-                <div class="poster-img">
-                    <img src="{% static 'images/poster/Football.png'%}" alt="football poster">
-                </div>
-            </div>
-
-            <div class="poster poster-8">
-                <div class="poster-img">
-                    <img src="{% static 'images/poster/Kabaddi.png'%}" alt="kabaddi poster">
-                </div>
-            </div>
-
-            <div class="poster poster-9">
-                <div class="poster-img">
-                    <img src="{% static 'images/poster/Kho-Kho_1.png'%}" alt="kho-kho poster">
-                </div>
-            </div>
-
-            <div class="poster poster-10">
-                <div class="poster-img">
-                    <img src="{% static 'images/poster/Marathon.png'%}" alt="marathon poster">
-                </div>
-            </div>
-
-            <div class="poster poster-11">
-                <div class="poster-img">
-                    <img src="{% static 'images/poster/RinkFootball.png'%}" alt="RinkFootball poster">
-                </div>
-            </div>
-            
-
         </div>
+
+        <div class="poster poster-3">
+            <div class="poster-img">
+                <img src="{% static 'images/poster/Box_cricket.png'%}" alt="box cricket poster">
+            </div>
+        </div>
+
+        <div class="poster poster-4">
+            <div class="poster-img">
+                <img src="{% static 'images/poster/Carrom.png'%}" alt="carrom poster">
+            </div>
+        </div>
+
+        <div class="poster poster-5">
+            <div class="poster-img">
+                <img src="{% static 'images/poster/Chess.png'%}" alt="chess poster">
+            </div>
+        </div>
+
+        <div class="poster poster-6">
+            <div class="poster-img">
+                <img src="{% static 'images/poster/Cricket.png'%}" alt="cricket poster">
+            </div>
+        </div>
+
+        <div class="poster poster-7">
+            <div class="poster-img">
+                <img src="{% static 'images/poster/Football.png'%}" alt="football poster">
+            </div>
+        </div>
+
+        <div class="poster poster-8">
+            <div class="poster-img">
+                <img src="{% static 'images/poster/Kabaddi.png'%}" alt="kabaddi poster">
+            </div>
+        </div>
+
+        <div class="poster poster-9">
+            <div class="poster-img">
+                <img src="{% static 'images/poster/Kho-Kho_1.png'%}" alt="kho-kho poster">
+            </div>
+        </div>
+
+        <div class="poster poster-10">
+            <div class="poster-img">
+                <img src="{% static 'images/poster/Marathon.png'%}" alt="marathon poster">
+            </div>
+        </div>
+
+        <div class="poster poster-11">
+            <div class="poster-img">
+                <img src="{% static 'images/poster/RinkFootball.png'%}" alt="RinkFootball poster">
+            </div>
+        </div> -->
+
+
     </div>
+</div>
 
 {% endblock %}

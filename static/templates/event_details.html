@@ -4,26 +4,26 @@
 {% block content %}
 <div class="my-container event-details-container">
     <div class="event-details">
-        <div class="row">
+        <div class="row px-2">
             <div class="col-md-5 col-sm-12 img-side py-5">
-                <div class="detailed-poster-img">
-                    <img src="{% static 'images/poster/Athletics.png' %}" alt="athletic">
+                <div class="detailed-poster-img px-2">
+                    <!-- <img src="{% static 'images/poster/Athletics.png' %}" alt="athletic"> -->
+                    <img src="/{{item.poster}}" alt="{{item.eventName}}">
                 </div>
             </div>
             <div class="col-md-7 col-sm-12 content-side py-5">
-                <div class="details p-3">
-                    <div class="eventName my-3">
-                        <h3>Event Name</h3>
-						<a href="{% url 'registrationpage' name='Athletics' %}">Register Here</a>
+                <div class="details pb-3">
+                    <div class="eventName mb-3 row">
+                        <h2 class="col-md-8 col-sm-6">{{item.eventName}}</h2>
+						<a class="col-md-4 col-sm-6 btn btn-primary mb-4" href="{% url 'registrationpage' name=item.eventName %}">Register Here</a>
                     </div>
-                    <div class="eventDesc my-3">
-                        <p>Description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla quidem ipsa
-                            cumque possimus vitae recusandae maxime soluta sit temporibus exercitationem! Obcaecati
-                            voluptates explicabo neque ducimus optio eum vero nesciunt itaque!</p>
+                    <div class="eventDesc">
+                        <p>{{item.eventDesc}}</p>
                     </div>
-                    <div class="event-coordinator my-3">
-                        <h5>Name1 - Contact1</h5>
-                        <h5>Name2 - Contact2</h5>
+                    <div class="event-coordinator my-5">
+                        <h3 class="text-muted">Organizing Heads</h3><hr>
+                        <h3>{{item.eventCoOrdinator1}} - {{item.eventCoOrdinator1Mob}}</h3>
+                        <h3>{{item.eventCoOrdinator2}} - {{item.eventCoOrdinator2Mob}}</h3>
                     </div>
                 </div>
             </div>
