@@ -30,19 +30,19 @@ def registrationPage(request, name='*'):
 				sh = SheetEditor(sheetName=sheet_name, sheet=saved_data.event)
 				sh.wks.update(f"A{len(sh.wks.get_all_records()) + offset}:G{len(sh.wks.get_all_records()) + offset}", [[saved_data.playerId, saved_data.fullName, saved_data.email, saved_data.collegeName, saved_data.mobNo, saved_data.event, str(saved_data.datetimestamp)]])
 			
-			elif saved_data.event == "Badminton (Singles)":
+			elif saved_data.event == "Badminton (S)":
 				sh = SheetEditor(sheetName=sheet_name, sheet=saved_data.event)
 				sh.wks.update(f"A{len(sh.wks.get_all_records()) + offset}:G{len(sh.wks.get_all_records()) + offset}", [[saved_data.playerId, saved_data.fullName, saved_data.email, saved_data.collegeName, saved_data.mobNo, saved_data.event, str(saved_data.datetimestamp)]])
 			
-			elif saved_data.event == "Badminton (Doubles)":
+			elif saved_data.event == "Badminton (D)":
 				sh = SheetEditor(sheetName=sheet_name, sheet=saved_data.event)
 				sh.wks.update(f"A{len(sh.wks.get_all_records()) + offset}:G{len(sh.wks.get_all_records()) + offset}", [[saved_data.playerId, saved_data.fullName, saved_data.email, saved_data.collegeName, saved_data.mobNo, saved_data.event, str(saved_data.datetimestamp)]])
 			
-			elif saved_data.event == "Carrom (Singles)":
+			elif saved_data.event == "Carrom (S)":
 				sh = SheetEditor(sheetName=sheet_name, sheet=saved_data.event)
 				sh.wks.update(f"A{len(sh.wks.get_all_records()) + offset}:G{len(sh.wks.get_all_records()) + offset}", [[saved_data.playerId, saved_data.fullName, saved_data.email, saved_data.collegeName, saved_data.mobNo, saved_data.event, str(saved_data.datetimestamp)]])
 			
-			elif saved_data.event == "Carrom (Doubles)":
+			elif saved_data.event == "Carrom (D)":
 				sh = SheetEditor(sheetName=sheet_name, sheet=saved_data.event)
 				sh.wks.update(f"A{len(sh.wks.get_all_records()) + offset}:G{len(sh.wks.get_all_records()) + offset}", [[saved_data.playerId, saved_data.fullName, saved_data.email, saved_data.collegeName, saved_data.mobNo, saved_data.event, str(saved_data.datetimestamp)]])
 			
