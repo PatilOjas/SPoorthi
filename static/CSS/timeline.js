@@ -2,7 +2,7 @@ var controller = new ScrollMagic.Controller();
 TweenMax.set('#timeline',{visibility:0});
 
 var tweenOne =
-new TweenMax.fromTo('#timeline',5,{drawSVG:"0%"}, {drawSVG:"6.25%"});  
+new TweenMax.fromTo('#timeline', 5, {drawSVG:"0%"}, {drawSVG:"6.25%"});  
  
 var scene1 = new ScrollMagic.ScrollScene({
   triggerElement: '#timeline',
@@ -11,7 +11,7 @@ var scene1 = new ScrollMagic.ScrollScene({
 }).setTween(tweenOne).addTo(controller); 
     
 var tweenTwo =
-new TweenMax.fromTo('#timeline',1,{drawSVG:"6.25%"}, {drawSVG:"12.5%"});
+new TweenMax.fromTo('#timeline', 1, {drawSVG:"6.25%"}, {drawSVG:"12.5%"});
 
 var scene2 = new ScrollMagic.ScrollScene({
   triggerElement: '.dayTwo',

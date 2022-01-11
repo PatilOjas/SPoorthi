@@ -55,7 +55,7 @@
 
 <div class="bg-coral p-5 media-container">
     <div class="trailer-video-container">
-        <video src="{% static 'images/trailer.mp4' %}" controls width="1000"></video>
+        <video src="{% static 'images/trailer.mp4' %}" controls width="1000" id="trailer-vdo"></video>
     </div>
 
     <div class="theme-container">
@@ -65,7 +65,7 @@
         </div>
     
         <div class="theme-video-container">
-            <video src="{% static 'images/theme.mp4' %}" controls width="1000"></video>
+            <video src="{% static 'images/theme.mp4' %}" controls width="1000" id="theme-vdo"></video>
         </div>
     </div>
 
@@ -153,5 +153,25 @@
 		</li>
 	</ul>
 </div>
+<script>
+	// To auto-play trailer video
+	$('#trailer-vdo').mouseover(function(){
+		$(this).get(0).play();
+	}).mouseout(function(){
+		$(this).get(0).pause();
+	})
+
+	// To auto-play theme video
+	$('#theme-vdo').mouseover(function(){
+		$(this).get(0).play();
+	}).mouseout(function(){
+		$(this).get(0).pause();
+	})
+
+	// To prevent carousel from pausing when hovered
+	// $('.carousel').carousel({
+    // pause: "false"
+	// });
+</script>
 <script src="{% static 'CSS/timeline.js' %}"></script>
 {% endblock %}
