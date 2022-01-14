@@ -4,15 +4,16 @@ from app.models import *
 
 class RegistrationModel(models.Model):
 	playerId = models.AutoField(primary_key=True)
-	fullName = models.CharField(max_length=100, null=False, blank=False)
 	email = models.EmailField(null=False, blank=False)
-	collegeName = models.CharField(max_length=100, null=False, blank=False)
+	fullName = models.CharField(max_length=100, null=False, blank=False)
 	mobNo = models.CharField(max_length=15, null=False, blank=False)
+	secondPlayerName = models.CharField(max_length=100, blank=True)
+	secondPlayerMobNo = models.CharField(max_length=15, blank=True)
+	collegeName = models.CharField(max_length=100, null=False, blank=False)
 	event = models.CharField(max_length=50, null=False, blank=False)
 	datetimestamp = models.DateTimeField(auto_now=True)
 
 	
-
 	def __str__(self):
 		return self.fullName
 

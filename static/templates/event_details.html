@@ -14,8 +14,15 @@
             <div class="col-md-7 col-sm-12 content-side py-5">
                 <div class="details pb-3">
                     <div class="eventName mb-3 row">
-                        <h2 class="col-md-8 col-sm-6">{{item.eventName}}</h2>
-						<a class="col-md-4 col-sm-6 btn btn-primary mb-4" href="{% url 'registrationpage' name=item.eventName %}">Register Here</a>
+                        <h2 class="col-md-6 col-sm-6">{{item.eventName}}</h2>
+                        <!-- {% with eve=item.eventName %}{% endwith %}
+                        {% with evetwo=item.eventName %}{% endwith %} -->
+                            {% if item.eventName == "Carrom" or item.eventName == "Badminton" %}
+						        <a class="col-md-2 col-sm-6 btn btn-primary mb-4" href="{% url 'registrationpage' name=item.eventName %}%20(S)">Register for (Singles)</a>
+						        <a class="col-md-2 mx-2 col-sm-6 btn btn-primary mb-4" href="{% url 'registrationpage' name=item.eventName %}%20(D)">Register for (Doubles)</a>
+                            {% else %}
+                            <a class="col-md-6 col-sm-6 btn btn-primary mb-4" href="{% url 'registrationpage' name=item.eventName %}">Register Here</a>
+                            {% endif %}
                     </div>
                     <div class="eventDesc">
                         <p>{{item.eventDesc}}</p>

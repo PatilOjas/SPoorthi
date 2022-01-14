@@ -6,42 +6,42 @@
 {% block content %}
 
 <section class="carousel-area">
-    <!-- #### Bootstrap Carousel -->
-    <div id="carousel" class="carousel slide" data-bs-ride="carousel" style="width: 100%; height: 90vh;">
-        <!-- <div class="carousel-indicators">
+	<!-- #### Bootstrap Carousel -->
+	<div id="carousel" class="carousel slide" data-bs-ride="carousel" style="width: 100%; height: 90vh;">
+		<!-- <div class="carousel-indicators">
               <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
               <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
               <button type="button" data-bs-target="#carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
             </div> -->
-        <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="4000">
-                <img src="{% static 'images/spoorthi3.jpg' %}" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h1>SPoorthi</h1>
-                </div>
-            </div>
-            <div class="carousel-item" data-bs-interval="4000">
-                <img src="{% static 'images/spoorthi4.jpg' %}" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h1>Agility</h1>
-                </div>
-            </div>
-            <div class="carousel-item" data-bs-interval="4000">
-                <img src="{% static 'images/marathon.jpg' %}" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h1>Marathon</h1>
-                </div>
-            </div>
+		<div class="carousel-inner">
+			<div class="carousel-item active" data-bs-interval="4000">
+				<img src="{% static 'images/spoorthi3.jpg' %}" class="d-block w-100" alt="...">
+				<div class="carousel-caption d-none d-md-block">
+					<h1>SPoorthi</h1>
+				</div>
+			</div>
+			<div class="carousel-item" data-bs-interval="4000">
+				<img src="{% static 'images/spoorthi4.jpg' %}" class="d-block w-100" alt="...">
+				<div class="carousel-caption d-none d-md-block">
+					<h1>Agility</h1>
+				</div>
+			</div>
+			<div class="carousel-item" data-bs-interval="4000">
+				<img src="{% static 'images/marathon.jpg' %}" class="d-block w-100" alt="...">
+				<div class="carousel-caption d-none d-md-block">
+					<h1>Marathon</h1>
+				</div>
+			</div>
 
-            <div class="carousel-item" data-bs-interval="3000">
-                <img src="{% static 'images/cyclothon.jpg' %}" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h1>SPIT Cyclothon</h1>
-                </div>
-            </div>
-        </div>
-        <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+			<div class="carousel-item" data-bs-interval="3000">
+				<img src="{% static 'images/cyclothon.jpg' %}" class="d-block w-100" alt="...">
+				<div class="carousel-caption d-none d-md-block">
+					<h1>SPIT Cyclothon</h1>
+				</div>
+			</div>
+		</div>
+		<!-- <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </button>
@@ -49,27 +49,27 @@
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button> -->
-    </div>
-    <!-- #### Bootstrap Carousel end -->
+	</div>
+	<!-- #### Bootstrap Carousel end -->
 </section>
 
 <div class="bg-coral p-5 media-container">
-    <div class="trailer-video-container">
-        <video src="{% static 'images/trailer.mp4' %}" controls width="1000"></video>
-    </div>
+	<div class="trailer-video-container">
+		<video src="{% static 'images/trailer.mp4' %}" controls width="1000"></video>
+	</div>
 
-    <div class="theme-container">
-        <div class="theme-announcement">
-            <h1>Theme</h1>
-            <h4>This year witness _____ with SPoorthi</h4>
-        </div>
-    
-        <div class="theme-video-container">
-            <video src="{% static 'images/theme.mp4' %}" controls width="1000"></video>
-        </div>
-    </div>
+	<div class="theme-container">
+		<div class="theme-announcement">
+			<h1>Theme</h1>
+			<h4>This year witness _____ with SPoorthi</h4>
+		</div>
 
-    <!-- <div class="photos-container">
+		<div class="theme-video-container">
+			<video src="{% static 'images/theme.mp4' %}" controls width="1000"></video>
+		</div>
+	</div>
+
+	<!-- <div class="photos-container">
         <div class="photo">
             <img src="{% static 'images/spit.jpg' %}" alt="spit photo">
         </div>
@@ -81,75 +81,76 @@
 
 
 <div class="timeline-wrapper">
-	<div class="svg-timeline">
+	<div class="svg-timeline" id="verticalLine">
 		<svg width="8px" height="2000.7px" viewBox="0 0 8 2000.7">
-		<line id="timeline" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-miterlimit="10" x1="4" y1="0" x2="4" y2="2000.7"/>
+			<line id="timeline" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-miterlimit="10" x1="4" y1="0"
+				x2="4" y2="2000.7" />
 		</svg>
 	</div>
 	<ul class="timeline clearfix">
 		<li class="timeline__item">
-		<h3 class="timeline__day">1st December: <span>SPIT Sports ground </span></h3>
-		<p class="timeline__day-sum">Your adventure begins!!! <br>SPoorthi opens up for regitration</p>
+			<h3 class="timeline__day">1st December: <span>SPIT Sports ground </span></h3>
+			<p class="timeline__day-sum">Your adventure begins!!! <br>SPoorthi opens up for regitration</p>
 		</li>
 		<li class="timeline__item right">
-		<h3 class="timeline__day dayTwo">13th January: <span>SPIT Sports ground </span></h3>
-		<p class="timeline__day-sum">keynote Speaker series, SPIT Marathon registration begins</p>
+			<h3 class="timeline__day dayTwo">13th January: <span>SPIT Sports ground </span></h3>
+			<p class="timeline__day-sum">keynote Speaker series, SPIT Marathon registration begins</p>
 		</li>
 		<li class="timeline__item">
-		<h3 class="timeline__day dayThree">14-15 January: <span>SPIT Sports ground </span></h3>
-		<p class="timeline__day-sum">Carrom</p>
+			<h3 class="timeline__day dayThree">14-15 January: <span>SPIT Sports ground </span></h3>
+			<p class="timeline__day-sum">Carrom</p>
 		</li>
 		<li class="timeline__item right">
-		<h3 class="timeline__day dayFour">17th January: <span>SPIT Sports ground </span></h3>
-		<p class="timeline__day-sum">Carrom, Throwball</p>
+			<h3 class="timeline__day dayFour">17th January: <span>SPIT Sports ground </span></h3>
+			<p class="timeline__day-sum">Carrom, Throwball</p>
 		</li>
 		<li class="timeline__item">
-		<h3 class="timeline__day dayFive">18th January: <span>SPIT Sports ground</span></h3>
-		<p class="timeline__day-sum">Football, VolleyBall, Kabaddi, TableTennis, TurfCricket</p>
+			<h3 class="timeline__day dayFive">18th January: <span>SPIT Sports ground</span></h3>
+			<p class="timeline__day-sum">Football, VolleyBall, Kabaddi, TableTennis, TurfCricket</p>
 		</li>
 		<li class="timeline__item right">
-		<h3 class="timeline__day daySix">19th January: <span>SPIT Sports ground </span></h3>
-		<p class="timeline__day-sum">Football, VolleyBall, Kabaddi, TableTennis, TurfCricket</p>
+			<h3 class="timeline__day daySix">19th January: <span>SPIT Sports ground </span></h3>
+			<p class="timeline__day-sum">Football, VolleyBall, Kabaddi, TableTennis, TurfCricket</p>
 		</li>
 		<li class="timeline__item">
-		<h3 class="timeline__day daySeven">20th January: <span>SPIT Sports ground</span></h3>
-		<p class="timeline__day-sum">Football</p>
+			<h3 class="timeline__day daySeven">20th January: <span>SPIT Sports ground</span></h3>
+			<p class="timeline__day-sum">Football</p>
 		</li>
 		<li class="timeline__item right">
-		<h3 class="timeline__day dayEight">21st, 22nd, 23rd January: <span>SPIT Sports ground </span></h3>
-		<p class="timeline__day-sum">TurfCricket</p>
+			<h3 class="timeline__day dayEight">21st, 22nd, 23rd January: <span>SPIT Sports ground </span></h3>
+			<p class="timeline__day-sum">TurfCricket</p>
 		</li>
 		<li class="timeline__item">
-		<h3 class="timeline__day dayNine">24th January: <span>SPIT Sports ground</span></h3>
-		<p class="timeline__day-sum">VolleyBall, TurfCricket</p>
+			<h3 class="timeline__day dayNine">24th January: <span>SPIT Sports ground</span></h3>
+			<p class="timeline__day-sum">VolleyBall, TurfCricket</p>
 		</li>
 		<li class="timeline__item right">
-		<h3 class="timeline__day dayTen">25th January: <span>SPIT Sports ground </span></h3>
-		<p class="timeline__day-sum">Athletics, TurfCricket, Throwball, TurfFootBall</p>
+			<h3 class="timeline__day dayTen">25th January: <span>SPIT Sports ground </span></h3>
+			<p class="timeline__day-sum">Athletics, TurfCricket, Throwball, TurfFootBall</p>
 		</li>
 		<li class="timeline__item">
-		<h3 class="timeline__day dayEleven">26th January: <span>SPIT Sports ground</span></h3>
-		<p class="timeline__day-sum">TurfCricket, ThrowBall</p>
+			<h3 class="timeline__day dayEleven">26th January: <span>SPIT Sports ground</span></h3>
+			<p class="timeline__day-sum">TurfCricket, ThrowBall</p>
 		</li>
 		<li class="timeline__item right">
-		<h3 class="timeline__day dayTwelve">27th January: <span>SPIT Sports ground </span></h3>
-		<p class="timeline__day-sum">TurfCricket, Chess, BadMinton, BasketBall</p>
+			<h3 class="timeline__day dayTwelve">27th January: <span>SPIT Sports ground </span></h3>
+			<p class="timeline__day-sum">TurfCricket, Chess, BadMinton, BasketBall</p>
 		</li>
 		<li class="timeline__item">
-		<h3 class="timeline__day dayThirteen">28th January: <span>SPIT Sports ground</span></h3>
-		<p class="timeline__day-sum">TurfCricket, Chess, BadMinton</p>
+			<h3 class="timeline__day dayThirteen">28th January: <span>SPIT Sports ground</span></h3>
+			<p class="timeline__day-sum">TurfCricket, Chess, BadMinton</p>
 		</li>
 		<li class="timeline__item right">
-		<h3 class="timeline__day dayForteen">29th January: <span>SPIT Sports ground </span></h3>
-		<p class="timeline__day-sum">TurfCricket, Chess, BadMinton</p>
+			<h3 class="timeline__day dayForteen">29th January: <span>SPIT Sports ground </span></h3>
+			<p class="timeline__day-sum">TurfCricket, Chess, BadMinton</p>
 		</li>
 		<li class="timeline__item">
-		<h3 class="timeline__day dayFifteen">30th January: <span>SPIT Sports ground</span></h3>
-		<p class="timeline__day-sum">TurfCricket, Chess</p>
+			<h3 class="timeline__day dayFifteen">30th January: <span>SPIT Sports ground</span></h3>
+			<p class="timeline__day-sum">TurfCricket, Chess</p>
 		</li>
 		<li class="timeline__item right">
-		<h3 class="timeline__day daySixteen">31st January: <span>SPIT Sports ground </span></h3>
-		<p class="timeline__day-sum">TurfCricket, Chess</p>
+			<h3 class="timeline__day daySixteen">31st January: <span>SPIT Sports ground </span></h3>
+			<p class="timeline__day-sum">TurfCricket, Chess</p>
 		</li>
 	</ul>
 </div>

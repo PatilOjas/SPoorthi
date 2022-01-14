@@ -217,7 +217,6 @@ ul{
 	&:after{
 	content:'';
 	display:block;
-	background-image: url('http://codepen.vincebrown.me/assets/images/white-mountains.jpg');
 	height:500px;
 	width: 100%;
 	background-size:cover;
@@ -232,6 +231,11 @@ ul{
 	margin-left:50%;
 	transform: translateX(-50%);
 	display:none;
+
+	width: 10px;
+	height: 200vh;
+	background-color: azure;
+
 	@include mq(md) {
 	display:block;
 	fill: red;
@@ -278,6 +282,22 @@ ul{
 	
 	}
 }
+
+.timeline{
+	padding: 2rem;
+	li{
+		/* From https://css.glass */
+		padding: 1.5rem;
+		background: rgba(70, 70, 70, 0.42);
+		border-radius: 5px;
+		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(11.9px);
+		-webkit-backdrop-filter: blur(11.9px);
+		border: 1px solid rgba(80, 80, 80, 0.44);
+	}
+}
+
+
 // .clearfix:after {
 // 	visibility: hidden;
 // 	display: block;

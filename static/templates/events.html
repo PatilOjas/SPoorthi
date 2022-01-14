@@ -7,11 +7,11 @@
     <div class="all-posters">
 
         {% for event in allEvents %}
-            <a class="poster poster-1" href="{% url 'event_details' name=event.eventName %}">
-                <div class="poster-img">
-                    <img src="/{{event.poster}}" alt="{{event.eventName}} poster">
-                </div>
-            </a>
+                <a class="poster poster-1" href="{% url 'event_details' name=event.eventName %}">
+                    <div class="poster-img">
+                        <img src="/{{event.poster}}" alt="{{event.eventName}} poster">
+                    </div>
+                </a>
         {% endfor %}
 <!-- 
         <a class="poster poster-1" href="{% url 'event_details' name='Athletic' %}">

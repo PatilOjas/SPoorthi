@@ -121,3 +121,33 @@ var scene16 = new ScrollMagic.ScrollScene({
 if (new Date().getTime() >= new Date(2021, 11, 24)){
 	console.log("Execute")
 }
+
+
+
+
+
+
+
+
+
+
+// let timeScroll = document.getElementById('verticalLine');
+
+// timeScroll.addEventListener('mouseover', ()=>{
+//   timeScroll.style.backgroundColor = "#000000"
+// })
+// timeScroll.addEventListener('mouseout', ()=>{
+//   timeScroll.style.backgroundColor = "#ffffff"
+// })
+
+
+// window.addEventListener('load' ,()=>{
+//   let timeScroll1 = document.getElementById('verticalLine');
+//   console.log(timeScroll1.offsetHeight);
+//   console.log(window.pageYOffset || document.documentElement.scrollTop);
+//   window.onscroll = (()=>{
+//     let progress = window.pageYOffset - timeScroll.offsetHeight;
+//     timeScroll.style.height = progress + "px";
+//   })
+//   // let totalHeight = document.body.scrollHeight - window.innerHeight;
+// })
