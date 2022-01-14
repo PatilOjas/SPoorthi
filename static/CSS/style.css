@@ -405,7 +405,8 @@ ul {
 
 .gallery .overlay {
   position: absolute;
-  font-size: 10em;
+  font-size: 7em;
+  text-align: center;
   color: white;
   z-index: 2;
   top: 50%;
