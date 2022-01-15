@@ -90,10 +90,8 @@ def registrationPage(request, name='*'):
 def homePage(request):
 	return render(request, 'home.html')
 
-# def liveNews(request):
-# 	return render(request, 'livescore.html', {'data': data})
-
-
+def contact(request):
+	return render(request, 'contact.html')
 
 
 

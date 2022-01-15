@@ -7,36 +7,30 @@
 
 <section class="carousel-area">
 	<!-- #### Bootstrap Carousel -->
-	<div id="carousel" class="carousel slide" data-bs-ride="carousel" style="width: 100%; height: 90vh;">
-		<!-- <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-              <button type="button" data-bs-target="#carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-            </div> -->
+	<div id="carousel" class="carousel slide" data-bs-ride="carousel" style="width: 100%; ">
 		<div class="carousel-inner">
 			<div class="carousel-item active" data-bs-interval="4000">
 				<img src="{% static 'images/spoorthi3.jpg' %}" class="d-block w-100" alt="...">
-				<div class="carousel-caption d-none d-md-block">
+				<div class="carousel-caption  ">
 					<h1>SPoorthi</h1>
 				</div>
 			</div>
 			<div class="carousel-item" data-bs-interval="4000">
 				<img src="{% static 'images/spoorthi4.jpg' %}" class="d-block w-100" alt="...">
-				<div class="carousel-caption d-none d-md-block">
+				<div class="carousel-caption  ">
 					<h1>Agility</h1>
 				</div>
 			</div>
 			<div class="carousel-item" data-bs-interval="4000">
 				<img src="{% static 'images/marathon.jpg' %}" class="d-block w-100" alt="...">
-				<div class="carousel-caption d-none d-md-block">
+				<div class="carousel-caption  ">
 					<h1>Marathon</h1>
 				</div>
 			</div>
 
 			<div class="carousel-item" data-bs-interval="3000">
 				<img src="{% static 'images/cyclothon.jpg' %}" class="d-block w-100" alt="...">
-				<div class="carousel-caption d-none d-md-block">
+				<div class="carousel-caption  ">
 					<h1>SPIT Cyclothon</h1>
 				</div>
 			</div>
@@ -156,18 +150,18 @@
 </div>
 <script>
 	// To auto-play trailer video
-	$('#trailer-vdo').mouseover(function(){
-		$(this).get(0).play();
-	}).mouseout(function(){
-		$(this).get(0).pause();
-	})
+	// $('#trailer-vdo').mouseover(function(){
+	// 	$(this).get(0).play();
+	// }).mouseout(function(){
+	// 	$(this).get(0).pause();
+	// })
 
-	// To auto-play theme video
-	$('#theme-vdo').mouseover(function(){
-		$(this).get(0).play();
-	}).mouseout(function(){
-		$(this).get(0).pause();
-	})
+	// // To auto-play theme video
+	// $('#theme-vdo').mouseover(function(){
+	// 	$(this).get(0).play();
+	// }).mouseout(function(){
+	// 	$(this).get(0).pause();
+	// })
 
 	// To prevent carousel from pausing when hovered
 	// $('.carousel').carousel({

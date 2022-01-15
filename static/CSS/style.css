@@ -126,14 +126,23 @@
 .carousel .carousel-item .carousel-caption {
   z-index: 2;
   text-align: start;
-  -webkit-transform: translateY(-15rem);
-          transform: translateY(-15rem);
-  -webkit-animation: fade-in 2s;
-          animation: fade-in 2s;
+  position: absolute;
+  top: 70%;
+  left: 10%;
+  padding: 0;
+  -webkit-animation: fade-in 4s infinite ease-in-out;
+          animation: fade-in 4s infinite ease-in-out;
+  background-color: #fbff2a;
+  bottom: auto;
+  overflow: hidden;
+  word-wrap: none;
+  white-space: nowrap;
 }
 
 .carousel .carousel-item .carousel-caption h1 {
   font-size: 5rem;
+  padding: 0.5rem 2rem;
+  color: rgba(38, 41, 51, 0.9);
 }
 
 .carousel .carousel-item::after {
@@ -145,6 +154,30 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 0;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 40rem;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 40rem;
+  }
+  100% {
+    width: 0%;
+  }
 }
 
 .media-container {
@@ -423,7 +456,7 @@ ul {
 
 .gallery .overlay {
   position: absolute;
-  font-size: 7em;
+  font-size: 5em;
   text-align: center;
   color: white;
   z-index: 2;
@@ -444,7 +477,7 @@ ul {
   width: 100%;
   height: 100%;
   background-color: black;
-  opacity: 0.7;
+  opacity: 0.5;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   z-index: 0;
@@ -458,7 +491,7 @@ ul {
 
 .gallery:hover .overlay {
   opacity: 0;
-  top: -80%;
+  top: -10%;
   overflow: hidden;
 }
 
@@ -817,9 +850,37 @@ footer p {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   html {
     font-size: 60%;
+  }
+  .carousel-caption {
+    left: 5%;
+  }
+  .carousel-caption h1 {
+    font-size: 4rem !important;
+  }
+  @-webkit-keyframes fade-in {
+    0% {
+      width: 0;
+    }
+    50% {
+      width: 32rem;
+    }
+    100% {
+      width: 0;
+    }
+  }
+  @keyframes fade-in {
+    0% {
+      width: 0;
+    }
+    50% {
+      width: 32rem;
+    }
+    100% {
+      width: 0;
+    }
   }
 }
 
@@ -845,6 +906,22 @@ footer p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+}
+
+@media (max-width: 1300px) {
+  .navbar-nav {
+    margin-left: 5rem;
+  }
+  .nav-link {
+    margin: 0 1rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .gallery::after,
+  .gallery .overlay {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */

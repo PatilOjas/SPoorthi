@@ -1,6 +1,7 @@
 .carousel{
     height: 100vh;
     position: relative;
+
 	.carousel-item{
         height: 100vh;
         position: relative;
@@ -12,12 +13,25 @@
         .carousel-caption{
             z-index: 2;
             text-align: start;
-            transform: translateY(-15rem);
-            animation: fade-in 2s;
+			position: absolute;
+            top: 70%;
+			left: 10%;
+			padding: 0;
+            animation: fade-in 4s infinite ease-in-out;
+			background-color: #fbff2a;
+			// background-color: transparent;
+			bottom: auto;
+			overflow: hidden;
+			word-wrap: none;
+			white-space: nowrap;
             h1{
                 font-size: 5rem;
+				padding: 0.5rem 2rem;
+				color: $secondary;
             }
         }
+		
+		
         
     }
     .carousel-item::after{
@@ -32,6 +46,24 @@
     }
     
 }
+
+@keyframes fade-in {
+	0%{
+		width: 0;
+	}
+	50%{
+		width: 40rem;
+	}
+	100%{
+		width: 0%;
+	}
+}
+
+// .carousel:hover .carousel-caption{
+// 	animation: none;
+// 	transition: all 0.2s ease-in-out;
+// 	transform: scale(1.1) translateX(5%);
+// }
 
 .media-container{
 	display: flex;
