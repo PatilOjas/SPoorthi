@@ -62,13 +62,13 @@
 								<div class="input-group-prepend">
 									<span class="input-group-text"> <i class="fa fa-user"></i> </span>
 								</div>
-								<input name="secondPlayerName" class="form-control" placeholder="Second player's name" type="text" required>
+								<input name="secondPlayerName" class="form-control" placeholder="Second player's name" type="text" value="" >
 							</div> <!-- form-group// -->
 							<div class="form-group input-group">
 								<div class="input-group-prepend">
 									<span class="input-group-text"> <i class="fa fa-phone"></i> </span>
 								</div>
-								<input name="secondPlayerMobNo" class="form-control" pattern="[789][0-9]{9}" placeholder="Second player's mobile number" type="text" required>
+								<input name="secondPlayerMobNo" class="form-control" pattern="[789][0-9]{9}" placeholder="Second player's mobile number" type="text" value="" >
 							</div> <!-- form-group// -->
 
 						</div>
@@ -94,6 +94,8 @@
 	</div>
 
 	<script>
+		
+		// To check whether doubles is selected
 		function yesnoCheck(that) {
 			if ((that.value === "Carrom (D)" || that.value === "Badminton (D)")) {
 				document.getElementById("secondplayer").style.display = "block";
@@ -105,27 +107,20 @@
 		$(document).ready(function() {
 		// Construct URL object using current browser URL
 		var url = new URL(document.location);
-		console.log(url)
-
+		
 		// Get query parameters object
 		var params = url.pathname;
-		console.log(typeof params)
 		
 		// Get value of paper
 		var pramsList = params.split("/")
-		// console.log(pramsList.slice(-1)[0].replaceAll("%20", " "))
-		// Set it as the dropdown value
+		var props = {"value": pramsList.slice(-1)[0].replaceAll("%20", " ")}
 		
-		$("#event").val(pramsList.slice(-1)[0].replaceAll("%20", " "));
+		// If doubles, display second player details
+		yesnoCheck(props);
+		
+		// Set it as the dropdown value
+		$("#event").val(props.value);
 		});
-
-		function yesnoCheck(that) {
-			if ((that.value === "Carrom (D)" || that.value === "Badminton (D)")) {
-				document.getElementById("secondplayer").style.display = "block";
-			} else {
-				document.getElementById("secondplayer").style.display = "none";
-			}
-		}
 	</script>
 
 	{% endblock %}
