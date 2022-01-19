@@ -28,8 +28,24 @@
     width: 100%;
     img {
         width: 100%;
+        z-index: 4;
     }
     z-index: 3;
+    
+    .event-tag{
+        background-color: $secondary;
+        padding: 0.2rem 1rem;
+        width: 70%;
+        color: white;
+        text-align: end;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+        transition: all 0.35s ease-in-out;
+        z-index: -1;
+    }
+
 }
 .poster-img:after {
     content: '';
@@ -38,7 +54,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: -2;
     background-color: aqua;
     transform: translate(0.5rem,0.5rem);
     transition: all 0.2s ease-in-out;
@@ -51,7 +67,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: -2;
     background: url('../images/hover_pattern.png') repeat;
     background-size: 10px;
     transform: translate(-0.7rem,-0.7rem);
@@ -60,14 +76,20 @@
 
 .poster:hover {
     cursor: pointer;
+    
     .poster-img:before {
         
-        transform: translate(-1.5rem,-1.2rem);
+        transform: translate(-1.3rem,-1rem);
     }
     
     .poster-img:after {
         background-color: aqua;
-        transform: translate(1.5rem,1rem);
+        transform: translate(1.7rem,1.2rem);
+    }
+
+    .event-tag{
+        // z-index: 3;
+        transform: translateY(100%);
     }
 }
 

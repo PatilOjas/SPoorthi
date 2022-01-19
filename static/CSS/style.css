@@ -537,6 +537,23 @@ ul {
 
 .poster-img img {
   width: 100%;
+  z-index: 4;
+}
+
+.poster-img .event-tag {
+  background-color: rgba(38, 41, 51, 0.9);
+  padding: 0.2rem 1rem;
+  width: 70%;
+  color: white;
+  text-align: end;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+  z-index: -1;
 }
 
 .poster-img:after {
@@ -546,7 +563,7 @@ ul {
   height: 100%;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: -2;
   background-color: aqua;
   -webkit-transform: translate(0.5rem, 0.5rem);
           transform: translate(0.5rem, 0.5rem);
@@ -561,7 +578,7 @@ ul {
   height: 100%;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: -2;
   background: url("../images/hover_pattern.png") repeat;
   background-size: 10px;
   -webkit-transform: translate(-0.7rem, -0.7rem);
@@ -575,14 +592,19 @@ ul {
 }
 
 .poster:hover .poster-img:before {
-  -webkit-transform: translate(-1.5rem, -1.2rem);
-          transform: translate(-1.5rem, -1.2rem);
+  -webkit-transform: translate(-1.3rem, -1rem);
+          transform: translate(-1.3rem, -1rem);
 }
 
 .poster:hover .poster-img:after {
   background-color: aqua;
-  -webkit-transform: translate(1.5rem, 1rem);
-          transform: translate(1.5rem, 1rem);
+  -webkit-transform: translate(1.7rem, 1.2rem);
+          transform: translate(1.7rem, 1.2rem);
+}
+
+.poster:hover .event-tag {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
 }
 
 .event-details {
@@ -923,5 +945,20 @@ footer p {
   .gallery .overlay {
     display: none;
   }
+}
+
+.my-box-shadow {
+  -webkit-box-shadow: 0 0 10px 2px rgba(90, 90, 90, 0.3);
+          box-shadow: 0 0 10px 2px rgba(90, 90, 90, 0.3);
+}
+
+.my-hover-div-1 {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.my-hover-div-1:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 /*# sourceMappingURL=style.css.map */

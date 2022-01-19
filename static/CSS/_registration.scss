@@ -5,7 +5,7 @@
     font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
     // background-image: url("/static/images/Sports.png");
     background-repeat: no-repeat;
-    background: linear-gradient(to right top, #db5050,#ff8060, #fff066);
+    background: linear-gradient(to right top, $reg-pri,$reg-sec, $reg-tri);
     background-size: 200%;
     position: relative;
     min-height: 100vh;
