@@ -11,16 +11,5 @@
 @import "registration";
 @import "footer";
 @import "media";
+@import "utils";
 
-
-// util
-.my-box-shadow{
-    box-shadow: 0 0 10px 2px rgba(90, 90, 90, 0.3);
-}
-
-.my-hover-div-1{
-    transition: all 0.2s ease-in-out;
-}
-.my-hover-div-1:hover{
-    transform: scale(1.05);
-}
