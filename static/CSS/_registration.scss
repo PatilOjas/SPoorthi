@@ -18,25 +18,14 @@
     background-position: bottom;
 }
 
-// @keyframes move-bg{
-//     0%{
-//         background-position: (0% 0%);
-//     }
-//     50%{
-//         background-position: (100% 100%);
-//     }
-//     100%{
-//         background-position: (0% 0%);
-//     }
-// }
 
 .register-section .form-group{
-    margin: 1rem 0;
+    margin: 2rem 0;
 }
 
 
 .register-section .card{
-    width: 30rem;
+    width: 32rem;
     box-shadow: 0 0 10px 2px rgba(90, 90, 90, 0.3);
     margin: 1rem;
     background-color: transparent;
@@ -55,6 +44,10 @@
     border: none;
     border-bottom: 2px solid silver;
     border-radius: 0;
+}
+
+.fa{
+    font-size: 1.5rem;
 }
 
 .register-section .input-group-text-select{
@@ -80,13 +73,49 @@
         border: none;
         border-bottom: 2px solid silver;
         border-radius: 0;
+        padding-left: 1rem;
     }
     input:focus,select:focus{
         box-shadow: none;
         border-bottom: 2px solid silver;
         background-color: transparent;
     }
+
+    .input-group{
+        &:focus-within > .placeholder,
+        &:not(:focus-within):valid > .placeholder
+        {
+            top: -13px;
+            transform: scale(0.8);
+            transform-origin: 0;
+        }
+
+        .placeholder{
+            position: absolute;
+            left: 4rem;
+            top: 1rem;
+            transform-origin: 0;
+            transition: all 0.2s ease-in-out;
+            color: #495057;
+        }
+        
+        input:not(:placeholder-shown) + label,
+        select:valid + label
+        {
+            top: -13px;
+            transform: scale(0.8);
+            transform-origin: 0;
+        }
+    }
+
+    .keepUp{
+        top: -13px;
+        transform: scale(0.8);
+        transform-origin: 0;
+    }
 }
+
+
 
 .input-color{
     color: #495057;

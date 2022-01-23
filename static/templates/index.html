@@ -12,36 +12,40 @@
 		<div class="container">
 			<!-- ############################################## registration form ########################################### -->
 			<div class="card bg-light">
-				<article class="card-body mx-auto" style="max-width: 400px;">
+				<article class="card-body mx-auto" style="max-width: 450px;">
 					<h4 class="card-title mt-3 text-center">Registration</h4>
-					<p class="text-center text-secondary mb-4">Get registered and prove you are a Champion</p>
+					<p class="text-center text-secondary mb-4 d-block">Get registered and prove you are a Champion</p>
 
 					<form method="POST">
 						{% csrf_token %}
+						
 						<div class="form-group input-group">
 							<div class="input-group-prepend">
 								<span class="input-group-text"> <i class="fa fa-user"></i> </span>
 							</div>
-							<input name="fullName" class="form-control" placeholder="Full name" type="text" required>
+							<input name="fullName" placeholder=" " id="fullName" class="form-control" type="text" required>
+							<label for="fullName" class="placeholder">Full Name</label>
 						</div> <!-- form-group// -->
 						<div class="form-group input-group">
 							<div class="input-group-prepend">
 								<span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
 							</div>
-							<input name="email" class="form-control" placeholder="Email address" type="email" required>
+							<input name="email" placeholder=" " class="form-control" type="email" required>
+							<label class="placeholder" >Email address</label>
 						</div> <!-- form-group// -->
 						<div class="form-group input-group">
 							<div class="input-group-prepend">
 								<span class="input-group-text"> <i class="fa fa-phone"></i> </span>
 							</div>
-							<input name="mobNo" class="form-control" pattern="[789][0-9]{9}" placeholder="Phone number" type="text" required>
+							<input name="mobNo" placeholder=" " class="form-control" pattern="[789][0-9]{9}" type="text" required>
+							<label class="placeholder">Phone number</label>
 						</div> <!-- form-group// -->
 						<div class="form-group input-group">
 							<div class="input-group-prepend">
 								<span class="input-group-text-select"> <i class="fa fa-gamepad fa-sm"></i> </span>
 							</div>
-							<select class="form-control input-color" id="event" name="event" onchange="yesnoCheck(this)" required>
-								<option value="" selected="Select job type">Select Sport</option>
+							<select placeholder=" " class="form-control input-color" id="event" name="event" onchange="yesnoCheck(this)" required>
+								<option value="" selected="Select job type"></option>
 								<option value="Turf Cricket">Turf Cricket</option>
 								<option value="Turf Football">Turf Football</option>
 								<option value="Volleyball">Volleyball</option>
@@ -56,19 +60,22 @@
 								<option value="Table Tennis">Table Tennis</option>
 								<option value="Tug of War">Tug of War</option>
 							</select>
+							<label class="placeholder">Select Sport</label>
 						</div> <!-- form-group end.// -->
 						<div id="secondplayer" style="display: none;">
 							<div class="form-group input-group">
 								<div class="input-group-prepend">
 									<span class="input-group-text"> <i class="fa fa-user"></i> </span>
 								</div>
-								<input name="secondPlayerName" class="form-control" placeholder="Second player's name" type="text" value="" >
+								<input name="secondPlayerName" placeholder=" " class="form-control" type="text" value="" >
+								<label class="placeholder">Second player's name</label>
 							</div> <!-- form-group// -->
 							<div class="form-group input-group">
 								<div class="input-group-prepend">
 									<span class="input-group-text"> <i class="fa fa-phone"></i> </span>
 								</div>
-								<input name="secondPlayerMobNo" class="form-control" pattern="[789][0-9]{9}" placeholder="Second player's mobile number" type="text" value="" >
+								<input name="secondPlayerMobNo" placeholder=" " class="form-control" pattern="[789][0-9]{9}" type="text" value="" >
+								<label class="placeholder">Second player's mobile number</label>
 							</div> <!-- form-group// -->
 
 						</div>
@@ -77,8 +84,8 @@
 								<span class="input-group-text"> <i class="fa fa-university"></i> </span>
 							</div>
 							<!-- <input name="mobNo" class="form-control" placeholder="Phone number" type="text" required> -->
-							<input type="text" class="form-control" placeholder="College Name" id="collegeName"
-								name="collegeName" required>
+							<input type="text" placeholder=" " class="form-control" id="collegeName" name="collegeName" required>
+							<label class="placeholder">College Name</label>
 						</div> <!-- form-group// -->
 						<!-- <label for="collegeName">College Name</label> -->
 						<div class="form-group">
@@ -89,11 +96,17 @@
 				</article>
 			</div> <!-- card.// -->
 
+			
+
 		</div>
 		<!--container end.//-->
 	</div>
 
 	<script>
+
+
+		//hold placeholder up if input has value
+		let fullName = document.getElementsByName('fullName')
 		
 		// To check whether doubles is selected
 		function yesnoCheck(that) {

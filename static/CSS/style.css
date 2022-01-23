@@ -677,11 +677,11 @@ ul {
 }
 
 .register-section .form-group {
-  margin: 1rem 0;
+  margin: 2rem 0;
 }
 
 .register-section .card {
-  width: 30rem;
+  width: 32rem;
   -webkit-box-shadow: 0 0 10px 2px rgba(90, 90, 90, 0.3);
           box-shadow: 0 0 10px 2px rgba(90, 90, 90, 0.3);
   margin: 1rem;
@@ -705,6 +705,10 @@ ul {
   border: none;
   border-bottom: 2px solid silver;
   border-radius: 0;
+}
+
+.fa {
+  font-size: 1.5rem;
 }
 
 .register-section .input-group-text-select {
@@ -733,6 +737,7 @@ ul {
   border: none;
   border-bottom: 2px solid silver;
   border-radius: 0;
+  padding-left: 1rem;
 }
 
 .register-section input:focus, .register-section select:focus {
@@ -740,6 +745,43 @@ ul {
           box-shadow: none;
   border-bottom: 2px solid silver;
   background-color: transparent;
+}
+
+.register-section .input-group:focus-within > .placeholder,
+.register-section .input-group:not(:focus-within):valid > .placeholder {
+  top: -13px;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-transform-origin: 0;
+          transform-origin: 0;
+}
+
+.register-section .input-group .placeholder {
+  position: absolute;
+  left: 4rem;
+  top: 1rem;
+  -webkit-transform-origin: 0;
+          transform-origin: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  color: #495057;
+}
+
+.register-section .input-group input:not(:placeholder-shown) + label,
+.register-section .input-group select:valid + label {
+  top: -13px;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-transform-origin: 0;
+          transform-origin: 0;
+}
+
+.register-section .keepUp {
+  top: -13px;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-transform-origin: 0;
+          transform-origin: 0;
 }
 
 .input-color {
