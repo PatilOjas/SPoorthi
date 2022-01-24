@@ -56,6 +56,10 @@ def registrationPage(request, name='*'):
 				sh = SheetEditor(sheetName=sheet_name, sheet=saved_data.event)
 				sh.wks.update(f"A{len(sh.wks.get_all_records()) + offset}:G{len(sh.wks.get_all_records()) + offset}", [[saved_data.playerId, saved_data.email, saved_data.fullName, saved_data.mobNo, saved_data.collegeName, saved_data.event, str(saved_data.datetimestamp)]])
 			
+			elif saved_data.event == "Kho-kho":
+				sh = SheetEditor(sheetName=sheet_name, sheet=saved_data.event)
+				sh.wks.update(f"A{len(sh.wks.get_all_records()) + offset}:G{len(sh.wks.get_all_records()) + offset}", [[saved_data.playerId, saved_data.email, saved_data.fullName, saved_data.mobNo, saved_data.collegeName, saved_data.event, str(saved_data.datetimestamp)]])
+			
 			elif saved_data.event == "Dodgeball":
 				sh = SheetEditor(sheetName=sheet_name, sheet=saved_data.event)
 				sh.wks.update(f"A{len(sh.wks.get_all_records()) + offset}:G{len(sh.wks.get_all_records()) + offset}", [[saved_data.playerId, saved_data.email, saved_data.fullName, saved_data.mobNo, saved_data.collegeName, saved_data.event, str(saved_data.datetimestamp)]])
@@ -64,9 +68,14 @@ def registrationPage(request, name='*'):
 				sh = SheetEditor(sheetName=sheet_name, sheet=saved_data.event)
 				sh.wks.update(f"A{len(sh.wks.get_all_records()) + offset}:G{len(sh.wks.get_all_records()) + offset}", [[saved_data.playerId, saved_data.email, saved_data.fullName, saved_data.mobNo, saved_data.collegeName, saved_data.event, str(saved_data.datetimestamp)]])
 			
-			elif saved_data.event == "Table Tennis":
+			elif saved_data.event == "Table Tennis (S)":
 				sh = SheetEditor(sheetName=sheet_name, sheet=saved_data.event)
 				sh.wks.update(f"A{len(sh.wks.get_all_records()) + offset}:G{len(sh.wks.get_all_records()) + offset}", [[saved_data.playerId, saved_data.email, saved_data.fullName, saved_data.mobNo, saved_data.collegeName, saved_data.event, str(saved_data.datetimestamp)]])
+			
+			elif saved_data.event == "Table Tennis (D)":
+				sh = SheetEditor(sheetName=sheet_name, sheet=saved_data.event)
+				sh.wks.update(f"A{len(sh.wks.get_all_records()) + offset}:I{len(sh.wks.get_all_records()) + offset}", [[saved_data.playerId, saved_data.email, saved_data.fullName, saved_data.mobNo, saved_data.secondPlayerName, saved_data.secondPlayerMobNo, saved_data.collegeName, saved_data.event, str(saved_data.datetimestamp)]])
+			
 			
 			elif saved_data.event == "Tug of War":
 				sh = SheetEditor(sheetName=sheet_name, sheet=saved_data.event)

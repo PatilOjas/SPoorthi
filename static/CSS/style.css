@@ -9,7 +9,7 @@
 
 .my-container {
   padding: 10rem 5rem;
-  min-height: 90vh;
+  min-height: 95vh;
 }
 
 .bg-coral {
@@ -495,8 +495,8 @@ ul {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  -webkit-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   overflow: hidden;
 }
 
@@ -509,8 +509,8 @@ ul {
   height: 100%;
   background-color: black;
   opacity: 0.5;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
   z-index: 0;
 }
 
@@ -522,7 +522,7 @@ ul {
 
 .gallery:hover .overlay {
   opacity: 0;
-  top: -10%;
+  z-index: -1;
   overflow: hidden;
 }
 
@@ -531,7 +531,6 @@ ul {
 }
 
 .all-posters {
-  background-color: #f8fff0;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(15rem, 1fr))[auto-fill];
@@ -540,6 +539,7 @@ ul {
   -webkit-column-gap: 6rem;
           column-gap: 6rem;
   justify-items: center;
+  z-index: 1;
 }
 
 .all-posters a {
@@ -611,7 +611,7 @@ ul {
   left: 0;
   z-index: -2;
   background: url("../images/hover_pattern.png") repeat;
-  background-size: 10px;
+  background-size: 11px;
   -webkit-transform: translate(-0.7rem, -0.7rem);
           transform: translate(-0.7rem, -0.7rem);
   -webkit-transition: all 0.2s ease-in-out;
@@ -692,28 +692,12 @@ ul {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
-  background-repeat: no-repeat;
-  background: -webkit-gradient(linear, left bottom, right top, from(#db5050), color-stop(#ff8060), to(#fff066));
-  background: linear-gradient(to right top, #db5050, #ff8060, #fff066);
-  background-size: 200%;
-  position: relative;
-  min-height: 100vh;
-  -webkit-animation-name: move-bg;
-          animation-name: move-bg;
-  -webkit-animation-duration: 10s;
-          animation-duration: 10s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  z-index: 0;
 }
 
 .register-section::after {
   content: '';
   position: absolute;
   bottom: 0;
-  z-index: -1;
   opacity: 0.6;
   width: 100%;
   height: 100%;
@@ -721,30 +705,6 @@ ul {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
-}
-
-@-webkit-keyframes move-bg {
-  0% {
-    background-position: 0% 0%;
-  }
-  50% {
-    background-position: 100% 100%;
-  }
-  100% {
-    background-position: 0% 0%;
-  }
-}
-
-@keyframes move-bg {
-  0% {
-    background-position: 0% 0%;
-  }
-  50% {
-    background-position: 100% 100%;
-  }
-  100% {
-    background-position: 0% 0%;
-  }
 }
 
 .register-section .form-group {
@@ -757,6 +717,7 @@ ul {
           box-shadow: 0 0 10px 2px rgba(90, 90, 90, 0.3);
   margin: 1rem;
   background-color: transparent;
+  z-index: 2;
 }
 
 .register-section .container {
@@ -771,6 +732,10 @@ ul {
 
 .register-section .input-group-text {
   padding: 0.7rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid silver;
+  border-radius: 0;
 }
 
 .register-section .input-group-text-select {
@@ -787,6 +752,25 @@ ul {
   border-top-left-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
   color: #495057;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid silver;
+  border-radius: 0;
+}
+
+.register-section input, .register-section select {
+  outline: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid silver;
+  border-radius: 0;
+}
+
+.register-section input:focus, .register-section select:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-bottom: 2px solid silver;
+  background-color: transparent;
 }
 
 .input-color {
@@ -991,5 +975,85 @@ footer p {
 .my-hover-div-1:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+}
+
+@-webkit-keyframes move-bg {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+@keyframes move-bg {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.color-register-page {
+  background-repeat: no-repeat;
+  background: -webkit-gradient(linear, left top, right top, from(#e26777), color-stop(#fd896c), to(#fff066));
+  background: linear-gradient(to right, #e26777, #fd896c, #fff066);
+  background-size: 300%;
+  position: relative;
+  min-height: 100vh;
+  -webkit-animation-name: move-bg;
+          animation-name: move-bg;
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+.color-contact-page {
+  background-repeat: no-repeat;
+  background: -webkit-gradient(linear, left top, right top, from(#D16BA5), color-stop(#86A8E7), to(#5FFBF1));
+  background: linear-gradient(to right, #D16BA5, #86A8E7, #5FFBF1);
+  background-size: 300%;
+  position: relative;
+  min-height: 100vh;
+  -webkit-animation-name: move-bg;
+          animation-name: move-bg;
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+.color-events-page {
+  background-repeat: no-repeat;
+  background: -webkit-gradient(linear, left top, right top, from(#ffafbd), color-stop(#fa98fa), to(#ffc3a0));
+  background: linear-gradient(to right, #ffafbd, #fa98fa, #ffc3a0);
+  background-size: 300%;
+  position: relative;
+  min-height: 100vh;
+  -webkit-animation-name: move-bg;
+          animation-name: move-bg;
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+.color-gallery-page {
+  background: -webkit-gradient(linear, left top, right bottom, from(#000428), to(#004e92));
+  background: linear-gradient(to right bottom, #000428, #004e92);
 }
 /*# sourceMappingURL=style.css.map */

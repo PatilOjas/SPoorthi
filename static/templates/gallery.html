@@ -5,9 +5,9 @@
 
 {% block content %}
 
-	<div class="my-container bg-coral">
+	<div class="my-container color-gallery-page">
 			
-		<h1 style="color: white;">Agility 2021</h1>
+		<h1 class="mb-4" style="color: white;">Agility 2021</h1>
 		<div class="gallery">
 			{% for i in agility2021 %}
 				<img src="{% static 'images/agility2021/' %}{{i}}" alt="{{ i }}">
@@ -17,7 +17,7 @@
 		
 		<div style="height: 5rem;"></div>
 		
-		<h1 style="color: white;">Glimpse of Past Years</h1>
+		<h1 class="mb-4" style="color: white;">Glimpse of Past Years</h1>
 		<div class="gallery">
 			{% for i in glimpse %}
 				<img src="{% static 'images/glimpse/' %}{{i}}" alt="{{i}}">

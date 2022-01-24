@@ -7,14 +7,14 @@
   {% block content %}
 
 
-	<div class="register-section">
+	<div class="register-section color-register-page">
 
 		<div class="container">
 			<!-- ############################################## registration form ########################################### -->
 			<div class="card bg-light">
 				<article class="card-body mx-auto" style="max-width: 400px;">
 					<h4 class="card-title mt-3 text-center">Registration</h4>
-					<p class="text-center text-secondary">Get registered and prove you are a Champion</p>
+					<p class="text-center text-secondary mb-4">Get registered and prove you are a Champion</p>
 
 					<form method="POST">
 						{% csrf_token %}
@@ -51,9 +51,11 @@
 								<option value="Carrom (D)">Carrom (Doubles)</option>
 								<option value="Athletics">Athletics</option>
 								<option value="Chess">Chess</option>
+								<option value="Kho-kho">Kho-kho</option>
 								<option value="Dodgeball">Dodgeball</option>
 								<option value="Throwball">Throwball</option>
-								<option value="Table Tennis">Table Tennis</option>
+								<option value="Table Tennis (S)">Table Tennis (Singles)</option>
+								<option value="Table Tennis (D)">Table Tennis (Doubles)</option>
 								<option value="Tug of War">Tug of War</option>
 							</select>
 						</div> <!-- form-group end.// -->
@@ -82,7 +84,7 @@
 						</div> <!-- form-group// -->
 						<!-- <label for="collegeName">College Name</label> -->
 						<div class="form-group">
-							<button type="submit" class="btn mybtn btn-block"> Register </button>
+							<button type="submit" class="btn mybtn btn-block mt-3"> Register </button>
 						</div> <!-- form-group// -->
 
 					</form>
@@ -97,7 +99,7 @@
 		
 		// To check whether doubles is selected
 		function yesnoCheck(that) {
-			if ((that.value === "Carrom (D)" || that.value === "Badminton (D)")) {
+			if ((that.value === "Carrom (D)" || that.value === "Badminton (D)" || that.value === "Table Tennis (D)")) {
 				document.getElementById("secondplayer").style.display = "block";
 			} else {
 				document.getElementById("secondplayer").style.display = "none";

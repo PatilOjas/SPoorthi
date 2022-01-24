@@ -1,0 +1,54 @@
+// util
+.my-box-shadow{
+    box-shadow: 0 0 10px 2px rgba(90, 90, 90, 0.3);
+}
+
+
+// scale up the boxes on hover
+.my-hover-div-1{
+    transition: all 0.2s ease-in-out;
+}
+.my-hover-div-1:hover{
+    transform: scale(1.05);
+}
+
+// apply animated gradient to background
+// *** ALWAYS ADD color-x CLASS ALONG WITH bg-gradient
+
+@mixin bg-gradient($val1,$val2, $val3){
+    background-repeat: no-repeat;
+    background: linear-gradient(to right, $val1,$val2, $val3);
+    background-size: 300%;
+    position: relative;
+    min-height: 100vh;
+    animation-name: move-bg;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes move-bg{
+    0%{
+        background-position: (0% 0%);
+    }
+    50%{
+        background-position: (100% 100%);
+    }
+    100%{
+        background-position: (0% 0%);
+    }
+}
+.color-register-page{
+    @include bg-gradient(#e26777,#fd896c, #fff066);
+}
+.color-contact-page{
+    @include bg-gradient(#D16BA5,#86A8E7 , #5FFBF1)
+}
+.color-events-page{
+    @include bg-gradient(#ffafbd ,#fa98fa, #ffc3a0, )
+    // @include bg-gradient(#17274d, #341755,#700f50)
+    // @include bg-gradient(#ee9ca7,#fac0c7, #e2c2c6)
+}
+.color-gallery-page{
+    // @include bg-gradient(#000428 ,#0d395f, #006a9b)
+    background: linear-gradient(to right bottom,#000428 , #004e92);
+}
