@@ -52,3 +52,8 @@
     // @include bg-gradient(#000428 ,#0d395f, #006a9b)
     background: linear-gradient(to right bottom,#000428 , #004e92);
 }
+
+.color-event-details-page{
+    // @include bg-gradient(#ee9ca7,#fac0c7, #e2c2c6)
+    @include bg-gradient(#ee9ca7,#fac0c7, #e2c2c6)
+}

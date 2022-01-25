@@ -77,13 +77,14 @@
     cursor: pointer;
     
     .poster-img:before {
-        
+        // transform: translate(-2rem,-0.8rem);
         transform: translate(-1.3rem,-1rem);
     }
     
     .poster-img:after {
         background-color: aqua;
-        transform: translate(1.7rem,1.2rem);
+        // transform: translate(2rem,0.8rem);
+        transform: translate(1.9rem,1.1rem);
     }
 
     .event-tag{

@@ -598,8 +598,8 @@ ul {
 
 .poster:hover .poster-img:after {
   background-color: aqua;
-  -webkit-transform: translate(1.7rem, 1.2rem);
-          transform: translate(1.7rem, 1.2rem);
+  -webkit-transform: translate(1.9rem, 1.1rem);
+          transform: translate(1.9rem, 1.1rem);
 }
 
 .poster:hover .event-tag {
@@ -1066,5 +1066,22 @@ footer p {
 .color-gallery-page {
   background: -webkit-gradient(linear, left top, right bottom, from(#000428), to(#004e92));
   background: linear-gradient(to right bottom, #000428, #004e92);
+}
+
+.color-event-details-page {
+  background-repeat: no-repeat;
+  background: -webkit-gradient(linear, left top, right top, from(#ee9ca7), color-stop(#fac0c7), to(#e2c2c6));
+  background: linear-gradient(to right, #ee9ca7, #fac0c7, #e2c2c6);
+  background-size: 300%;
+  position: relative;
+  min-height: 100vh;
+  -webkit-animation-name: move-bg;
+          animation-name: move-bg;
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
 }
 /*# sourceMappingURL=style.css.map */
