@@ -5,6 +5,11 @@
 
 {% block content %}
 
+
+<!-- <canvas id="canvas" style="position:absolute; top:0; left:0;"></canvas>
+<div id="buffer" style="display:none;"> -->
+
+
 <section class="carousel-area">
 	<!-- #### Bootstrap Carousel -->
 	<div id="carousel" class="carousel slide" data-bs-ride="carousel" style="width: 100%; ">
@@ -35,7 +40,8 @@
 				</div>
 			</div>
 		</div>
-		<!-- <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+	</div>
+	<!-- <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </button>
@@ -43,9 +49,10 @@
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button> -->
-	</div>
+
 	<!-- #### Bootstrap Carousel end -->
 </section>
+<!-- Put below section just above section closing tag -->
 
 <div class="bg-coral p-5 media-container">
     <div class="trailer-video-container">
@@ -77,39 +84,39 @@
 <div class="timeline-wrapper">
 	<div class="svg-timeline" id="verticalLine">
 		<div class="svg-elasped-timeline">
-			<svg width="8px" height="2410.7px" viewBox="0 0 8 3000.7" fill="transparent">
+			<svg width="8px" height="1810.7px" viewBox="0 0 8 3000.7" fill="transparent">
 				<line id="elasped-timeline" fill="none" stroke="#00FF00" stroke-width="10" stroke-miterlimit="10" x1="4" y1="0"
-					x2="4" y2="28.11%" /> 
-					<!-- Works for desktop screensize only: Keep y2 as multiple of 9.37% for each step & 1% for nothing -->
+					x2="4" y2="2.8em" /> 
+					<!-- With em: total height=163.8em; default=2.8em; increment by 23em -->
 			</svg>
 		</div>
 	</div>
 	<ul class="timeline clearfix">
-		<li class="timeline__item my-hover-div-1">
+		<li class="timeline__item my-hover-div-1" id="dayOne">
 			<h3 class="timeline__day">25th February: <span><b><em>Andheri Sports Complex </em></b></span></h3>
 			<p class="timeline__day-sum">Badminton</p>
 		</li>
-		<li class="timeline__item my-hover-div-1 right">
+		<li class="timeline__item my-hover-div-1 right" id="dayTwo">
 			<h3 class="timeline__day dayTwo">26th February: <span><b><em>UMRB Turf, Andheri Sports Complex </em></b></span></h3>
 			<p class="timeline__day-sum">Football</p>
 		</li>
-		<li class="timeline__item my-hover-div-1">
+		<li class="timeline__item my-hover-div-1" id="dayThree">
 			<h3 class="timeline__day dayThree">27th February: <span><b><em>UMRB Turf, Andheri Sports Complex </em></b></span></h3>
 			<p class="timeline__day-sum">Cricket</p>
 		</li>
-		<li class="timeline__item my-hover-div-1 right">
+		<li class="timeline__item my-hover-div-1 right" id="dayFour">
 			<h3 class="timeline__day dayFour">28th February: <span><b><em>Sports ground; SPIT Gymkhana </em></b></span></h3>
 			<p class="timeline__day-sum">Volleyball, Carrom</p>
 		</li>
-		<li class="timeline__item my-hover-div-1">
+		<li class="timeline__item my-hover-div-1" id="dayFive">
 			<h3 class="timeline__day dayFive">1st March: <span><b><em> Gymkhana; SPIT Ground </em></b></span></h3>
 			<p class="timeline__day-sum">TableTennis, Tug of war</p>
 		</li>
-		<li class="timeline__item my-hover-div-1 right">
+		<li class="timeline__item my-hover-div-1 right" id="daySix">
 			<h3 class="timeline__day daySix">2nd March: <span><b><em> Sports ground </em></b></span></h3>
 			<p class="timeline__day-sum">Throwball, Kabaddi</p>
 		</li>
-		<li class="timeline__item my-hover-div-1">
+		<li class="timeline__item my-hover-div-1" id="daySeven">
 			<h3 class="timeline__day daySeven">3rd March: <span><b><em> Gymkhana; SPIT Sports ground </em></b></span></h3>
 			<p class="timeline__day-sum">Chess, Dodgeball</p>
 		</li>
@@ -152,104 +159,54 @@
 	</ul>
 </div>
 <script>
-	// To auto-play trailer video
-	// $('#trailer-vdo').mouseover(function(){
-	// 	$(this).get(0).play();
-	// }).mouseout(function(){
-	// 	$(this).get(0).pause();
-	// })
+	if (new Date().getTime() >= new Date(2022, 2, 3)){
+		let v = document.getElementById("elasped-timeline").getAttribute("y2")
+		document.getElementById("elasped-timeline").setAttribute("y2", "163.8em");
+		document.getElementById("daySeven").style.background = "rgba(57, 255, 20, 1)";
+	}
+	
+	else if (new Date().getTime() >= new Date(2022, 2, 2)){
+		let v = document.getElementById("elasped-timeline").getAttribute("y2")
+		document.getElementById("elasped-timeline").setAttribute("y2", "140.8em");
+		document.getElementById("daySix").style.background = "rgba(57, 255, 20, 1)";
+	}
+	
+	else if (new Date().getTime() >= new Date(2022, 2, 1)){
+		let v = document.getElementById("elasped-timeline").getAttribute("y2")
+		document.getElementById("elasped-timeline").setAttribute("y2", "117.8em");
+		document.getElementById("dayFive").style.background = "rgba(57, 255, 20, 1)";
+	}
+	
+	else if (new Date().getTime() >= new Date(2022, 1, 28)){
+		let v = document.getElementById("elasped-timeline").getAttribute("y2")
+		document.getElementById("elasped-timeline").setAttribute("y2", "94.8em");
+		document.getElementById("dayFour").style.background = "rgba(57, 255, 20, 1)";
+	}
+	
+	else if (new Date().getTime() >= new Date(2022, 1, 27)){
+		let v = document.getElementById("elasped-timeline").getAttribute("y2")
+		document.getElementById("elasped-timeline").setAttribute("y2", "71.8em");
+		document.getElementById("dayThree").style.background = "rgba(57, 255, 20, 1)";
+	}
+	
+	else if (new Date().getTime() >= new Date(2022, 1, 26)){
+		let v = document.getElementById("elasped-timeline").getAttribute("y2")
+		document.getElementById("elasped-timeline").setAttribute("y2", "48.8em");
+		document.getElementById("dayTwo").style.background = "rgba(57, 255, 20, 1)";
+	}
+	
+	else if (new Date().getTime() >= new Date(2022, 1, 25)){
+		let v = document.getElementById("elasped-timeline").getAttribute("y2")
+		document.getElementById("elasped-timeline").setAttribute("y2", "25.8em");
+		document.getElementById("dayOne").style.background = "rgba(57, 255, 20, 1)";
+	}
+	
+	else{
+		let v = document.getElementById("elasped-timeline").getAttribute("y2")
+		document.getElementById("elasped-timeline").setAttribute("y2", "2.8em");
+	}
+	
 
-	// // To auto-play theme video
-	// $('#theme-vdo').mouseover(function(){
-	// 	$(this).get(0).play();
-	// }).mouseout(function(){
-	// 	$(this).get(0).pause();
-	// })
-
-	// To prevent carousel from pausing when hovered
-	// $('.carousel').carousel({
-    // pause: "false"
-	// });
-
-	// if (new Date().getTime() >= new Date(2021, 11, 1)){
-	// 	let v = document.getElementById("elasped-timeline").getAttribute("y2")
-	// 	document.getElementById("elasped-timeline").setAttribute("y2", parseInt(v) + 180);
-	// }
-	
-	// if (new Date().getTime() >= new Date(2021, 11, 13)){
-	// 	let v = document.getElementById("elasped-timeline").getAttribute("y2")
-	// 	document.getElementById("elasped-timeline").setAttribute("y2", parseInt(v) + 200);
-	// }
-	
-	// if (new Date().getTime() >= new Date(2021, 11, 15)){
-	// 	let v = document.getElementById("elasped-timeline").getAttribute("y2")
-	// 	document.getElementById("elasped-timeline").setAttribute("y2", parseInt(v) + 200);
-	// }
-	
-	// if (new Date().getTime() >= new Date(2021, 11, 17)){
-	// 	let v = document.getElementById("elasped-timeline").getAttribute("y2")
-	// 	document.getElementById("elasped-timeline").setAttribute("y2", parseInt(v) + 200);
-	// }
-	
-	// if (new Date().getTime() >= new Date(2021, 11, 18)){
-	// 	let v = document.getElementById("elasped-timeline").getAttribute("y2")
-	// 	document.getElementById("elasped-timeline").setAttribute("y2", parseInt(v) + 200);
-	// }
-	
-	// if (new Date().getTime() >= new Date(2021, 11, 19)){
-	// 	let v = document.getElementById("elasped-timeline").getAttribute("y2")
-	// 	document.getElementById("elasped-timeline").setAttribute("y2", parseInt(v) + 200);
-	// }
-	
-	// if (new Date().getTime() >= new Date(2021, 11, 20)){
-	// 	let v = document.getElementById("elasped-timeline").getAttribute("y2")
-	// 	document.getElementById("elasped-timeline").setAttribute("y2", parseInt(v) + 200);
-	// }
-	
-	// if (new Date().getTime() >= new Date(2021, 11, 23)){
-	// 	let v = document.getElementById("elasped-timeline").getAttribute("y2")
-	// 	document.getElementById("elasped-timeline").setAttribute("y2", parseInt(v) + 200);
-	// }
-	
-	// if (new Date().getTime() >= new Date(2021, 11, 24)){
-	// 	let v = document.getElementById("elasped-timeline").getAttribute("y2")
-	// 	document.getElementById("elasped-timeline").setAttribute("y2", parseInt(v) + 200);
-	// }
-	
-	// if (new Date().getTime() >= new Date(2021, 11, 25)){
-	// 	let v = document.getElementById("elasped-timeline").getAttribute("y2")
-	// 	document.getElementById("elasped-timeline").setAttribute("y2", parseInt(v) + 200);
-	// }
-	
-	// if (new Date().getTime() >= new Date(2021, 11, 26)){
-	// 	let v = document.getElementById("elasped-timeline").getAttribute("y2")
-	// 	document.getElementById("elasped-timeline").setAttribute("y2", parseInt(v) + 200);
-	// }
-	
-	// if (new Date().getTime() >= new Date(2021, 11, 27)){
-	// 	let v = document.getElementById("elasped-timeline").getAttribute("y2")
-	// 	document.getElementById("elasped-timeline").setAttribute("y2", parseInt(v) + 200);
-	// }
-	
-	// if (new Date().getTime() >= new Date(2022, 11, 28)){
-	// 	let v = document.getElementById("elasped-timeline").getAttribute("y2")
-	// 	document.getElementById("elasped-timeline").setAttribute("y2", parseInt(v) + 200);
-	// }
-	
-	// if (new Date().getTime() >= new Date(2022, 11, 29)){
-	// 	let v = document.getElementById("elasped-timeline").getAttribute("y2")
-	// 	document.getElementById("elasped-timeline").setAttribute("y2", parseInt(v) + 200);
-	// }
-	
-	// if (new Date().getTime() >= new Date(2022, 11, 30)){
-	// 	let v = document.getElementById("elasped-timeline").getAttribute("y2")
-	// 	document.getElementById("elasped-timeline").setAttribute("y2", parseInt(v) + 200);
-	// }
-	
-	// if (new Date().getTime() >= new Date(2022, 11, 31).getTime()){
-	// 	let v = document.getElementById("elasped-timeline").getAttribute("y2")
-	// 	document.getElementById("elasped-timeline").setAttribute("y2", parseInt(v) + 200);
-	// }
 	
 </script>
 <!-- <script src="{% static 'CSS/timeline.js' %}"></script> -->
