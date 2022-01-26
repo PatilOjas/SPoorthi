@@ -1,27 +1,53 @@
 {% extends 'base.html' %}
 
-{% block title %}{{ pageTitle }}{% endblock %}
+{% block title %}{{ pageTitle }}{% endblock %} 
 
 {% block content %}
 
-
-    <div class="contact-us my-container color-contact-page">
-        <div class="content card">
-            <h2 class="title card-header">Contact Us</h2>
-            <div class="card-body">
-                <div class="contact-people">
-                    <h5>Darshan Somani  +91 8180877448</h5>
-                    <h5>Contact person 2</h5>
-                    <h5>Contact person 3</h5>
-                </div>
-                <hr>
-                <div class="contact-social">
-                    <h5>Email</h5>
-                    <h5>Facebook</h5>
-                    <h5>Instagram</h5>
-                </div>
-            </div>
+<div class="contact-us my-container color-contact-page">
+  <div class="card mx-5">
+    <h2 class="title card-header text-center">Contact Us</h2>
+    <div class="card-body">
+      <div class="contact-people">
+        <div class="person my-5">
+          <h4>Sports Secretary S.P.I.T</h4>
+          <h5>Darshan Somani +91 8180877448</h5>
         </div>
-    </div>
+        <div class="person my-5">
+          <h4>Sports Vice Secretary S.P.I.T</h4>
+          <h5>Tanisha Kalathil +91 83697 80361</h5>
+        </div>
+        
+        <div class="person my-5">
+          <h4>Sports Technical Head S.P.I.T</h4>
+          <h5>Ojas Patil ojas.patil@spit.ac.in</h5>
+          <h5>Prathmesh Waghmode prathmesh.waghmode@spit.ac.in</h5>
+        </div>
+        
+        <div class="person my-5">
+          <a href="https://www.instagram.com/p/CUaibnwtpS5/"><h4>Other Core Committee members</h4></a>
+        </div>
+      </div>
 
-{% endblock %}
+      <hr />
+
+      <div class="contact-social">
+        <div class="media-link">
+          <a href="https://www.instagram.com/spoorthi_spit/"><i class="fab fa-instagram"></i>Instagram</a>
+        </div>
+        <div class="media-link">
+          <a href="https://www.facebook.com/SPoorthiSPIT/"><i class="fab fa-facebook"></i>Facebook</a>
+        </div>
+        <div class="media-link">
+          <a href="mailto:sports@spit.ac.in"><i class="far fa-envelope"></i>sports@spit.ac.in</a>
+        </div>
+        <div class="media-link">
+          <a href="https://www.google.com/maps/place/Bharatiya+Vidya+Bhavan's+Sardar+Patel+Institute+of+Technology+(SPIT)/@19.1231776,72.8339267,17z/data=!3m1!4b1!4m5!3m4!1s0x3be7c9d90e067ba9:0x16268e5d6bca2e6a!8m2!3d19.1231776!4d72.8361154">
+            <i class="fas fa-map-marker-alt"></i>Sardar Patel Institute of Technology, Andheri(W), Mumbai 400 058</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  {% endblock %}

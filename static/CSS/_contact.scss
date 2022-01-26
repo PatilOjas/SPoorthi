@@ -1,0 +1,17 @@
+.contact-us{
+
+    .card-body{
+        
+        
+        .contact-social{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(20rem, 25rem));
+            gap: 3rem;
+            justify-content: center;
+            .media-link{
+                margin: 2rem;
+                
+            }
+        }
+    }
+}
