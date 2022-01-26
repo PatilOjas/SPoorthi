@@ -16,7 +16,7 @@
                     <div class="eventName mb-3 row">
                         <h2 class="col-md-8 col-sm-6">{{item.eventName}}</h2>
 						<br>
-                        {% if item.eventName == 'Carrom' or item.eventName == 'Badminton' %}
+                        {% if item.eventName == 'Carrom' or item.eventName == 'Badminton' or item.eventName == 'Table Tennis' %}
                             <div class="col-md-4  col-sm-6 ">
                                 <a class="btn btn-primary mb-4 form-control" href="{% url 'registrationpage' name=item.eventName %} (S)">Register Here for Singles</a>
                                 <a class="btn btn-primary mb-4 form-control" href="{% url 'registrationpage' name=item.eventName %} (D)">Register Here for Doubles</a>
