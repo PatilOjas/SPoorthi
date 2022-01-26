@@ -4,8 +4,8 @@ var w = c.width = window.innerWidth,
     
     opts = {
       
-      len: 20,
-      count: 50,
+      len: 70,
+      count: 100,
       baseTime: 10,
       addedTime: 10,
       dieChance: .05,
