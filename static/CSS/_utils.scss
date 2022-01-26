@@ -44,8 +44,8 @@
     @include bg-gradient(#D16BA5,#86A8E7 , #5FFBF1)
 }
 .color-events-page{
-    @include bg-gradient(#ffafbd ,#fa98fa, #ffc3a0, )
-    // @include bg-gradient(#17274d, #341755,#700f50)
+    // @include bg-gradient(#ffafbd ,#fa98fa, #ffc3a0, )
+    @include bg-gradient(#1b1241, #4c1864,#7c0b92)
     // @include bg-gradient(#ee9ca7,#fac0c7, #e2c2c6)
 }
 .color-gallery-page{
@@ -55,5 +55,5 @@
 
 .color-event-details-page{
     // @include bg-gradient(#ee9ca7,#fac0c7, #e2c2c6)
-    @include bg-gradient(#ee9ca7,#fac0c7, #e2c2c6)
+    @include bg-gradient(#1b1241, #4c1864,#7c0b92)
 }

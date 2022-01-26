@@ -89,7 +89,7 @@ def registrationPage(request, name='*'):
 			return redirect('events')
 	
 	# if name == '*':
-	return render(request, 'index.html')
+	return render(request, 'index.html', {'pageTitle':"Register"})
 	# else:
 	# 	return render(request, 'index.html')
 
@@ -97,10 +97,10 @@ def registrationPage(request, name='*'):
 
 
 def homePage(request):
-	return render(request, 'home.html')
+	return render(request, 'home.html', {'pageTitle':"Home"})
 
 def contact(request):
-	return render(request, 'contact.html')
+	return render(request, 'contact.html', {'pageTitle':"Contact"})
 
 
 
@@ -108,6 +108,7 @@ def gallery(request):
 	data = {
 		'glimpse': os.listdir(path='./static/images/glimpse'),
 		'agility2021': os.listdir(path='./static/images/agility2021'),
+		'pageTitle':"Gallery"
 	}
 	
 	return render(request, 'gallery.html', data)
@@ -116,15 +117,16 @@ def gallery(request):
 
 
 def eventPage(request, name=""):
+	context = {}
+	
 	if name=="":
-		context = {}
 		allEvents = EventModel.objects.all()
 		context['allEvents'] = allEvents
+		context['pageTitle'] = "Events"
 		return render(request, 'events.html', context)
 	else:
-		context = {}
-
 		#get the event details by event name and add to context
 		getEvent = EventModel.objects.get(eventName=name)
 		context['item'] = getEvent
+		context['pageTitle'] = "Event - "+name
 		return render(request, 'event_details.html', context)
