@@ -137,7 +137,6 @@ def gallery(request):
 	data['spoorthi'] = objects_SPoorthi
 	data['agility'] = objects_Agility
 	data['glimpse'] = objects_Glimpse
-	print(objects_Agility[0].image)
 	
 	return render(request, 'gallery.html', data)
 
