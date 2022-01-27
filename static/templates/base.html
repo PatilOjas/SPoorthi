@@ -12,12 +12,16 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 	<!------ Include the above in your HEAD tag ---------->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+	<!-- Font Awesome link-->
+	<link rel="stylesheet" href="{% static 'CSS/all.min.css' %}">
+
+
+
 	<link rel="stylesheet" href="{% static 'CSS/style.css' %}">
 
 	<title>
 		{% block title %}{% endblock %}
-	  </title>
+	</title>
 	  
 	<link rel="shortcut icon" href="{% static 'images/favicon.png' %}" type="image/x-icon">
 	<!-- AJAX -->
@@ -80,11 +84,11 @@
 			<p>&hearts; SPIT Sports Committee</p>
 		</div>
 		<div class="social-media-links">
-			<div class="media-link">
-				<a href="https://www.instagram.com/spoorthi_spit/"><i class="fab fa-instagram"></i></a>
+			<div class="media-link my-hover-div-1">
+				<a href="https://www.instagram.com/spoorthi_spit/"><i class="fab fa-instagram fa-2x"></i></a>
 			</div>
-			<div class="media-link">
-				<a href="https://www.facebook.com/SPoorthiSPIT/"><i class="fab fa-facebook"></i></a>
+			<div class="media-link my-hover-div-1">
+				<a href="https://www.facebook.com/SPoorthiSPIT/"><i class="fab fa-facebook fa-2x"></i></a>
 			</div>
 		</div>
 
@@ -93,12 +97,7 @@
 
 	<script src="{% static 'CSS/bootstrap.bundle.min.js' %}"></script>
 	<script  src="{% static 'CSS/dist/script.js' %}"></script>
-	<script>
-		// window.setInterval('refresh()', 5000);
-		// function refresh(){
-		// 	window.location.reload()
-		// }
-	</script>
+	<script src="{% static 'CSS/all.min.js' %}"></script>
 </body>
 
 </html>

@@ -12,6 +12,7 @@
         .contact-people{
             flex-basis: 50%;
             padding: 2rem 3rem;
+            padding-left: 5rem;
             .title{
                 border-bottom: 4px solid #777;
                 width: 40%;
@@ -61,7 +62,7 @@
                     border: 2px solid #777;
                     
                     i{
-                        font-size: 2.5rem;
+                        font-size: 3rem;
                         color: #777;
                         transition: all 0.2s ease-in-out;
                     }
@@ -78,28 +79,28 @@
                 }
                 
                 .link-1:hover{
-                    background: #861396; 
+                    background: #a750b4; 
                     border-color: transparent;
                     i{
                         color: white;
                     }
                 }
                 .link-2:hover{
-                    background:#4267B2; 
+                    background:#4d70b4; 
                     border-color: transparent;
                     i{
                         color: white;
                     }
                 }
                 .link-3:hover{
-                    background:#eb5a5a; 
+                    background:#f18080; 
                     border-color: transparent;
                     i{
                         color: white;
                     }
                 }
                 .link-4:hover{
-                    background:#453eac; 
+                    background:#635dbe; 
                     border-color: transparent;
                     i{
                         color: white;
