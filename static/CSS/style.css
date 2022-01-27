@@ -1,4 +1,116 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap");
+.my-box-shadow {
+  -webkit-box-shadow: 0 0 10px 2px rgba(90, 90, 90, 0.3);
+          box-shadow: 0 0 10px 2px rgba(90, 90, 90, 0.3);
+}
+
+.my-hover-div-1 {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.my-hover-div-1:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+@-webkit-keyframes move-bg {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+@keyframes move-bg {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.color-register-page {
+  background-repeat: no-repeat;
+  background: -webkit-gradient(linear, left top, right top, from(#e26777), color-stop(#fd896c), to(#fff066));
+  background: linear-gradient(to right, #e26777, #fd896c, #fff066);
+  background-size: 300%;
+  position: relative;
+  min-height: 100vh;
+  -webkit-animation-name: move-bg;
+          animation-name: move-bg;
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+.color-contact-page {
+  background-repeat: no-repeat;
+  background: -webkit-gradient(linear, left top, right top, from(#D16BA5), color-stop(#86A8E7), to(#5FFBF1));
+  background: linear-gradient(to right, #D16BA5, #86A8E7, #5FFBF1);
+  background-size: 300%;
+  position: relative;
+  min-height: 100vh;
+  -webkit-animation-name: move-bg;
+          animation-name: move-bg;
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+.color-events-page {
+  background-repeat: no-repeat;
+  background: -webkit-gradient(linear, left top, right top, from(#1b1241), color-stop(#4c1864), to(#7c0b92));
+  background: linear-gradient(to right, #1b1241, #4c1864, #7c0b92);
+  background-size: 300%;
+  position: relative;
+  min-height: 100vh;
+  -webkit-animation-name: move-bg;
+          animation-name: move-bg;
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+.color-gallery-page {
+  background: -webkit-gradient(linear, left top, right bottom, from(#000428), to(#004e92));
+  background: linear-gradient(to right bottom, #000428, #004e92);
+}
+
+.color-event-details-page {
+  background-repeat: no-repeat;
+  background: -webkit-gradient(linear, left top, right top, from(#1b1241), color-stop(#4c1864), to(#7c0b92));
+  background: linear-gradient(to right, #1b1241, #4c1864, #7c0b92);
+  background-size: 300%;
+  position: relative;
+  min-height: 100vh;
+  -webkit-animation-name: move-bg;
+          animation-name: move-bg;
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
 .my-page-body {
   margin: 0;
   padding: 0;
@@ -834,19 +946,174 @@ ul {
   color: #ffffff;
 }
 
+.contact-us .card {
+  border-radius: 2rem;
+}
+
+.contact-us a {
+  text-decoration: none;
+  color: #333;
+}
+
+.contact-us .card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  padding: 0;
+}
+
+.contact-us .card-body .contact-people {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  padding: 2rem 3rem;
+}
+
+.contact-us .card-body .contact-people .title {
+  border-bottom: 4px solid #777;
+  width: 40%;
+}
+
+.contact-us .card-body .contact-people .contact-info {
+  font-size: medium;
+  font-weight: 500;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.contact-us .card-body .contact-people .person:hover .contact-info {
+  opacity: 1;
+}
+
+.contact-us .card-body .contact-people .my-hover-div-1 {
+  border-bottom: 4px solid transparent;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  width: 80%;
+  margin-left: 2rem;
+}
+
+.contact-us .card-body .contact-people .my-hover-div-1:hover {
+  border-bottom: 4px solid #777;
+}
+
 .contact-us .card-body .contact-social {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(20rem, 25rem))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(20rem, 25rem));
-  gap: 3rem;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  position: relative;
+}
+
+.contact-us .card-body .contact-social .img-container {
+  width: 100%;
+  height: 100%;
+}
+
+.contact-us .card-body .contact-social .img-container img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 2rem;
+  height: 100%;
+  width: 100%;
+}
+
+.contact-us .card-body .contact-social .links-div {
+  position: absolute;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateY(-70%);
+          transform: translateY(-70%);
+}
+
+.contact-us .card-body .contact-social .links-div .media-link {
+  border: 2px solid #777;
+}
+
+.contact-us .card-body .contact-social .links-div .media-link i {
+  font-size: 2.5rem;
+  color: #777;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.contact-us .card-body .contact-social .links-div .media-link .link-desc {
+  display: none;
+}
+
+.contact-us .card-body .contact-social .links-div .link-1, .contact-us .card-body .contact-social .links-div .link-2, .contact-us .card-body .contact-social .links-div .link-3, .contact-us .card-body .contact-social .links-div .link-4 {
+  background: white;
+  border-radius: 100%;
+  width: 5rem;
+  height: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.contact-us .card-body .contact-social .media-link {
-  margin: 2rem;
+.contact-us .card-body .contact-social .links-div .link-1:hover {
+  background: #861396;
+  border-color: transparent;
+}
+
+.contact-us .card-body .contact-social .links-div .link-1:hover i {
+  color: white;
+}
+
+.contact-us .card-body .contact-social .links-div .link-2:hover {
+  background: #4267B2;
+  border-color: transparent;
+}
+
+.contact-us .card-body .contact-social .links-div .link-2:hover i {
+  color: white;
+}
+
+.contact-us .card-body .contact-social .links-div .link-3:hover {
+  background: #eb5a5a;
+  border-color: transparent;
+}
+
+.contact-us .card-body .contact-social .links-div .link-3:hover i {
+  color: white;
+}
+
+.contact-us .card-body .contact-social .links-div .link-4:hover {
+  background: #453eac;
+  border-color: transparent;
+}
+
+.contact-us .card-body .contact-social .links-div .link-4:hover i {
+  color: white;
 }
 
 footer {
@@ -1018,117 +1285,11 @@ footer p {
   .gallery .overlay {
     display: none;
   }
-}
-
-.my-box-shadow {
-  -webkit-box-shadow: 0 0 10px 2px rgba(90, 90, 90, 0.3);
-          box-shadow: 0 0 10px 2px rgba(90, 90, 90, 0.3);
-}
-
-.my-hover-div-1 {
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-
-.my-hover-div-1:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-}
-
-@-webkit-keyframes move-bg {
-  0% {
-    background-position: 0% 0%;
+  .contact-us .card-body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
   }
-  50% {
-    background-position: 100% 100%;
-  }
-  100% {
-    background-position: 0% 0%;
-  }
-}
-
-@keyframes move-bg {
-  0% {
-    background-position: 0% 0%;
-  }
-  50% {
-    background-position: 100% 100%;
-  }
-  100% {
-    background-position: 0% 0%;
-  }
-}
-
-.color-register-page {
-  background-repeat: no-repeat;
-  background: -webkit-gradient(linear, left top, right top, from(#e26777), color-stop(#fd896c), to(#fff066));
-  background: linear-gradient(to right, #e26777, #fd896c, #fff066);
-  background-size: 300%;
-  position: relative;
-  min-height: 100vh;
-  -webkit-animation-name: move-bg;
-          animation-name: move-bg;
-  -webkit-animation-duration: 7s;
-          animation-duration: 7s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-}
-
-.color-contact-page {
-  background-repeat: no-repeat;
-  background: -webkit-gradient(linear, left top, right top, from(#D16BA5), color-stop(#86A8E7), to(#5FFBF1));
-  background: linear-gradient(to right, #D16BA5, #86A8E7, #5FFBF1);
-  background-size: 300%;
-  position: relative;
-  min-height: 100vh;
-  -webkit-animation-name: move-bg;
-          animation-name: move-bg;
-  -webkit-animation-duration: 7s;
-          animation-duration: 7s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-}
-
-.color-events-page {
-  background-repeat: no-repeat;
-  background: -webkit-gradient(linear, left top, right top, from(#1b1241), color-stop(#4c1864), to(#7c0b92));
-  background: linear-gradient(to right, #1b1241, #4c1864, #7c0b92);
-  background-size: 300%;
-  position: relative;
-  min-height: 100vh;
-  -webkit-animation-name: move-bg;
-          animation-name: move-bg;
-  -webkit-animation-duration: 7s;
-          animation-duration: 7s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-}
-
-.color-gallery-page {
-  background: -webkit-gradient(linear, left top, right bottom, from(#000428), to(#004e92));
-  background: linear-gradient(to right bottom, #000428, #004e92);
-}
-
-.color-event-details-page {
-  background-repeat: no-repeat;
-  background: -webkit-gradient(linear, left top, right top, from(#1b1241), color-stop(#4c1864), to(#7c0b92));
-  background: linear-gradient(to right, #1b1241, #4c1864, #7c0b92);
-  background-size: 300%;
-  position: relative;
-  min-height: 100vh;
-  -webkit-animation-name: move-bg;
-          animation-name: move-bg;
-  -webkit-animation-duration: 7s;
-          animation-duration: 7s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
 }
 /*# sourceMappingURL=style.css.map */
