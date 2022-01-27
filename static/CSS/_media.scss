@@ -75,4 +75,9 @@
     .gallery .overlay{
         display: none;
     }
+    .contact-us{
+        .card-body{
+            flex-flow: column nowrap;
+        }
+    }
 }

@@ -4,6 +4,13 @@
 }
 
 
+@mixin side-by-side($direction, $justify, $align){
+    display: flex;
+    flex-flow: $direction wrap;
+    justify-content: $justify;
+    align-items: $align;
+}
+
 // scale up the boxes on hover
 .my-hover-div-1{
     transition: all 0.2s ease-in-out;
@@ -12,9 +19,8 @@
     transform: scale(1.05);
 }
 
-// apply animated gradient to background
-// *** ALWAYS ADD color-x CLASS ALONG WITH bg-gradient
 
+// apply animated gradient to background
 @mixin bg-gradient($val1,$val2, $val3){
     background-repeat: no-repeat;
     background: linear-gradient(to right, $val1,$val2, $val3);

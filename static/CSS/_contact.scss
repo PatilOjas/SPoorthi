@@ -1,17 +1,112 @@
 .contact-us{
-
+    .card{
+        border-radius: 2rem; 
+    }
+    a{
+        text-decoration: none;
+        color: #333;
+    }
     .card-body{
-        
-        
-        .contact-social{
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(20rem, 25rem));
-            gap: 3rem;
-            justify-content: center;
-            .media-link{
-                margin: 2rem;
-                
+        @include side-by-side(row,start,stretch);
+        padding: 0;
+        .contact-people{
+            flex-basis: 50%;
+            padding: 2rem 3rem;
+            .title{
+                border-bottom: 4px solid #777;
+                width: 40%;
             }
+            .contact-info{
+                font-size: medium;
+                font-weight: 500;
+                transition: all 0.3s ease-in-out;
+                opacity: 0;
+            }
+            .person:hover .contact-info{
+                opacity: 1;
+            }
+            .my-hover-div-1{
+                border-bottom: 4px solid transparent;
+                transition: all 0.2s ease-in-out;
+                width: 80%;
+                margin-left: 2rem;
+            }
+            .my-hover-div-1:hover{
+                border-bottom: 4px solid #777;
+            }
+        }
+
+
+
+        .contact-social{
+            flex-basis: 50%;
+            position: relative;
+            .img-container{
+                width: 100%;
+                height: 100%;
+                img{
+                    object-fit: contain;
+                    border-radius: 2rem;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+            .links-div{
+                position: absolute;
+                width: 100%;
+                @include side-by-side(row,space-around,center);
+                transform: translateY(-70%);
+                .media-link{
+                    border: 2px solid #777;
+                    
+                    i{
+                        font-size: 2.5rem;
+                        color: #777;
+                        transition: all 0.2s ease-in-out;
+                    }
+                    .link-desc{
+                        display: none;
+                    }
+                }
+                .link-1,.link-2,.link-3,.link-4{
+                    background: white;
+                    border-radius: 100%;
+                    width: 5rem;
+                    height: 5rem;
+                    @include side-by-side(row,center,center)
+                }
+                
+                .link-1:hover{
+                    background: #861396; 
+                    border-color: transparent;
+                    i{
+                        color: white;
+                    }
+                }
+                .link-2:hover{
+                    background:#4267B2; 
+                    border-color: transparent;
+                    i{
+                        color: white;
+                    }
+                }
+                .link-3:hover{
+                    background:#eb5a5a; 
+                    border-color: transparent;
+                    i{
+                        color: white;
+                    }
+                }
+                .link-4:hover{
+                    background:#453eac; 
+                    border-color: transparent;
+                    i{
+                        color: white;
+                    }
+                }
+            }
+
         }
     }
 }
