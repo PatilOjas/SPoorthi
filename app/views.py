@@ -1,11 +1,10 @@
 from django.shortcuts import redirect, render
 from django.shortcuts import render
 from .forms import RegistrationForm
-from .models import EventModel
+from .models import EventModel, ImageModel
 from django.core.mail import send_mail
 from django.conf import settings
-
-from .forms import RegistrationForm
+from django.core.paginator import Paginator
 
 import os
 
@@ -110,6 +109,35 @@ def gallery(request):
 		'agility2021': os.listdir(path='./static/images/agility2021'),
 		'pageTitle':"Gallery"
 	}
+
+	objects_SPoorthi = ImageModel.objects.filter(imageClass="SPoorthi").order_by('imageId')
+	p_SPoorthi = Paginator(objects_SPoorthi, 2)
+	page = request.GET.get('page1')
+	try:
+		objects_SPoorthi = p_SPoorthi.page(page)
+	except:
+		objects_SPoorthi = p_SPoorthi.page(1)
+
+	objects_Agility = ImageModel.objects.filter(imageClass="Agility").order_by('imageId')
+	p_Agility = Paginator(objects_Agility, 3)
+	page = request.GET.get('page2')
+	try:
+		objects_Agility = p_Agility.page(page)
+	except:
+		objects_Agility = p_Agility.page(1)
+
+	objects_Glimpse = ImageModel.objects.filter(imageClass="Glimpse").order_by('imageId')
+	p_Glimpse = Paginator(objects_Glimpse, 4)
+	page = request.GET.get('page3')
+	try:
+		objects_Glimpse = p_Glimpse.page(page)
+	except:
+		objects_Glimpse = p_Glimpse.page(1)
+	
+	data['spoorthi'] = objects_SPoorthi
+	data['agility'] = objects_Agility
+	data['glimpse'] = objects_Glimpse
+	print(objects_Agility[0].image)
 	
 	return render(request, 'gallery.html', data)
 

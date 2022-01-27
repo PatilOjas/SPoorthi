@@ -1,3 +1,4 @@
+from distutils.command import upload
 from django.db import models
 from app.models import *
 
@@ -29,3 +30,17 @@ class EventModel(models.Model):
 
 	def __str__(self):
 		return self.eventName
+
+class ImageModel(models.Model):
+	imageId = models.AutoField(primary_key=True)
+	image = models.ImageField(upload_to="images")
+	Classes = [
+		('SPoorthi', 'SPoorthi 2022'),
+		('Agility', 'Agility 2021'),
+		('Glimpse', 'Glimpse of Past Years')
+	]
+	imageClass = models.CharField(max_length=10, choices=Classes)
+	
+	def __str__(self):
+		return self.imageClass +" " + str(self.imageId)
+	# Make arrangements to provide option to select category of image whether glimpse, agility or spoorthi

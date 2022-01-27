@@ -7,14 +7,25 @@
 {% block content %}
 
 	<div class="my-container color-gallery-page">
-			
+		
+		{% if agility %}
 		<h1 class="mb-4" style="color: white;">Agility 2021</h1>
 		<div class="gallery">
-			{% for i in agility2021 %}
-				<img src="{% static 'images/agility2021/' %}{{i}}" alt="{{ i }}">
+			{% for i in agility %}
+				<img src="/media/{{i.image}}" alt="{{ i }}">
 			{% endfor %}
+			{% if agility.has_previous %}
+                <a href="?page1={{ agility.previous_page_number }}" style="color: white;"> previous </a>
+            {% endif %}
+            <span  style="color: white;">
+                Page {{ agility.number }} of {{ agility.paginator.num_pages }}
+            </span>
+            {% if agility.has_next %}
+                <a href="?page1={{ agility.next_page_number }}" style="color: white;"> next </a>
+            {% endif %}
 			<div class="overlay">Agility 2021</div>
 		</div>
+		{% endif %}
 		
 		<div style="height: 5rem;"></div>
 		
@@ -23,13 +34,23 @@
 			<div style="display: inline-block;"><video src="{% static 'images/trailer.mp4' %}" controls width="500" id="trailer-vdo"></video></div>
 			<div style="display: inline-block;"><video src="{% static 'images/theme.mp4' %}" controls width="500" id="theme-vdo"></video></div>
 		</div>
+		{% if glimpse %}
 		<div class="gallery">
-			
 			{% for i in glimpse %}
-				<img src="{% static 'images/glimpse/' %}{{i}}" alt="{{i}}">
+				<img src="/media/{{i.image}}" alt="{{ i }}">
 			{% endfor %}
+			{% if glimpse.has_previous %}
+                <a href="?page1={{ glimpse.previous_page_number }}" style="color: white;"> previous </a>
+            {% endif %}
+            <span  style="color: white;">
+                Page {{ glimpse.number }} of {{ glimpse.paginator.num_pages }}
+            </span>
+            {% if glimpse.has_next %}
+                <a href="?page1={{ glimpse.next_page_number }}" style="color: white;"> next </a>
+            {% endif %}
 			<div class="overlay">Glimpse of Past Years</div>
 		</div>
+		{% endif %}
 	</div>
 	
 {% endblock %}
