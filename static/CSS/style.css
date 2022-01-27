@@ -14,6 +14,10 @@
           transform: scale(1.05);
 }
 
+.my-hover-div-1:hover i, .my-hover-div-1:hover .fa {
+  color: white !important;
+}
+
 @-webkit-keyframes move-bg {
   0% {
     background-position: 0% 0%;
@@ -976,6 +980,7 @@ ul {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
   padding: 2rem 3rem;
+  padding-left: 5rem;
 }
 
 .contact-us .card-body .contact-people .title {
@@ -1050,7 +1055,7 @@ ul {
 }
 
 .contact-us .card-body .contact-social .links-div .media-link i {
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #777;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -1081,7 +1086,7 @@ ul {
 }
 
 .contact-us .card-body .contact-social .links-div .link-1:hover {
-  background: #861396;
+  background: #a750b4;
   border-color: transparent;
 }
 
@@ -1090,7 +1095,7 @@ ul {
 }
 
 .contact-us .card-body .contact-social .links-div .link-2:hover {
-  background: #4267B2;
+  background: #4d70b4;
   border-color: transparent;
 }
 
@@ -1099,7 +1104,7 @@ ul {
 }
 
 .contact-us .card-body .contact-social .links-div .link-3:hover {
-  background: #eb5a5a;
+  background: #f18080;
   border-color: transparent;
 }
 
@@ -1108,7 +1113,7 @@ ul {
 }
 
 .contact-us .card-body .contact-social .links-div .link-4:hover {
-  background: #453eac;
+  background: #635dbe;
   border-color: transparent;
 }
 
@@ -1192,6 +1197,10 @@ footer p {
   -webkit-transform: scale(1.8);
           transform: scale(1.8);
   color: #dddddd;
+}
+
+.social-media-links a {
+  color: #999;
 }
 
 @media (min-width: 901px) and (max-width: 1100px) {

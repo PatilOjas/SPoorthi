@@ -4,6 +4,7 @@
 }
 
 
+
 @mixin side-by-side($direction, $justify, $align){
     display: flex;
     flex-flow: $direction wrap;
@@ -17,6 +18,9 @@
 }
 .my-hover-div-1:hover{
     transform: scale(1.05);
+    i, .fa{
+        color: white !important;
+    }
 }
 
 
