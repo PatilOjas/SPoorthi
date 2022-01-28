@@ -30,6 +30,7 @@
     margin: 1rem;
     background-color: transparent;
     z-index: 2;
+    border-radius: 1rem;
 }
 .register-section .container{
     padding: 5rem 0;
@@ -125,7 +126,8 @@
 
 .mybtn{
     // background-image: linear-gradient(to bottom,  #db5050,#ff8060, #fff066);
-    background-color: #ff9166;
+    // background-color: #ff9166;
+    background-color: $prim-dark;
     color: #ffffff;
     transition: all 0.3s ease-in-out;
     margin-bottom: 1rem;
@@ -134,6 +136,7 @@
 }
 
 .mybtn:hover{
-    background-color: #ff7260;
+    // background-color: #ff7260;
+    background-color: $prim;
     color: #ffffff;
 }
