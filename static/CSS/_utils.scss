@@ -1,9 +1,13 @@
-// util
+
+
+
 .my-box-shadow{
     box-shadow: 0 0 10px 2px rgba(90, 90, 90, 0.3);
 }
 
-
+.text-prim{
+    color: rgb(126, 10, 161);
+}
 
 @mixin side-by-side($direction, $justify, $align){
     display: flex;
@@ -22,6 +26,22 @@
         color: white !important;
     }
 }
+
+
+.underline{
+    position: relative;
+}
+.underline::before {
+    content: "";
+    position: absolute;
+    left: -5%;
+    top:85%;
+    width: 75%;
+    height: 0.7rem;
+    transform: skew(-25deg);
+    background: rgba(209, 79, 248, 0.5);
+  }
+
 
 
 // apply animated gradient to background

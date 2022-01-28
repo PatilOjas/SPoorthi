@@ -36,13 +36,56 @@
         }
 
     }
+
+    .contact-us{
+        .card-body{
+            .contact-people{
+                span{
+                    font-size: 80%;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                }
+            }
+            .contact-social{
+                .media-link{
+                    
+                    font-size: 0.8rem;
+                
+                }
+                .links-div{
+                    .link-1,.link-2,.link-3,.link-4{
+                        width: 4rem;
+                        height: 4rem;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media (max-width:768px){
     .content-side{
         border: none;
     }
-    
+    .contact-us{
+        .card{
+            border-radius: 1rem;
+        }
+        .card-body{
+
+            .contact-people{
+                padding: 2rem;
+                align-items: center;
+                text-align: center;
+            }
+            .peop{
+                text-align: start;
+                padding-left: 2rem;
+            }
+            
+        }
+    }
     
 }
 
@@ -56,6 +99,7 @@
             align-items: center;
         }
     }
+    
 }
 
 
@@ -78,6 +122,20 @@
     .contact-us{
         .card-body{
             flex-flow: column nowrap;
+            .contact-social{
+                .img-container{
+                    height: 20rem;
+                    img{
+                        height: 100%;
+                        overflow: hidden;
+                        object-fit: cover;
+                        border-radius: 0 0 1rem 1rem;
+                    }
+                }
+                .img-container::after{
+                    border-radius: 0 0 1rem 1rem;
+                }
+            }
         }
     }
 }

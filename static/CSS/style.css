@@ -4,6 +4,10 @@
           box-shadow: 0 0 10px 2px rgba(90, 90, 90, 0.3);
 }
 
+.text-prim {
+  color: #7e0aa1;
+}
+
 .my-hover-div-1 {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -16,6 +20,22 @@
 
 .my-hover-div-1:hover i, .my-hover-div-1:hover .fa {
   color: white !important;
+}
+
+.underline {
+  position: relative;
+}
+
+.underline::before {
+  content: "";
+  position: absolute;
+  left: -5%;
+  top: 85%;
+  width: 75%;
+  height: 0.7rem;
+  -webkit-transform: skew(-25deg);
+          transform: skew(-25deg);
+  background: rgba(209, 79, 248, 0.5);
 }
 
 @-webkit-keyframes move-bg {
@@ -952,6 +972,7 @@ ul {
 
 .contact-us .card {
   border-radius: 2rem;
+  border: none;
 }
 
 .contact-us a {
@@ -974,26 +995,56 @@ ul {
       -ms-flex-align: stretch;
           align-items: stretch;
   padding: 0;
+  border: none;
 }
 
 .contact-us .card-body .contact-people {
+  position: relative;
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
-  padding: 2rem 3rem;
-  padding-left: 5rem;
+  padding: 2rem 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
 }
 
 .contact-us .card-body .contact-people .title {
-  border-bottom: 4px solid #777;
-  width: 40%;
+  display: inline-block;
+}
+
+.contact-us .card-body .contact-people .person {
+  display: inline-block;
+}
+
+.contact-us .card-body .contact-people .text-prim {
+  position: relative;
+}
+
+.contact-us .card-body .contact-people .text-prim span {
+  overflow-wrap: break-word;
+  z-index: 4;
+  background-color: #d6d6d6;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.3rem;
 }
 
 .contact-us .card-body .contact-people .contact-info {
-  font-size: medium;
-  font-weight: 500;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   opacity: 0;
+}
+
+.contact-us .card-body .contact-people .peop h4 {
+  margin: 1.5rem 0;
 }
 
 .contact-us .card-body .contact-people .person:hover .contact-info {
@@ -1001,15 +1052,11 @@ ul {
 }
 
 .contact-us .card-body .contact-people .my-hover-div-1 {
-  border-bottom: 4px solid transparent;
+  color: #7e0aa1;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   width: 80%;
   margin-left: 2rem;
-}
-
-.contact-us .card-body .contact-people .my-hover-div-1:hover {
-  border-bottom: 4px solid #777;
 }
 
 .contact-us .card-body .contact-social {
@@ -1021,18 +1068,51 @@ ul {
 .contact-us .card-body .contact-social .img-container {
   width: 100%;
   height: 100%;
+  max-height: 45rem;
 }
 
 .contact-us .card-body .contact-social .img-container img {
-  -o-object-fit: contain;
-     object-fit: contain;
-  border-radius: 2rem;
+  -o-object-fit: fill;
+     object-fit: fill;
+  border-radius: 0 2rem 2rem 0;
   height: 100%;
   width: 100%;
+  overflow: hidden;
+}
+
+.contact-us .card-body .contact-social .img-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 0 2rem 2rem 0;
+}
+
+.contact-us .card-body .contact-social .img-container::before {
+  content: '';
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -o-object-position: center;
+     object-position: center;
+  position: absolute;
+  background: url("../images/Sports-PNG-Image.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  overflow: visible;
+  z-index: 1;
 }
 
 .contact-us .card-body .contact-social .links-div {
   position: absolute;
+  z-index: 10;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1253,11 +1333,38 @@ footer p {
       width: 0;
     }
   }
+  .contact-us .card-body .contact-people span {
+    font-size: 80%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+  .contact-us .card-body .contact-social .media-link {
+    font-size: 0.8rem;
+  }
+  .contact-us .card-body .contact-social .links-div .link-1, .contact-us .card-body .contact-social .links-div .link-2, .contact-us .card-body .contact-social .links-div .link-3, .contact-us .card-body .contact-social .links-div .link-4 {
+    width: 4rem;
+    height: 4rem;
+  }
 }
 
 @media (max-width: 768px) {
   .content-side {
     border: none;
+  }
+  .contact-us .card {
+    border-radius: 1rem;
+  }
+  .contact-us .card-body .contact-people {
+    padding: 2rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .contact-us .card-body .peop {
+    text-align: start;
+    padding-left: 2rem;
   }
 }
 
@@ -1299,6 +1406,19 @@ footer p {
     -webkit-box-direction: normal;
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap;
+  }
+  .contact-us .card-body .contact-social .img-container {
+    height: 20rem;
+  }
+  .contact-us .card-body .contact-social .img-container img {
+    height: 100%;
+    overflow: hidden;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 0 0 1rem 1rem;
+  }
+  .contact-us .card-body .contact-social .img-container::after {
+    border-radius: 0 0 1rem 1rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
