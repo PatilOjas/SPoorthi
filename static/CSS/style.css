@@ -858,7 +858,7 @@ ul {
 }
 
 .register-section .container {
-  padding: 10rem 0;
+  padding: 5rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -875,8 +875,9 @@ ul {
   border-radius: 0;
 }
 
-.fa {
-  font-size: 1.5rem;
+.fa-2x {
+  font-size: 1.4rem !important;
+  color: #666;
 }
 
 .register-section .input-group-text-select {
@@ -927,12 +928,13 @@ ul {
 .register-section .input-group .placeholder {
   position: absolute;
   left: 4rem;
-  top: 1rem;
+  top: 0.9rem;
   -webkit-transform-origin: 0;
           transform-origin: 0;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   color: #495057;
+  z-index: -1;
 }
 
 .register-section .input-group input:not(:placeholder-shown) + label,

@@ -32,7 +32,7 @@
     z-index: 2;
 }
 .register-section .container{
-    padding: 10rem 0;
+    padding: 5rem 0;
     // position: absolute;
     display: flex;
     justify-content: center;
@@ -46,8 +46,9 @@
     border-radius: 0;
 }
 
-.fa{
-    font-size: 1.5rem;
+.fa-2x{
+    font-size: 1.4rem !important;
+    color: #666;
 }
 
 .register-section .input-group-text-select{
@@ -93,10 +94,11 @@
         .placeholder{
             position: absolute;
             left: 4rem;
-            top: 1rem;
+            top: 0.9rem;
             transform-origin: 0;
             transition: all 0.2s ease-in-out;
             color: #495057;
+            z-index: -1;
         }
         
         input:not(:placeholder-shown) + label,
