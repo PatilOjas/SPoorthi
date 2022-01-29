@@ -39,6 +39,22 @@
   background: rgba(209, 79, 248, 0.5);
 }
 
+.underline-2 {
+  position: relative;
+}
+
+.underline-2::before {
+  content: "";
+  position: absolute;
+  left: -5%;
+  top: 85%;
+  width: 75%;
+  height: 0.5rem;
+  -webkit-transform: skew(-45deg);
+          transform: skew(-45deg);
+  background: #ffc65c;
+}
+
 @-webkit-keyframes move-bg {
   0% {
     background-position: 0% 0%;
@@ -299,6 +315,63 @@ body {
 
 .nav-link:hover {
   color: #fff;
+}
+
+.branding {
+  position: relative;
+}
+
+.branding .overlay .branding-title {
+  position: absolute;
+  top: 25%;
+  left: 0;
+  width: 45%;
+  z-index: 2;
+}
+
+.branding .overlay .branding-title h1 {
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+.branding .overlay .text-1 {
+  color: orange;
+  font-size: 6rem;
+  font-weight: 800;
+}
+
+.branding .overlay .text-2 {
+  color: white;
+  font-size: 8rem;
+  font-weight: 900;
+  line-height: 6rem;
+}
+
+.branding .overlay::after {
+  content: '';
+  position: absolute;
+  top: 25%;
+  left: 0;
+  width: 45%;
+  height: 10rem;
+  background-color: #20232e;
+  -webkit-clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
+  z-index: 0;
+}
+
+.branding .overlay::before {
+  content: '';
+  position: absolute;
+  top: 35%;
+  left: 0;
+  width: 45%;
+  height: 10rem;
+  background-color: orange;
+  -webkit-clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
+  z-index: -2;
 }
 
 .carousel {
