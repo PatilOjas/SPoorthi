@@ -335,17 +335,50 @@ body {
   padding: 0;
 }
 
-.branding .overlay .text-1 {
+.branding .overlay .branding-title .text-1 {
   color: orange;
   font-size: 6rem;
   font-weight: 800;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-animation: slide-in 0.5s 1s ease-in-out forwards;
+          animation: slide-in 0.5s 1s ease-in-out forwards;
 }
 
-.branding .overlay .text-2 {
+.branding .overlay .branding-title .text-2 {
   color: white;
   font-size: 8rem;
   font-weight: 900;
   line-height: 6rem;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-animation: slide-in 0.6s 1.1s ease-in-out forwards;
+          animation: slide-in 0.6s 1.1s ease-in-out forwards;
+}
+
+.branding .overlay .hexa-links {
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  top: 25%;
+  left: 60%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (8rem)[3];
+      grid-template-columns: repeat(3, 8rem);
+  -ms-grid-rows: (8rem)[3];
+      grid-template-rows: repeat(3, 8rem);
+  gap: 0;
+}
+
+.branding .overlay .hexa-links .hex {
+  -webkit-clip-path: polygon(0 50%, 25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%);
+          clip-path: polygon(0 50%, 25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%);
+  background-color: #283048;
+  border: 1px solid red;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
 }
 
 .branding .overlay::after {
@@ -359,6 +392,8 @@ body {
   -webkit-clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
           clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
   z-index: 0;
+  -webkit-animation: slide-in 1s ease-in-out forwards;
+          animation: slide-in 1s ease-in-out forwards;
 }
 
 .branding .overlay::before {
@@ -372,6 +407,28 @@ body {
   -webkit-clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
           clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
   z-index: -2;
+}
+
+@-webkit-keyframes slide-in {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 
 .carousel {
