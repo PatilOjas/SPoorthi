@@ -1,4 +1,10 @@
-
+@mixin get-over($top,$left,$w,$h){
+    position: absolute;
+    width: $w;
+    height: $h;
+    top: $top;
+    left: $left;
+}
 
 
 .my-box-shadow{
@@ -28,6 +34,8 @@
 }
 
 
+
+
 .underline{
     position: relative;
 }
@@ -40,6 +48,21 @@
     height: 0.7rem;
     transform: skew(-25deg);
     background: rgba(209, 79, 248, 0.5);
+  }
+
+
+  .underline-2{
+    position: relative;
+}
+.underline-2::before {
+    content: "";
+    position: absolute;
+    left: -5%;
+    top:85%;
+    width: 75%;
+    height: 0.5rem;
+    transform: skew(-45deg);
+    background: rgb(255, 198, 92);
   }
 
 

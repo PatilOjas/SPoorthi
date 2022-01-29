@@ -53,24 +53,32 @@
 
 	<!-- #### Bootstrap Carousel end -->
 <!-- </section> -->
-<div class="bg-coral" style="max-width: 100vw; overflow: hidden; max-height: 90vh; display: flex; justify-content: center; align-items: center;">
-	<canvas style="height: 110vh;" id=c></canvas>
+
+
+<div class="branding">
+	<div class="bg-coral" style="max-width: 100vw; overflow: hidden; max-height: 75vh; display: flex; align-items: center;">
+		<canvas style="height: 110vh;" id=c></canvas>
+	</div>
+	<div class="overlay">
+		<div class="branding-title">
+			<h1 class="text-center text-1 underline-2">Spoorthi</h1>
+			<h1 class="text-end text-2">2022</h1>
+		</div>
+		<!-- <div class="hexa-links">
+			<div class="hex-1"></div>
+			<div class="hex-1"></div>
+			<div class="hex-1"></div>
+			<div class="hex-1"></div>
+			<div class="hex-1"></div>
+			<div class="hex-1"></div>
+			<div class="hex-1"></div>
+		</div> -->
+	</div>
 </div>
 
 <div class="bg-coral p-5 media-container">
     <div class="trailer-video-container">
         <video src="{% static 'images/trailer.mp4' %}" controls width="1000" id="trailer-vdo"></video>
-    </div>
-
-    <div class="theme-container">
-        <div class="theme-announcement">
-            <h1>Theme</h1>
-            <h4>This year witness _____ with SPoorthi</h4>
-        </div>
-    
-        <div class="theme-video-container">
-            <video src="{% static 'images/theme.mp4' %}" controls width="1000" id="theme-vdo"></video>
-        </div>
     </div>
 
 	<!-- <div class="photos-container">

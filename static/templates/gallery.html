@@ -30,12 +30,12 @@
 		<div style="height: 5rem;"></div>
 		
 		<h1 class="mb-4" style="color: white;">Glimpse of Past Years</h1>
-		<div class="past-videos" style="display:flex; justify-content: space-evenly;">
-			<div style="display: inline-block;"><video src="{% static 'images/trailer.mp4' %}" controls width="500" id="trailer-vdo"></video></div>
-			<div style="display: inline-block;"><video src="{% static 'images/theme.mp4' %}" controls width="500" id="theme-vdo"></video></div>
+		<div class="past-videos" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(25rem, 30rem)); gap: 2rem; justify-content: space-evenly;">
+			<div><video src="{% static 'images/trailer.mp4' %}" controls width="100%" id="trailer-vdo"></video></div>
+			<div><video src="{% static 'images/theme.mp4' %}" controls width="100%" id="theme-vdo"></video></div>
 		</div>
 		{% if glimpse %}
-		<div class="gallery">
+		<div class="gallery my-5">
 			{% for i in glimpse %}
 				<img src="/media/{{i.image}}" alt="{{ i }}">
 			{% endfor %}

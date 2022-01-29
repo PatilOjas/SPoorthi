@@ -1,31 +1,33 @@
+
 var w = c.width = window.innerWidth,
     h = c.height = window.innerHeight,
     ctx = c.getContext( '2d' ),
     
     opts = {
       
-      len: 70,
-      count: 100,
-      baseTime: 10,
-      addedTime: 10,
-      dieChance: .05,
-      spawnChance: 1,
-      sparkChance: .1,
-      sparkDist: 10,
-      sparkSize: 2,
+      len: w / 30,
+      count: 200,
+      baseTime: 20,
+      addedTime: 5,
+      dieChance: .005,
+      spawnChance: 0.5,
+      sparkChance: .2,
+      sparkDist: 4,
+      sparkSize: 1,
       
       color: 'hsl(hue,100%,light%)',
-      baseLight: 50,
-      addedLight: 10, // [50-10,50+10]
-      shadowToTimePropMult: 6,
-      baseLightInputMultiplier: .01,
-      addedLightInputMultiplier: .02,
+      baseLight: 10,
+      addedLight: 5, // [50-10,50+10]
+      shadowToTimePropMult: 1,
+      baseLightInputMultiplier: .02,
+      addedLightInputMultiplier: .09,
       
       cx: w / 2,
       cy: h / 2,
-      repaintAlpha: .04,
-      hueChange: .1
+      repaintAlpha: .01, // lesser the val, longer lasts the hexagon
+      hueChange: 0
     },
+
     
     tick = 0,
     lines = [],
@@ -34,6 +36,9 @@ var w = c.width = window.innerWidth,
     
     baseRad = Math.PI * 2 / 6;
     
+if (w<760){
+  opts.len = w/10;
+}
 ctx.fillStyle = 'black';
 ctx.fillRect( 0, 0, w, h );
 
@@ -112,12 +117,35 @@ Line.prototype.step = function(){
 loop();
 
 window.addEventListener( 'resize', function(){
-  
   w = c.width = window.innerWidth;
   h = c.height = window.innerHeight;
   ctx.fillStyle = 'black';
   ctx.fillRect( 0, 0, w, h );
+  console.log(w);
   
+  if (w < 760){
+    opts.len = w / 10;
+    opts.addedTime = 5;
+    opts.sparkSize = 0.5;
+    opts.sparkDist = 2;
+  }
+
+      // baseTime: 10,
+      // addedTime: 10,
+      // dieChance: .05,
+      // spawnChance: 1,
+      // sparkChance: .1,
+      // sparkDist: 10,
+      // sparkSize: 2,
+      
+      // color: 'hsl(hue,100%,light%)',
+      // baseLight: 50,
+      // addedLight: 10, // [50-10,50+10]
+      // shadowToTimePropMult: 6,
+      // baseLightInputMultiplier: .01,
+      // addedLightInputMultiplier: .02,
+
+
   opts.cx = w / 2;
   opts.cy = h / 2;
   
