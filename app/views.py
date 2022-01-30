@@ -121,7 +121,7 @@ def gallery(request):
 		objects_SPoorthi = p_SPoorthi.page(1)
 
 	objects_Agility = ImageModel.objects.filter(imageClass="Agility").order_by('imageId')
-	p_Agility = Paginator(objects_Agility, 3)
+	p_Agility = Paginator(objects_Agility, 4)
 	page = request.GET.get('page2')
 	try:
 		objects_Agility = p_Agility.page(page)

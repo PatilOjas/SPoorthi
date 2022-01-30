@@ -33,7 +33,9 @@
                     <div class="event-coordinator my-5">
                         <h3 class="text-muted">Organizing Heads</h3><hr>
                         <h3>{{item.eventCoOrdinator1}} - {{item.eventCoOrdinator1Mob}}</h3>
-                        <h3>{{item.eventCoOrdinator2}} - {{item.eventCoOrdinator2Mob}}</h3>
+						{% if item.eventCoOrdinator2 %}
+                        	<h3>{{item.eventCoOrdinator2}} - {{item.eventCoOrdinator2Mob}}</h3>
+						{% endif %}
                     </div>
                 </div>
             </div>

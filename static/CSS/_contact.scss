@@ -125,14 +125,15 @@
                 }
                 
                 .link-1:hover{
-                    background: #a750b4; 
+                    // background: #a750b4; 
+					background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
                     border-color: transparent;
                     i{
                         color: white;
                     }
                 }
                 .link-2:hover{
-                    background:#4d70b4; 
+                    background:#4267B2; 
                     border-color: transparent;
                     i{
                         color: white;
