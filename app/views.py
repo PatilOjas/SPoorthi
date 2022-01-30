@@ -5,6 +5,7 @@ from .models import EventModel, ImageModel
 from django.core.mail import send_mail
 from django.conf import settings
 from django.core.paginator import Paginator
+from django.contrib import messages
 
 import os
 
@@ -85,6 +86,7 @@ def registrationPage(request, name='*'):
 			message = f"Greetings From Spoorthi SPIT,\nHello {saved_data.fullName}, you have succesfully registered for {saved_data.event}.\nPlease Show this email at the time of Event.\nSee you at SPoorthi from 13-31st January'20.\nSports Team At SPIT"
 			# from_email = settings.EMAIL_HOST_USER
 			# mail = send_mail(subject, message, from_email, [request.POST['email']], fail_silently=False)
+			messages.success(request, 'Your have been registerred successfuly!')
 			return redirect('events')
 	
 	# if name == '*':
