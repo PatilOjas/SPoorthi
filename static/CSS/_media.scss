@@ -18,12 +18,47 @@
     html{
         font-size: 60%;
     }
-    .carousel-caption{
-        left: 5%;
-        h1{
-            font-size: 4rem !important;
+    
+    .branding{
+        .overlay{
+            --s: 7rem;
+            --f: calc(var(--s) * 1.732 - 1px); 
+
+            .branding-title{
+                .text-1{
+                    font-size: 5rem;
+                }
+                .text-2{
+                    font-size: 7rem;
+                }
+            }
+
+            .hexa-container{
+                width: 35rem;
+                .hexa-links{
+                    // @include get-over(25%, 50%, 35%, 100%);
+                    .hex{
+                        clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+                        background-color: $my-blue;
+                        width: var(--s);
+                        height: calc(var(--s) * 1.1547);
+                        display: inline-block;
+                        padding: 0;
+                        margin-bottom: - 2rem;
+                    }
+                }
+                .hexa-links::before {
+                    content: "";
+                    width: calc(var(--s) / 2 );
+                    float: left;
+                    height: 120%; 
+                    shape-outside: repeating-linear-gradient(#0000 0 calc(var(--f) - 3px), #000 0 var(--f));
+                }
+            }
+            
         }
     }
+
     @keyframes fade-in {
         0%{
             width: 0;
@@ -86,7 +121,13 @@
             
         }
     }
-    
+    .branding{
+        .overlay{
+            .hexa-container{
+                margin: 4rem 0;
+            }
+        }
+    }
 }
 
 @media (max-width:990px){
@@ -114,6 +155,21 @@
 
 
 @media (max-width:1200px){
+
+    
+    .branding{
+        .overlay{
+            .branding-title{
+                padding-top: 5rem;
+            }
+            .branding-title::before{
+                width: 75%;
+            }
+            .hexa-container{
+                padding-top: 5rem;
+            }
+        }
+    }
     
     .gallery::after,
     .gallery .overlay{
