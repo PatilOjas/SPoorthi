@@ -230,7 +230,7 @@ body {
 /* ####################################### navbar ###################################### */
 .navbar {
   padding: 0.8em 6em;
-  background-color: rgba(38, 41, 51, 0.9);
+  background-color: #20232e;
   /*secondary*/
   position: absolute;
   top: 0;
@@ -364,8 +364,8 @@ body {
   color: orange;
   font-size: 6rem;
   font-weight: 800;
-  -webkit-transform: translateX(-120%);
-          transform: translateX(-120%);
+  -webkit-transform: translateX(-180%);
+          transform: translateX(-180%);
   -webkit-animation: slide-in 0.5s 1s ease-in-out forwards;
           animation: slide-in 0.5s 1s ease-in-out forwards;
 }
@@ -375,8 +375,8 @@ body {
   font-size: 8rem;
   font-weight: 900;
   line-height: 7rem;
-  -webkit-transform: translateX(-120%);
-          transform: translateX(-120%);
+  -webkit-transform: translateX(-180%);
+          transform: translateX(-180%);
   -webkit-animation: slide-in 0.6s 1.1s ease-in-out forwards;
           animation: slide-in 0.6s 1.1s ease-in-out forwards;
 }
@@ -411,20 +411,23 @@ body {
   width: 40rem;
 }
 
+.branding .overlay .hexa-container .hexa-links a, .branding .overlay .hexa-container .hexa-links a:visited, .branding .overlay .hexa-container .hexa-links a:hover {
+  text-decoration: none;
+}
+
 .branding .overlay .hexa-container .hexa-links .hex {
   -webkit-clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
           clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
-  background-color: #20232e;
+  background: -webkit-gradient(linear, right top, left top, color-stop(50%, #283048), color-stop(50%, #20232e));
+  background: linear-gradient(to left, #283048 50%, #20232e 50%);
   width: var(--s);
   height: calc(var(--s) * 1.1547);
   display: inline-block;
   padding: 0;
   margin-bottom: -2rem;
-  -webkit-transition: background-color 0.2s ease-in-out;
-  transition: background-color 0.2s ease-in-out;
-  -webkit-transition: color 0.4s ease-in-out;
-  transition: color 0.4s ease-in-out;
-  color: #20232e;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  color: transparent;
   font-size: 1.2rem;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -439,6 +442,10 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 2px;
+  -webkit-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+  -webkit-animation: shake-it 1s 1.5s ease-in-out;
+          animation: shake-it 1s 1.5s ease-in-out;
 }
 
 .branding .overlay .hexa-container .hexa-links .hex:hover {
@@ -473,6 +480,36 @@ body {
   100% {
     -webkit-transform: translateX(0);
             transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes shake-it {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  50% {
+    -webkit-transform: rotateZ(-10deg);
+            transform: rotateZ(-10deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+}
+
+@keyframes shake-it {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  50% {
+    -webkit-transform: rotateZ(-10deg);
+            transform: rotateZ(-10deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
   }
 }
 
@@ -515,7 +552,7 @@ body {
 .carousel .carousel-item .carousel-caption h1 {
   font-size: 5rem;
   padding: 0.5rem 2rem;
-  color: rgba(38, 41, 51, 0.9);
+  color: #20232e;
 }
 
 .carousel .carousel-item::after {
@@ -1017,7 +1054,7 @@ ul {
 }
 
 .poster-img .event-tag {
-  background-color: rgba(38, 41, 51, 0.9);
+  background-color: #20232e;
   padding: 0.2rem 1rem;
   width: 70%;
   color: white;
@@ -1118,7 +1155,7 @@ ul {
 }
 
 .content-side .details .eventName {
-  border-bottom: 0.5rem solid rgba(38, 41, 51, 0.9);
+  border-bottom: 0.5rem solid #20232e;
 }
 
 .content-side .details .eventDesc {
@@ -1130,7 +1167,7 @@ ul {
 }
 
 .content-side .details .event-coordinator {
-  color: rgba(38, 41, 51, 0.9);
+  color: #20232e;
 }
 
 .register-section {
@@ -1518,7 +1555,7 @@ footer {
   min-height: 5rem;
   text-align: center;
   padding: 1rem;
-  background-color: rgba(38, 41, 51, 0.9);
+  background-color: #20232e;
   /*secondary*/
   color: #999999;
   display: -webkit-box;

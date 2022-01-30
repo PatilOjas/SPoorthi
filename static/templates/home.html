@@ -18,13 +18,13 @@
 		</div>
 		<div class="hexa-container ms-4 ms-sm-5">
 			<div class="hexa-links ms-4 ms-sm-5">
-				<div class="hex my-hover-div-1">Events</div>
-				<div class="hex my-hover-div-1">Timeline</div>
-				<div class="hex my-hover-div-1">Trailer</div>
-				<div class="hex my-hover-div-1">Gallery</div>
-				<div class="hex my-hover-div-1">Register</div>
-				<div class="hex my-hover-div-1">Contact</div>
-				<div class="hex my-hover-div-1">Home</div>
+				<a href="{% url 'events' %}" class="hex my-hover-div-1">Events</a>
+				<a href="#timeline" class="hex my-hover-div-1">Timeline</a>
+				<a href="#trailer-vdo" class="hex my-hover-div-1">Trailer</a>
+				<a href="{% url 'gallery' %}" class="hex my-hover-div-1">Gallery</a>
+				<a href="{% url 'registrationpage' name='*' %}" class="hex my-hover-div-1">Register</a>
+				<a href="{% url 'contact' %}" class="hex my-hover-div-1">Contact</a>
+				<a href="{% url 'homepage' %}" class="hex my-hover-div-1">Home</a>
 			</div>
 		</div>
 	</div>
@@ -37,7 +37,7 @@
 </div>
 
 
-<div class="timeline-wrapper">
+<div class="timeline-wrapper" id="timeline">
 	<div class="svg-timeline" id="verticalLine"></div>
 	<div class="status">
 		<div class="statusbar" id="statusbar"></div>
