@@ -1,3 +1,11 @@
+.home-page{
+	background: black;
+}
+.timeline{
+	border-top: 3px dashed #283048;
+}
+
+
 .branding{
 	position: relative;
 
@@ -466,12 +474,22 @@ ul{
 	li{
 		/* From https://css.glass */
 		padding: 1.5rem;
-		background: rgba(70, 70, 70, 0.42);
+		background: #283048;
 		border-radius: 5px;
 		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 		backdrop-filter: blur(11.9px);
 		-webkit-backdrop-filter: blur(11.9px);
 		border: 1px solid rgba(80, 80, 80, 0.44);
+	}
+	
+}
+li{
+	position: relative;
+	.fa-flag-checkered{
+		position: absolute !important;
+		right: 1rem;
+		top: 1rem;
+		color: #283048 !important;
 	}
 }
 
@@ -486,8 +504,7 @@ ul{
 	border: 2px solid #33ff00;
 	border-radius: 50%;
 	box-sizing: border-box;
-	box-shadow: 0 0 0 0.5em #45237a,
-			0 0 0 -2em #56ff00;
+	box-shadow: 0 0 20px 3px #9eff85;
 }
 
 .pulse:before,
@@ -498,9 +515,10 @@ ul{
 	top: -1em;
 	right: -1em;
 	bottom: -1em;
-	border: 2px solid #33ff00;
+	background-color: #33ff00;
+	opacity: 0.5;
 	border-radius: 50%;
-	animation: animate 2s linear infinite
+	animation: animate 2s ease-in-out infinite
 }
 
 .pulse:after {
@@ -509,11 +527,11 @@ ul{
 
 @keyframes animate {
 	0% {
-		transform: scale(2.0);
+		transform: scale(1.2);
 	}
 
 	100% {
-		transform: scale(0.7);
+		transform: scale(0.5);
 	}
 }
 

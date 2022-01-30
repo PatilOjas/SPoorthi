@@ -317,6 +317,14 @@ body {
   color: #fff;
 }
 
+.home-page {
+  background: black;
+}
+
+.timeline {
+  border-top: 3px dashed #283048;
+}
+
 .branding {
   position: relative;
 }
@@ -861,13 +869,24 @@ ul {
 .timeline li {
   /* From https://css.glass */
   padding: 1.5rem;
-  background: rgba(70, 70, 70, 0.42);
+  background: #283048;
   border-radius: 5px;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(11.9px);
   -webkit-backdrop-filter: blur(11.9px);
   border: 1px solid rgba(80, 80, 80, 0.44);
+}
+
+li {
+  position: relative;
+}
+
+li .fa-flag-checkered {
+  position: absolute !important;
+  right: 1rem;
+  top: 1rem;
+  color: #283048 !important;
 }
 
 .pulse {
@@ -883,8 +902,8 @@ ul {
   border-radius: 50%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-box-shadow: 0 0 0 0.5em #45237a, 0 0 0 -2em #56ff00;
-          box-shadow: 0 0 0 0.5em #45237a, 0 0 0 -2em #56ff00;
+  -webkit-box-shadow: 0 0 20px 3px #9eff85;
+          box-shadow: 0 0 20px 3px #9eff85;
 }
 
 .pulse:before,
@@ -895,10 +914,11 @@ ul {
   top: -1em;
   right: -1em;
   bottom: -1em;
-  border: 2px solid #33ff00;
+  background-color: #33ff00;
+  opacity: 0.5;
   border-radius: 50%;
-  -webkit-animation: animate 2s linear infinite;
-          animation: animate 2s linear infinite;
+  -webkit-animation: animate 2s ease-in-out infinite;
+          animation: animate 2s ease-in-out infinite;
 }
 
 .pulse:after {
@@ -908,23 +928,23 @@ ul {
 
 @-webkit-keyframes animate {
   0% {
-    -webkit-transform: scale(2);
-            transform: scale(2);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
   100% {
-    -webkit-transform: scale(0.7);
-            transform: scale(0.7);
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
   }
 }
 
 @keyframes animate {
   0% {
-    -webkit-transform: scale(2);
-            transform: scale(2);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
   100% {
-    -webkit-transform: scale(0.7);
-            transform: scale(0.7);
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
   }
 }
 

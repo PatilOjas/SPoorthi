@@ -6,131 +6,149 @@
 
 {% block content %}
 
+<div class="home-page">
 
-<div class="branding">
-	<div class="bg-coral" style="max-width: 100vw; overflow: hidden; max-height: 120vh; display: flex; align-items: center; z-index: -3;">
-		<canvas style="height: 120vh;" id=c></canvas>
-	</div>
-	<div class="overlay">
-		<div class="branding-title">
-			<h1 class="text-center text-1 underline-2">Spoorthi</h1>
-			<h1 class="text-end text-2">2022</h1>
+	<div class="branding">
+		<div class="bg-black"
+			style="max-width: 100vw; overflow: hidden; max-height: 120vh; display: flex; align-items: center; z-index: -3;">
+			<canvas style="height: 120vh;" id=c></canvas>
 		</div>
-		<div class="hexa-container ms-4 ms-sm-5">
-			<div class="hexa-links ms-4 ms-sm-5">
-				<a href="{% url 'events' %}" class="hex my-hover-div-1">Events</a>
-				<a href="#timeline" class="hex my-hover-div-1">Timeline</a>
-				<a href="#trailer-vdo" class="hex my-hover-div-1">Trailer</a>
-				<a href="{% url 'gallery' %}" class="hex my-hover-div-1">Gallery</a>
-				<a href="{% url 'registrationpage' name='*' %}" class="hex my-hover-div-1">Register</a>
-				<a href="{% url 'contact' %}" class="hex my-hover-div-1">Contact</a>
-				<a href="{% url 'homepage' %}" class="hex my-hover-div-1">Home</a>
+		<div class="overlay">
+			<div class="branding-title">
+				<h1 class="text-center text-1 underline-2">Spoorthi</h1>
+				<h1 class="text-end text-2">2022</h1>
+			</div>
+			<div class="hexa-container ms-4 ms-sm-5">
+				<div class="hexa-links ms-4 ms-sm-5">
+					<a href="{% url 'events' %}" class="hex my-hover-div-1">Events</a>
+					<a href="#timeline" class="hex my-hover-div-1">Timeline</a>
+					<a href="#trailer-vdo" class="hex my-hover-div-1">Trailer</a>
+					<a href="{% url 'gallery' %}" class="hex my-hover-div-1">Gallery</a>
+					<a href="{% url 'registrationpage' name='*' %}" class="hex my-hover-div-1">Register</a>
+					<a href="{% url 'contact' %}" class="hex my-hover-div-1">Contact</a>
+					<a href="{% url 'homepage' %}" class="hex my-hover-div-1">Home</a>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
-<div class="bg-coral p-5 media-container">
-    <div class="trailer-video-container">
-        <video src="{% static 'images/trailer.mp4' %}" controls width="1000" id="trailer-vdo"></video>
-    </div>
-</div>
-
-
-<div class="timeline-wrapper" id="timeline">
-	<div class="svg-timeline" id="verticalLine"></div>
-	<div class="status">
-		<div class="statusbar" id="statusbar"></div>
-		<div class="pulse" id="pulse"></div>
+	<div class="bg-black p-5 media-container">
+		<div class="trailer-video-container">
+			<video src="{% static 'images/trailer.mp4' %}" controls width="1000" id="trailer-vdo"></video>
+		</div>
 	</div>
 
-	<ul class="timeline clearfix">
-		<li class="timeline__item my-hover-div-1" id="dayOne">
-			<h3 class="timeline__day">25th February: <span><b><em>Andheri Sports Complex </em></b></span></h3>
-			<p class="timeline__day-sum">Badminton</p>
-		</li>
-		<li class="timeline__item my-hover-div-1 right" id="dayTwo">
-			<h3 class="timeline__day dayTwo">26th February: <span><b><em>UMRB Turf, Andheri Sports Complex </em></b></span></h3>
-			<p class="timeline__day-sum">Football</p>
-		</li>
-		<li class="timeline__item my-hover-div-1" id="dayThree">
-			<h3 class="timeline__day dayThree">27th February: <span><b><em>UMRB Turf, Andheri Sports Complex </em></b></span></h3>
-			<p class="timeline__day-sum">Cricket</p>
-		</li>
-		<li class="timeline__item my-hover-div-1 right" id="dayFour">
-			<h3 class="timeline__day dayFour">28th February: <span><b><em>Sports ground; SPIT Gymkhana </em></b></span></h3>
-			<p class="timeline__day-sum">Volleyball, Carrom</p>
-		</li>
-		<li class="timeline__item my-hover-div-1" id="dayFive">
-			<h3 class="timeline__day dayFive">1st March: <span><b><em> Gymkhana; SPIT Ground </em></b></span></h3>
-			<p class="timeline__day-sum">TableTennis, Tug of war</p>
-		</li>
-		<li class="timeline__item my-hover-div-1 right" id="daySix">
-			<h3 class="timeline__day daySix">2nd March: <span><b><em> Sports ground </em></b></span></h3>
-			<p class="timeline__day-sum">Throwball, Kabaddi</p>
-		</li>
-		<li class="timeline__item my-hover-div-1" id="daySeven">
-			<h3 class="timeline__day daySeven">3rd March: <span><b><em> Gymkhana; SPIT Sports ground </em></b></span></h3>
-			<p class="timeline__day-sum">Chess, Dodgeball</p>
-		</li>
-	</ul>
+
+	<div class="timeline-wrapper" id="timeline">
+		<div class="svg-timeline" id="verticalLine"></div>
+		<div class="status">
+			<div class="statusbar" id="statusbar"></div>
+			<div class="pulse" id="pulse"></div>
+		</div>
+
+		<ul class="timeline clearfix">
+			<li class="timeline__item my-hover-div-1" id="dayOne">
+				<h3 class="timeline__day">25th February: <span><b><em>Andheri Sports Complex </em></b></span></h3>
+				<p class="timeline__day-sum">Badminton</p>
+				<i class="fa fa-flag-checkered fa-3x" aria-hidden="true"></i>
+			</li>
+			<li class="timeline__item my-hover-div-1 right" id="dayTwo">
+				<h3 class="timeline__day dayTwo">26th February: <span><b><em>UMRB Turf, Andheri Sports Complex
+							</em></b></span></h3>
+				<p class="timeline__day-sum">Football</p>
+				<i class="fa fa-flag-checkered fa-3x" aria-hidden="true"></i>
+			</li>
+			<li class="timeline__item my-hover-div-1" id="dayThree">
+				<h3 class="timeline__day dayThree">27th February: <span><b><em>UMRB Turf, Andheri Sports Complex
+							</em></b></span></h3>
+				<p class="timeline__day-sum">Cricket</p>
+				<i class="fa fa-flag-checkered fa-3x" aria-hidden="true"></i>
+			</li>
+			<li class="timeline__item my-hover-div-1 right" id="dayFour">
+				<h3 class="timeline__day dayFour">28th February: <span><b><em>Sports ground; SPIT Gymkhana
+							</em></b></span></h3>
+				<p class="timeline__day-sum">Volleyball, Carrom</p>
+				<i class="fa fa-flag-checkered fa-3x" aria-hidden="true"></i>
+			</li>
+			<li class="timeline__item my-hover-div-1" id="dayFive">
+				<h3 class="timeline__day dayFive">1st March: <span><b><em> Gymkhana; SPIT Ground </em></b></span></h3>
+				<p class="timeline__day-sum">TableTennis, Tug of war</p>
+				<i class="fa fa-flag-checkered fa-3x" aria-hidden="true"></i>
+			</li>
+			<li class="timeline__item my-hover-div-1 right" id="daySix">
+				<h3 class="timeline__day daySix">2nd March: <span><b><em> Sports ground </em></b></span></h3>
+				<p class="timeline__day-sum">Throwball, Kabaddi</p>
+				<i class="fa fa-flag-checkered fa-3x" aria-hidden="true"></i>
+			</li>
+			<li class="timeline__item my-hover-div-1" id="daySeven">
+				<h3 class="timeline__day daySeven">3rd March: <span><b><em> Gymkhana; SPIT Sports ground
+							</em></b></span></h3>
+				<p class="timeline__day-sum">Chess, Dodgeball</p>
+				<i class="fa fa-flag-checkered fa-3x" aria-hidden="true"></i>
+			</li>
+		</ul>
+	</div>
+
 </div>
+
+
+
 <script>
 
 	document.getElementById("pulse").style.transform = `translate(-25%, ${statusbar}rem)`
-	if(new Date().getTime() > new Date(2022, 2, 3).getTime()){
+	if (new Date().getTime() > new Date(2022, 2, 3).getTime()) {
 		document.getElementById("statusbar").style.height = "98.8rem"
 		document.getElementById("pulse").style.transform = `translate(-25%, 98.8rem)`
-		// document.getElementById("daySeven").style.background = "rgba(57, 255, 20, 1)";
+		// document.getElementById("daySeven").style.background = "rgba(57, 255, 20, 0.5)";
 	}
-	else if (new Date().getTime() === new Date(2022, 2, 3).getTime()){
+	else if (new Date().getTime() === new Date(2022, 2, 3).getTime()) {
 		document.getElementById("statusbar").style.height = "91rem"
 		document.getElementById("pulse").style.transform = `translate(-25%, 91rem)`
-		document.getElementById("daySeven").style.background = "rgba(57, 255, 20, 1)";
+		document.getElementById("daySeven").style.background = "rgba(57, 255, 20, 0.5)";
 	}
-	
-	else if (new Date().getTime() >= new Date(2022, 2, 2).getTime()){
+
+	else if (new Date().getTime() >= new Date(2022, 2, 2).getTime()) {
 		document.getElementById("statusbar").style.height = "77rem"
 		document.getElementById("pulse").style.transform = `translate(-25%, 77rem)`
-		document.getElementById("daySix").style.background = "rgba(57, 255, 20, 1)";
+		document.getElementById("daySix").style.background = "rgba(57, 255, 20, 0.5)";
 	}
-	
-	else if (new Date().getTime() >= new Date(2022, 2, 1).getTime()){
+
+	else if (new Date().getTime() >= new Date(2022, 2, 1).getTime()) {
 		document.getElementById("statusbar").style.height = "63rem"
 		document.getElementById("pulse").style.transform = `translate(-25%, 63rem)`
-		document.getElementById("dayFive").style.background = "rgba(57, 255, 20, 1)";
+		document.getElementById("dayFive").style.background = "rgba(57, 255, 20, 0.5)";
 	}
-	
-	else if (new Date().getTime() >= new Date(2022, 1, 28).getTime()){
+
+	else if (new Date().getTime() >= new Date(2022, 1, 28).getTime()) {
 		document.getElementById("statusbar").style.height = "49rem"
 		document.getElementById("pulse").style.transform = `translate(-25%, 49rem)`
-		document.getElementById("dayFour").style.background = "rgba(57, 255, 20, 1)";
+		document.getElementById("dayFour").style.background = "rgba(57, 255, 20, 0.5)";
 	}
-	
-	else if (new Date().getTime() >= new Date(2022, 1, 27).getTime()){
+
+	else if (new Date().getTime() >= new Date(2022, 1, 27).getTime()) {
 		document.getElementById("statusbar").style.height = "35rem"
 		document.getElementById("pulse").style.transform = `translate(-25%, 35rem)`
-		document.getElementById("dayThree").style.background = "rgba(57, 255, 20, 1)";
+		document.getElementById("dayThree").style.background = "rgba(57, 255, 20, 0.5)";
 	}
-	
-	else if (new Date().getTime() >= new Date(2022, 1, 26).getTime()){
+
+	else if (new Date().getTime() >= new Date(2022, 1, 26).getTime()) {
 		document.getElementById("statusbar").style.height = "21rem"
 		document.getElementById("pulse").style.transform = `translate(-25%, 21rem)`
-		document.getElementById("dayTwo").style.background = "rgba(57, 255, 20, 1)";
+		document.getElementById("dayTwo").style.background = "rgba(57, 255, 20, 0.5)";
 	}
-	
-	else if (new Date().getTime() >= new Date(2022, 1, 25).getTime()){
+
+	else if (new Date().getTime() >= new Date(2022, 0, 25).getTime()) {
 		document.getElementById("statusbar").style.height = "6rem"
 		document.getElementById("pulse").style.transform = `translate(-25%, 6rem)`
-		document.getElementById("dayOne").style.background = "rgba(57, 255, 20, 1)";
+		document.getElementById("dayOne").style.background = "rgba(57, 255, 20, 0.5)";
 	}
-	
-	else{
+
+	else {
 		document.getElementById("statusbar").style.height = "0rem"
 		document.getElementById("pulse").style.transform = `translate(-25%, 0rem)`
 	}
-	
 
-	
+
+
 </script>
 {% endblock %}
