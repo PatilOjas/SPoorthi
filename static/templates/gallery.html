@@ -7,7 +7,26 @@
 {% block content %}
 
 	<div class="my-container color-gallery-page">
-		
+
+		{% if spoorthi %}
+		<h1 class="mb-4" style="color: white;">SPoorthi 2022</h1>
+		<div class="gallery">
+			{% for i in spoorthi %}
+				<img src="/media/{{i.image}}" alt="{{ i }}">
+			{% endfor %}
+			{% if spoorthi.has_previous %}
+                <a href="?page1={{ spoorthi.previous_page_number }}" style="color: white;"> previous </a>
+            {% endif %}
+            <span  style="color: white;">
+                Page {{ spoorthi.number }} of {{ spoorthi.paginator.num_pages }}
+            </span>
+            {% if spoorthi.has_next %}
+                <a href="?page1={{ spoorthi.next_page_number }}" style="color: white;"> next </a>
+            {% endif %}
+			<div class="overlay">SPoorthi 2022</div>
+		</div>
+		{% endif %}
+
 		{% if agility %}
 		<h1 class="mb-4" style="color: white;">Agility 2021</h1>
 		<div class="gallery">
@@ -15,13 +34,13 @@
 				<img src="/media/{{i.image}}" alt="{{ i }}">
 			{% endfor %}
 			{% if agility.has_previous %}
-                <a href="?page1={{ agility.previous_page_number }}" style="color: white;"> previous </a>
+                <a href="?page2={{ agility.previous_page_number }}" style="color: white;"> previous </a>
             {% endif %}
             <span  style="color: white;">
                 Page {{ agility.number }} of {{ agility.paginator.num_pages }}
             </span>
             {% if agility.has_next %}
-                <a href="?page1={{ agility.next_page_number }}" style="color: white;"> next </a>
+                <a href="?page2={{ agility.next_page_number }}" style="color: white;"> next </a>
             {% endif %}
 			<div class="overlay">Agility 2021</div>
 		</div>
@@ -40,13 +59,13 @@
 				<img src="/media/{{i.image}}" alt="{{ i }}">
 			{% endfor %}
 			{% if glimpse.has_previous %}
-                <a href="?page1={{ glimpse.previous_page_number }}" style="color: white;"> previous </a>
+                <a href="?page3={{ glimpse.previous_page_number }}" style="color: white;"> previous </a>
             {% endif %}
             <span  style="color: white;">
                 Page {{ glimpse.number }} of {{ glimpse.paginator.num_pages }}
             </span>
             {% if glimpse.has_next %}
-                <a href="?page1={{ glimpse.next_page_number }}" style="color: white;"> next </a>
+                <a href="?page3={{ glimpse.next_page_number }}" style="color: white;"> next </a>
             {% endif %}
 			<div class="overlay">Glimpse of Past Years</div>
 		</div>
