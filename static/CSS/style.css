@@ -95,8 +95,8 @@
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
   background-repeat: no-repeat;
-  background: -webkit-gradient(linear, left top, right top, from(#73deff), to(#d06bff));
-  background: linear-gradient(to right, #73deff, #d06bff);
+  background: -webkit-gradient(linear, left top, right top, from(#07273d), to(#430053));
+  background: linear-gradient(to right, #07273d, #430053);
   background-size: 300%;
   position: relative;
   min-height: 100vh;
@@ -122,8 +122,8 @@
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
   background-repeat: no-repeat;
-  background: -webkit-gradient(linear, left top, right top, from(#73deff), to(#d06bff));
-  background: linear-gradient(to right, #73deff, #d06bff);
+  background: -webkit-gradient(linear, left top, right top, from(#07273d), to(#430053));
+  background: linear-gradient(to right, #07273d, #430053);
   background-size: 300%;
   position: relative;
   min-height: 100vh;
@@ -149,8 +149,8 @@
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
   background-repeat: no-repeat;
-  background: -webkit-gradient(linear, left top, right top, from(#73deff), to(#d06bff));
-  background: linear-gradient(to right, #73deff, #d06bff);
+  background: -webkit-gradient(linear, left top, right top, from(#07273d), to(#430053));
+  background: linear-gradient(to right, #07273d, #430053);
   background-size: 300%;
   position: relative;
   min-height: 100vh;
@@ -164,8 +164,8 @@
   background: -webkit-gradient(linear, left top, right bottom, from(#000428), to(#004e92));
   background: linear-gradient(to right bottom, #000428, #004e92);
   background-repeat: no-repeat;
-  background: -webkit-gradient(linear, left top, right top, from(#73deff), to(#d06bff));
-  background: linear-gradient(to right, #73deff, #d06bff);
+  background: -webkit-gradient(linear, left top, right top, from(#07273d), to(#430053));
+  background: linear-gradient(to right, #07273d, #430053);
   background-size: 300%;
   position: relative;
   min-height: 100vh;
@@ -195,8 +195,8 @@
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
   background-repeat: no-repeat;
-  background: -webkit-gradient(linear, left top, right top, from(#73deff), to(#d06bff));
-  background: linear-gradient(to right, #73deff, #d06bff);
+  background: -webkit-gradient(linear, left top, right top, from(#07273d), to(#430053));
+  background: linear-gradient(to right, #07273d, #430053);
   background-size: 300%;
   position: relative;
   min-height: 100vh;
