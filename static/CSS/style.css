@@ -1535,9 +1535,13 @@ li .fa-flag-checkered {
           align-items: center;
 }
 
+.contact-us .card-body .contact-social .links-div .link-1 {
+  background: linear-gradient(45deg, #fff, #fff);
+}
+
 .contact-us .card-body .contact-social .links-div .link-1:hover {
-  background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
-  border-color: transparent;
+  background: linear-gradient(45deg, #5851db, #833ab4, #c13584, #e1306c);
+  border-color: #777;
 }
 
 .contact-us .card-body .contact-social .links-div .link-1:hover i {
