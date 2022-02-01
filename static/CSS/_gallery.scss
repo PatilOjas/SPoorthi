@@ -1,3 +1,32 @@
+.gallery-links{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    background: rgb(38, 29, 63);
+    li{
+        list-style: none;
+        flex-grow: 1;
+        padding: 1rem 0;
+        margin-bottom: 0.5rem;
+        color: white;
+        background: rgb(0, 105, 124);
+        text-align: center;
+        // border: 2px solid #333;
+        border-bottom: 2px solid white;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+    }
+    li:hover{
+        background: rgb(163, 29, 40);
+        z-index: 3;
+    }
+}
 
 .gallery{
     display: grid;

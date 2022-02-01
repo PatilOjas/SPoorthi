@@ -123,11 +123,14 @@
                     height: 5rem;
                     @include side-by-side(row,center,center)
                 }
+                .link-1{
+                    background: linear-gradient(45deg, #fff, #fff);
+                }
                 
                 .link-1:hover{
                     // background: #a750b4; 
-					background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
-                    border-color: transparent;
+					background: linear-gradient(45deg, #5851db, #833ab4, #c13584, #e1306c);
+                    border-color: #777;
                     i{
                         color: white;
                     }
