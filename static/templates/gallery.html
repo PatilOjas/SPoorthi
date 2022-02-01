@@ -7,14 +7,18 @@
 {% block content %}
 
 	<div class="my-container color-gallery-page">
-
-		{% if spoorthi %}
+		<ul class="gallery-links mb-5">
+			<li class="my-hover-div-1" id="spoorthi-btn">Spoorthi 2022</li>
+			<li class="my-hover-div-1" id="agility-btn">Agility 2021</li>
+			<li class="my-hover-div-1" id="pastYear-btn">Past Years</li>
+		</ul>
+		<!-- {% if spoorthi %} -->
 		<h1 class="mb-4" style="color: white;">SPoorthi 2022</h1>
-		<div class="gallery">
+		<div id="spoorthi" class="gallery">
 			{% for i in spoorthi %}
 				<img src="/media/{{i.image}}" alt="{{ i }}">
 			{% endfor %}
-			{% if spoorthi.has_previous %}
+			<!-- {% if spoorthi.has_previous %}
                 <a href="?page1={{ spoorthi.previous_page_number }}" style="color: white;"> previous </a>
             {% endif %}
             <span  style="color: white;">
@@ -22,18 +26,18 @@
             </span>
             {% if spoorthi.has_next %}
                 <a href="?page1={{ spoorthi.next_page_number }}" style="color: white;"> next </a>
-            {% endif %}
+            {% endif %} -->
 			<div class="overlay">SPoorthi 2022</div>
 		</div>
-		{% endif %}
+		<!-- {% endif %} -->
 
-		{% if agility %}
+		<!-- {% if agility %} -->
 		<h1 class="mb-4" style="color: white;">Agility 2021</h1>
-		<div class="gallery">
+		<div id="agility" class="gallery mb-5">
 			{% for i in agility %}
 				<img src="/media/{{i.image}}" alt="{{ i }}">
 			{% endfor %}
-			{% if agility.has_previous %}
+			<!-- {% if agility.has_previous %}
                 <a href="?page2={{ agility.previous_page_number }}" style="color: white;"> previous </a>
             {% endif %}
             <span  style="color: white;">
@@ -41,24 +45,24 @@
             </span>
             {% if agility.has_next %}
                 <a href="?page2={{ agility.next_page_number }}" style="color: white;"> next </a>
-            {% endif %}
+            {% endif %} -->
 			<div class="overlay">Agility 2021</div>
 		</div>
-		{% endif %}
-		
-		<div style="height: 5rem;"></div>
-		
-		<h1 class="mb-4" style="color: white;">Glimpse of Past Years</h1>
+		<!-- {% endif %} -->
+<!-- 		
+		<div style="height: 5rem;"></div> -->
+		<br>
+		<h1 class="my-5" style="color: white;">Glimpse of Past Years</h1>
 		<div class="past-videos" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(25rem, 30rem)); gap: 2rem; justify-content: space-evenly;">
 			<div><video src="{% static 'images/trailer.mp4' %}" controls width="100%" id="trailer-vdo"></video></div>
 			<div><video src="{% static 'images/theme.mp4' %}" controls width="100%" id="theme-vdo"></video></div>
 		</div>
-		{% if glimpse %}
+		<!-- {% if glimpse %} -->
 		<div class="gallery my-5">
 			{% for i in glimpse %}
 				<img src="/media/{{i.image}}" alt="{{ i }}">
 			{% endfor %}
-			{% if glimpse.has_previous %}
+			<!-- {% if glimpse.has_previous %}
                 <a href="?page3={{ glimpse.previous_page_number }}" style="color: white;"> previous </a>
             {% endif %}
             <span  style="color: white;">
@@ -66,10 +70,10 @@
             </span>
             {% if glimpse.has_next %}
                 <a href="?page3={{ glimpse.next_page_number }}" style="color: white;"> next </a>
-            {% endif %}
+            {% endif %} -->
 			<div class="overlay">Glimpse of Past Years</div>
 		</div>
-		{% endif %}
+		<!-- {% endif %} -->
 	</div>
 	
 {% endblock %}

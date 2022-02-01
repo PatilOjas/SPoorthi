@@ -963,6 +963,43 @@ li .fa-flag-checkered {
   border: 1px #33ff00 solid;
 }
 
+.gallery-links {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  background: #261d3f;
+}
+
+.gallery-links li {
+  list-style: none;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 1rem 0;
+  margin-bottom: 0.5rem;
+  color: white;
+  background: #00697c;
+  text-align: center;
+  border-bottom: 2px solid white;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.gallery-links li:hover {
+  background: #a31d28;
+  z-index: 3;
+}
+
 .gallery {
   display: -ms-grid;
   display: grid;
