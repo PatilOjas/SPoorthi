@@ -54,13 +54,12 @@
 								<option value="Badminton (D)">Badminton (Doubles)</option>
 								<option value="Carrom (S)">Carrom (Singles)</option>
 								<option value="Carrom (D)">Carrom (Doubles)</option>
-								<option value="Athletics">Athletics</option>
+								<option value="Kabaddi">Kabaddi</option>
 								<option value="Chess">Chess</option>
 								<option value="Kho-kho">Kho-kho</option>
 								<option value="Dodgeball">Dodgeball</option>
 								<option value="Throwball">Throwball</option>
-								<option value="Table Tennis (S)">Table Tennis (Singles)</option>
-								<option value="Table Tennis (D)">Table Tennis (Doubles)</option>
+								<option value="Table Tennis">Table Tennis</option>
 								<option value="Tug of War">Tug of War</option>
 							</select>
 							<label class="placeholder">Select Sport</label>
@@ -113,7 +112,7 @@
 		
 		// To check whether doubles is selected
 		function yesnoCheck(that) {
-			if ((that.value === "Carrom (D)" || that.value === "Badminton (D)" || that.value === "Table Tennis (D)")) {
+			if ((that.value === "Carrom (D)" || that.value === "Badminton (D)")) {
 				document.getElementById("secondplayer").style.display = "block";
 			} else {
 				document.getElementById("secondplayer").style.display = "none";
