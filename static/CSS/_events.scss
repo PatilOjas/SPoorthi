@@ -19,7 +19,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    // border: 2px solid red;
 }
   
 .poster-img {
@@ -32,7 +31,6 @@
     z-index: 3;
     
     .event-tag{
-        // background-color: $secondary;
         background-color: rgb(187, 57, 25);
         padding: 0.2rem 1rem;
         width: 70%;
@@ -78,18 +76,15 @@
     cursor: pointer;
     
     .poster-img:before {
-        // transform: translate(-2rem,-0.8rem);
         transform: translate(-1.4rem,-1.1rem);
     }
     
     .poster-img:after {
         background-color: #FFBD59;
-        // transform: translate(2rem,0.8rem);
         transform: translate(1.5rem,1.1rem);
     }
 
     .event-tag{
-        // z-index: 3;
         transform: translateY(100%);
     }
 }
@@ -99,8 +94,6 @@
 
 // ####################### event details
 .event-details{
-    // padding-left: 1rem;
-    // box-shadow: 0 0 10px 2px rgba(38, 41, 51, 0.4);
     box-shadow: 0 0 25px 3px rgba(200, 203, 212, 0.5);
     background-color: #fafafa;
     border-radius: 2rem;
@@ -120,29 +113,21 @@
     }
 }
 
-// .col-md-5,.col-md-7{
-//     padding: 0;
-// }
 
 .content-side{
     border-left: 1px solid rgba(38, 41, 51, 0.4);
-    // background-color: aliceblue;
     .details{
-        // border: 1px solid red;
         padding: 0 2rem;
         .eventName{
-            // border: 1px solid lime;
             border-bottom: 0.5rem solid $secondary;
         }
         .eventDesc{
-            // border: 1px solid lime;
             margin: 5rem 0;
             p{
                 font-size: 1.2rem;
             }
         }
         .event-coordinator{
-            // border: 1px solid lime;
             color: $secondary;
         }
     }

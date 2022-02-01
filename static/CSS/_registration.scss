@@ -34,7 +34,6 @@
 }
 .register-section .container{
     padding: 5rem 0;
-    // position: absolute;
     display: flex;
     justify-content: center;
 }
@@ -125,18 +124,14 @@
 }
 
 .mybtn{
-    // background-image: linear-gradient(to bottom,  #db5050,#ff8060, #fff066);
-    // background-color: #ff9166;
     background-color: $prim-dark;
     color: #ffffff;
     transition: all 0.3s ease-in-out;
     margin-bottom: 1rem;
-    // display: block;
     width: 100%;
 }
 
 .mybtn:hover{
-    // background-color: #ff7260;
     background-color: $prim;
     color: #ffffff;
 }

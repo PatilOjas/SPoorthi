@@ -19,13 +19,18 @@ from app import views
 from django.conf.urls.static import static
 from django.conf import settings
 
+from django.urls import include, re_path
+from django.views.static import serve
+
+
 urlpatterns = [
-    path('admin/', admin.site.urls, name="admin"),
-	# path('registration/', views.registrationPage, name="registrationpage"),
+    path('8a2hn879f7ui4ha0/', admin.site.urls, name="admin"),
 	path('registration/<str:name>', views.registrationPage, name="registrationpage"),
 	path('', views.homePage, name='homepage'),
 	path('gallery/', views.gallery, name="gallery"),
 	path('events/', views.eventPage, name="events"),
 	path('events/<str:name>/', views.eventPage, name="event_details"),
     path('contactUs/', views.contact, name='contact'),
+    re_path(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}),
+    re_path(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

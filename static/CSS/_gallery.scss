@@ -17,7 +17,6 @@
         color: white;
         background: rgb(0, 105, 124);
         text-align: center;
-        // border: 2px solid #333;
         border-bottom: 2px solid white;
         cursor: pointer;
         transition: all 0.2s ease-in-out;
@@ -43,7 +42,6 @@
         transform: scale(1.2);
         cursor: pointer;
     }
-    // border: 2px solid #7d7d7d;
     .overlay{
         position: absolute;
         font-size: 5em;
@@ -69,7 +67,6 @@
     opacity: 0.3;
     transition: all 1s ease-in-out;
     z-index: 0;
-    // transition: z-index 0.3s 0.3s ease; ######## z-index transition delay
 }
 .gallery:hover::after{
     opacity: 0;
@@ -82,10 +79,3 @@
     z-index: -1;
     overflow: hidden;
 }
-
-// .past-videos{
-// 	border: 2px solid red;
-// 	display: flex;
-// 	flex-direction: row;
-// 	justify-content: center;
-// }

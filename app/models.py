@@ -43,4 +43,4 @@ class ImageModel(models.Model):
 	
 	def __str__(self):
 		return self.imageClass +" " + str(self.imageId)
-	# Make arrangements to provide option to select category of image whether glimpse, agility or spoorthi
+	

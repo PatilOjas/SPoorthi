@@ -84,14 +84,8 @@ def registrationPage(request, name='*'):
 			messages.success(request, 'Your have been registerred successfuly!')
 			return redirect('events')
 	
-	# if name == '*':
 	return render(request, 'index.html', {'pageTitle':"Register"})
-	# else:
-	# 	return render(request, 'index.html')
-
-
-
-
+	
 def homePage(request):
 	return render(request, 'home.html', {'pageTitle':"Home"})
 
@@ -108,28 +102,10 @@ def gallery(request):
 	}
 
 	objects_SPoorthi = ImageModel.objects.filter(imageClass="SPoorthi").order_by('imageId')
-	# p_SPoorthi = Paginator(objects_SPoorthi, 2)
-	# page = request.GET.get('page1')
-	# try:
-	# 	objects_SPoorthi = p_SPoorthi.page(page)
-	# except:
-	# 	objects_SPoorthi = p_SPoorthi.page(1)
-
+	
 	objects_Agility = ImageModel.objects.filter(imageClass="Agility").order_by('imageId')
-	# p_Agility = Paginator(objects_Agility, 4)
-	# page = request.GET.get('page2')
-	# try:
-	# 	objects_Agility = p_Agility.page(page)
-	# except:
-	# 	objects_Agility = p_Agility.page(1)
-
+	
 	objects_Glimpse = ImageModel.objects.filter(imageClass="Glimpse").order_by('imageId')
-	# p_Glimpse = Paginator(objects_Glimpse, 4)
-	# page = request.GET.get('page3')
-	# try:
-	# 	objects_Glimpse = p_Glimpse.page(page)
-	# except:
-	# 	objects_Glimpse = p_Glimpse.page(1)
 	
 	data['spoorthi'] = objects_SPoorthi
 	data['agility'] = objects_Agility
@@ -149,7 +125,6 @@ def eventPage(request, name=""):
 		context['pageTitle'] = "Events"
 		return render(request, 'events.html', context)
 	else:
-		#get the event details by event name and add to context
 		getEvent = EventModel.objects.get(eventName=name)
 		context['item'] = getEvent
 		context['pageTitle'] = "Event - "+name
