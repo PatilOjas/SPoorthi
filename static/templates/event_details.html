@@ -10,7 +10,7 @@
             <div class="col-md-5 col-sm-12 img-side py-5">
                 <div class="detailed-poster-img px-2">
                     <!-- <img src="{% static 'images/poster/Athletics.png' %}" alt="athletic"> -->
-                    <img src="/{{item.poster}}" alt="{{item.eventName}}">
+                    <img src="/media/{{item.poster}}" alt="{{item.eventName}}">
                 </div>
             </div>
             <div class="col-md-7 col-sm-12 content-side py-5">
@@ -18,7 +18,7 @@
                     <div class="eventName mb-3 row">
                         <h2 class="col-md-8 col-sm-6">{{item.eventName}}</h2>
 						<br>
-                        {% if item.eventName == 'Carrom' or item.eventName == 'Badminton' or item.eventName == 'Table Tennis' %}
+                        {% if item.eventName == 'Carrom' or item.eventName == 'Badminton' %}
                             <div class="col-md-4  col-sm-6 ">
                                 <a class="btn btn-primary mb-4 form-control" href="{% url 'registrationpage' name=item.eventName %} (S)">Register Here for Singles</a>
                                 <a class="btn btn-primary mb-4 form-control" href="{% url 'registrationpage' name=item.eventName %} (D)">Register Here for Doubles</a>

@@ -146,3 +146,13 @@
         }
     }
 }
+
+.stripes{
+	background: repeating-linear-gradient(
+  	135deg,
+  #c8530b,
+  #c8530b 10px,
+  #000000 10px,
+  #000000 20px,
+);
+}

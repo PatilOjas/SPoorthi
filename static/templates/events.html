@@ -11,7 +11,7 @@
         {% for event in allEvents %}
                 <a class="poster" href="{% url 'event_details' name=event.eventName %}">
                     <div class="poster-img">
-                        <img src="/{{event.poster}}" alt="{{event.eventName}} poster">
+                        <img src="/media/{{event.poster}}" alt="{{event.eventName}} poster">
                         <span class="event-tag">{{event.eventName}}</span>
                     </div>
                 </a>
