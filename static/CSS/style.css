@@ -1134,7 +1134,7 @@ li .fa-flag-checkered {
   top: 0;
   left: 0;
   z-index: -2;
-  background-color: aqua;
+  background-color: #FFBD59;
   -webkit-transform: translate(0.5rem, 0.5rem);
           transform: translate(0.5rem, 0.5rem);
   -webkit-transition: all 0.2s ease-in-out;
@@ -1149,10 +1149,10 @@ li .fa-flag-checkered {
   top: 0;
   left: 0;
   z-index: -2;
-  background: url("../images/hover_pattern.png") repeat;
-  background-size: 11px;
-  -webkit-transform: translate(-0.7rem, -0.7rem);
-          transform: translate(-0.7rem, -0.7rem);
+  background: url("../images/hover-pattern.png") repeat;
+  background-size: 5px;
+  -webkit-transform: translate(-0.5rem, -0.5rem);
+          transform: translate(-0.5rem, -0.5rem);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
@@ -1162,14 +1162,14 @@ li .fa-flag-checkered {
 }
 
 .poster:hover .poster-img:before {
-  -webkit-transform: translate(-1.3rem, -1rem);
-          transform: translate(-1.3rem, -1rem);
+  -webkit-transform: translate(-1.4rem, -1.1rem);
+          transform: translate(-1.4rem, -1.1rem);
 }
 
 .poster:hover .poster-img:after {
-  background-color: aqua;
-  -webkit-transform: translate(1.9rem, 1.1rem);
-          transform: translate(1.9rem, 1.1rem);
+  background-color: #FFBD59;
+  -webkit-transform: translate(1.5rem, 1.1rem);
+          transform: translate(1.5rem, 1.1rem);
 }
 
 .poster:hover .event-tag {
