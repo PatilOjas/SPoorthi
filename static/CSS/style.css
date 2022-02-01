@@ -1111,7 +1111,7 @@ li .fa-flag-checkered {
 }
 
 .poster-img .event-tag {
-  background-color: #20232e;
+  background-color: #bb3919;
   padding: 0.2rem 1rem;
   width: 70%;
   color: white;
@@ -1681,21 +1681,18 @@ footer p {
   border: 1px solid #dddddd;
 }
 
-.social-media-links .fab {
-  -webkit-transform: scale(1.6);
-          transform: scale(1.6);
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-}
-
-.social-media-links .media-link:hover .fab {
-  -webkit-transform: scale(1.8);
-          transform: scale(1.8);
-  color: #dddddd;
-}
-
 .social-media-links a {
   color: #999;
+}
+
+.social-media-links .fa-2x {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.social-media-links .media-link:hover .fa-2x {
+  font-size: 2rem !important;
+  color: white !important;
 }
 
 @media (min-width: 901px) and (max-width: 1100px) {

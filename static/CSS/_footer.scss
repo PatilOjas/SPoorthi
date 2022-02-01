@@ -37,17 +37,20 @@ footer{
         border: 1px solid #dddddd;
     }
     
-    .fab{
-        transform: scale(1.6);
-        transition: all 0.2s;
-    }
-    
-    .media-link:hover .fab{
-        transform: scale(1.8);
-        color: #dddddd;
-    }
-
     a{
         color: #999;
     }
+
+    .fa-2x{
+        transition: all 0.2s ease-in-out;
+    }
+    
+    .media-link:hover{
+        .fa-2x{
+            font-size: 2rem !important;
+            color: white !important;
+        }
+    }
+
+    
 }
