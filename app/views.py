@@ -20,11 +20,11 @@ def registrationPage(request, name='*'):
 		if form.is_valid():
 			saved_data = form.save()
 			
-			if saved_data.event == "Turf Cricket":
+			if saved_data.event == "Cricket":
 				sh = SheetEditor(sheetName=sheet_name, sheet=saved_data.event)
 				sh.wks.update(f"A{len(sh.wks.get_all_records()) + offset}:G{len(sh.wks.get_all_records()) + offset}", [[saved_data.playerId, saved_data.email, saved_data.fullName, saved_data.mobNo, saved_data.collegeName, saved_data.event, str(saved_data.datetimestamp)]])
 			
-			elif saved_data.event == "Turf Football":
+			elif saved_data.event == "Football":
 				sh = SheetEditor(sheetName=sheet_name, sheet=saved_data.event)
 				sh.wks.update(f"A{len(sh.wks.get_all_records()) + offset}:G{len(sh.wks.get_all_records()) + offset}", [[saved_data.playerId, saved_data.email, saved_data.fullName, saved_data.mobNo, saved_data.collegeName, saved_data.event, str(saved_data.datetimestamp)]])
 			
