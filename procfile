@@ -1,1 +1,0 @@
-web: gunicorn SPoorthi.wsgi --log-file -
