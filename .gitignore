@@ -7,3 +7,6 @@ temp.py
 *.sass.map
 *.scss.map
 *.scss
+__pycache__
+.idea
+.vscode
