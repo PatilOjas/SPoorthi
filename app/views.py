@@ -78,9 +78,9 @@ def registrationPage(request, name='*'):
 			
 
 			subject = "Successfully registered for SPoorthi!"
-			message = f"Greetings From Spoorthi SPIT,\nHello {saved_data.fullName}, you have succesfully registered for {saved_data.event}.\nPlease Show this email at the time of Event.\nSee you at SPoorthi from 13-31st January'20.\nSports Team At SPIT"
-			# from_email = settings.EMAIL_HOST_USER
-			# mail = send_mail(subject, message, from_email, [request.POST['email']], fail_silently=False)
+			message = f"Greetings From Spoorthi SPIT,\nHello {saved_data.fullName}, you have succesfully registered for {saved_data.event}.\nPlease Show this email at the time of Event.\nSee you at SPoorthi from 15th Feb'22-3rd Mar'22.\nSports Team At SPIT"
+			from_email = settings.EMAIL_HOST_USER
+			mail = send_mail(subject, message, from_email, [request.POST['email']], fail_silently=False)
 			messages.success(request, 'Your have been registerred successfuly!')
 			return redirect('events')
 	
