@@ -93,8 +93,8 @@ def registrationPage(request, name='*'):
 			
 
 			subject = "Successfully registered for SPoorthi!"
-			from_email = settings.EMAIL_HOST_USER
-			send_mail(subject, message, from_email, [request.POST['email']], fail_silently=False)
+			# from_email = settings.EMAIL_HOST_USER
+			# send_mail(subject, message, from_email, [request.POST['email']], fail_silently=False)
 
 			messages.success(request, 'Your have been registerred successfuly!')
 			
